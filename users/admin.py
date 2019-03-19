@@ -1,0 +1,24 @@
+from django.contrib import admin
+
+# Register your models here.
+
+
+admin.site.site_header = 'Boat'
+
+admin.site.site_title = 'Boat'
+
+admin.site.index_title = 'Boat'
+
+
+# Register your models here.
+from users.models import Cargo_Cards, TC_Cards, Tonnage_Cards
+
+
+class AuthorAdmin(admin.ModelAdmin):
+    list_display = ('first_name', 'last_name', 'email')
+    search_fields = ('first_name', 'last_name')
+
+
+admin.site.register(Cargo_Cards)
+admin.site.register(TC_Cards)
+admin.site.register(Tonnage_Cards)
