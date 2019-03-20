@@ -11,7 +11,7 @@ admin.site.index_title = 'Boat'
 
 
 # Register your models here.
-from users.models import Cargo_Cards, TC_Cards, Tonnage_Cards
+from users.models import Cargo_Card, TC_Card, Tonnage_Card
 
 
 class AuthorAdmin(admin.ModelAdmin):
@@ -19,6 +19,6 @@ class AuthorAdmin(admin.ModelAdmin):
     search_fields = ('first_name', 'last_name')
 
 
-admin.site.register(Cargo_Cards)
-admin.site.register(TC_Cards)
-admin.site.register(Tonnage_Cards)
+admin.site.register(Cargo_Card)
+admin.site.register(TC_Card)
+admin.site.register(Tonnage_Card)
