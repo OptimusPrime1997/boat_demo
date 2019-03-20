@@ -3,7 +3,13 @@
     <el-tab-pane label="Tonnage Cards" name="first">
       <div>Tonnage offer cards</div>
 
-      <el-table :data="tableData1" height="250" border style="width: 100%">
+      <el-table
+        :data="tableData1"
+        height="250"
+        border
+        style="width: 100%"
+        @row-click="display_mail"
+      >
         <el-table-column prop="Vessel_name" label="Vessel Name" width="180">
         </el-table-column>
 
@@ -20,7 +26,18 @@
         </el-table-column>
         <el-table-column prop="Sent" label="Sent" width="180">
         </el-table-column>
+        <!-- <el-table-column
+          prop="mail_text"
+          label="text"
+          width="0"
+          v-show="false"
+        >
+        </el-table-column> -->
       </el-table>
+
+      <div>
+        <v-clamp autoresize :max-lines="10">{{ text }}</v-clamp>
+      </div>
     </el-tab-pane>
 
     <el-tab-pane label="Cargo Cards " name="second">
@@ -89,13 +106,15 @@
 
 
 <script>
+import VClamp from 'vue-clamp'
 export default {
   data() {
     return {
       activeName2: 'first',
       tableData1: [],
       tableData2: [],
-      tableData3: []
+      tableData3: [],
+      text: ''
     };
   },
   mounted() {
@@ -149,7 +168,6 @@ export default {
     })
       .then(function (response) {
         var a = eval(response.data);
-
         for (var i = 0; i < a.list.length; i++) {
           self.tableData3.push(a.list[i].fields);
           //JSON.stringify(a.list[i].fields)
@@ -165,6 +183,15 @@ export default {
     // console.log("test");
   },
   methods: {
+    // tonnage talbe行 点击方法
+    display_mail(row) {
+      // console.log("display mail method");
+      // console.log(row['mail_text']);
+      this.text = row['mail_text']
+
+    },
+
+    // 搜素框方法
     searchCargo() {
       var self = this;
       this.tableData2.splice(0, this.tableData2.length);
