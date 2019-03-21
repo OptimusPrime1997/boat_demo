@@ -1,3 +1,4 @@
+
 import Login from './views/Login.vue'
 import Detail from './views/detail.vue'
 import Table from './views/table.vue'

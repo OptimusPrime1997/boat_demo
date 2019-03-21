@@ -130,12 +130,10 @@ export default {
     };
   },
   mounted() {
-
   },
   created() {
     this.load();
   },
-
   methods: {
     load() {
       var data = this.formData;
@@ -176,7 +174,6 @@ export default {
         }).catch(err => {
           console.log(err)
         });
-
       });
     },
     onSubmit() {
@@ -196,7 +193,6 @@ export default {
       this.load();
     }
   },
-
 };
 </script>
 
@@ -261,5 +257,3 @@ export default {
   margin: 0 auto;
 }
 </style>
-
-

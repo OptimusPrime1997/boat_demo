@@ -12,15 +12,15 @@ from users.models import TC_Card
 from django.views.decorators.csrf import csrf_exempt
 
 
-# tc_card
+# tonnage_card
 @csrf_exempt
 @require_http_methods(["GET"])
-def get_tc(request):
+def get_tonnage(request):
     response = {}
     try:
         print("tests:")
         # users = User.objects.filter(email=email)
-        user = TC_Card.objects.all()
+        user = Tonnage_Card.objects.all()
         print(user)
         # print(user.toJSON())
         # response['list'] = json.loads(serializers.serialize("json", users))
@@ -35,13 +35,32 @@ def get_tc(request):
 
 @csrf_exempt
 @require_http_methods(["GET"])
-def search_tc(request, content):
+def search_tonnage(request, content):
     response = {}
     try:
         print("tests:")
         # users = User.objects.filter(email=email)
         # user = Cargo_Cards.objects.filter()
-        user = TC_Card.objects.filter(Account__contains=content)
+        user = Tonnage_Card.objects.filter(Vessel_name__contains=content)
+        # print(user.toJSON())
+        # response['list'] = json.loads(serializers.serialize("json", users))
+        response['list'] = json.loads(serializers.serialize("json", user))
+        response['error_num'] = 0
+        response['msg'] = 'success'
+    except Exception as  e:
+        response['msg'] = str(e)
+        response['error_num'] = 1
+    return JsonResponse(response)
+
+@csrf_exempt
+@require_http_methods(["GET"])
+def search_tonnage_data(request, content):
+    response = {}
+    try:
+        print("tests:")
+        # users = User.objects.filter(email=email)
+        # user = Cargo_Cards.objects.filter()
+        user = Tonnage_Card.objects.filter(Open_date_S__contains=content,Open_date_E__contains=content)
         # print(user.toJSON())
         # response['list'] = json.loads(serializers.serialize("json", users))
         response['list'] = json.loads(serializers.serialize("json", user))
@@ -97,15 +116,15 @@ def search_cargo(request, content):
     return JsonResponse(response)
 
 
-# tonnage_card
+# tc_card
 @csrf_exempt
 @require_http_methods(["GET"])
-def get_tonnage(request):
+def get_tc(request):
     response = {}
     try:
         print("tests:")
         # users = User.objects.filter(email=email)
-        user = Tonnage_Card.objects.all()
+        user = TC_Card.objects.all()
         print(user)
         # print(user.toJSON())
         # response['list'] = json.loads(serializers.serialize("json", users))
@@ -117,16 +136,15 @@ def get_tonnage(request):
         response['error_num'] = 1
     return JsonResponse(response)
 
-
 @csrf_exempt
 @require_http_methods(["GET"])
-def search_tonnage(request, content):
+def search_tc(request, content):
     response = {}
     try:
         print("tests:")
         # users = User.objects.filter(email=email)
         # user = Cargo_Cards.objects.filter()
-        user = Tonnage_Card.objects.filter(Vessel_name__contains=content)
+        user = TC_Card.objects.filter(Account__contains=content)
         # print(user.toJSON())
         # response['list'] = json.loads(serializers.serialize("json", users))
         response['list'] = json.loads(serializers.serialize("json", user))
