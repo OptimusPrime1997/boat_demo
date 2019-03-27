@@ -124,13 +124,12 @@
                                     <button @click="searchCargo1" class="btn" style="text-align:center;width:60px;height:32px;font-size:15px"  >Search</button>
 
 
-                                    <div>
+
 
                                     <el-table
-                                      :data="tableData1"
+                                      :data="tableData1.slice((currentPage-1)*pagesize,currentPage*pagesize)"
                                       height="800"
-                                      border
-                                      style="width: 100%"
+                                      border style="width: 100%"
                                       @row-click="display_mail">
 
                                               <el-table-column prop="Vessel_name" label="Vessel Name" width="200" >
@@ -152,18 +151,32 @@
 
                                     </el-table>
 
+                                          <!--&lt;!&ndash;// 处理分页&ndash;&gt;-->
+                                          <!--<div class="yema">-->
+                                          <!--    <el-pagination background-->
+                                            <!--@size-change="handleSizeChange"-->
+                                            <!--@current-change="handleCurrentChange"-->
+                                            <!--:current-page="currentPage"-->
+                                            <!--:page-sizes="[5,10,15]"-->
+                                            <!--:page-size="pagesize"-->
+                                            <!--layout="total,jumper,prev, pager, next,sizes"-->
+                                            <!--:total="tableData1.length" >-->
+                                          <!--    </el-pagination>-->
+                                          <!--</div>-->
+                                         <div class="yema">
+                                              <el-pagination background
+                                            @size-change="handleSizeChange"
+                                            @current-change="handleCurrentChange"
+                                            :current-page="currentPage"
 
-                                     <!--// 处理分页-->
-                                     <el-pagination
-                                        @size-change="handleSizeChange"
-                                        @current-change="handleCurrentChange"
-                                        :current-page="currentPage"
-                                        :page-sizes="[10, 20, 30, 40]"
-                                        :page-size="pageSize"
-                                        layout="total, sizes, prev, next, jumper"
-                                        :total="totalCount"
-                                      ></el-pagination>
-                                       </div>
+                                            layout="prev, pager, next"
+                                            :total="tableData1.length" >
+                                              </el-pagination>
+                                          </div>
+
+
+
+
 
 
                             </el-tab-pane>
@@ -288,7 +301,7 @@
 
 
 
-                                    <el-table :data="tableData2" height="800" border style="width: 100%" @row-click="display_mail">
+                                    <el-table :data="tableData2.slice((currentPage-1)*pagesize,currentPage*pagesize)" height="800" border style="width: 100%" @row-click="display_mail">
                                     <el-table-column prop="Cargo_name" label="Cargo Name" width="130">
                                     </el-table-column>
 
@@ -316,16 +329,29 @@
 
                                   </el-table>
 
-                                    <!--// 处理分页-->
-                                     <el-pagination
-                                        @size-change="handleSizeChange"
-                                        @current-change="handleCurrentChange"
-                                        :current-page="currentPage"
-                                        :page-sizes="[10, 20, 30, 40]"
-                                        :page-size="pageSize"
-                                        layout="total, sizes, prev, next, jumper"
-                                        :total="totalCount"
-                                      ></el-pagination>
+                                     <!--&lt;!&ndash;// 处理分页&ndash;&gt;-->
+                                          <!--<div class="yema">-->
+                                          <!--    <el-pagination background-->
+                                            <!--@size-change="handleSizeChange"-->
+                                            <!--@current-change="handleCurrentChange"-->
+                                            <!--:current-page="currentPage"-->
+                                            <!--:page-sizes="[5,10,15]"-->
+                                            <!--:page-size="pagesize"-->
+                                            <!--layout="total,jumper,prev, pager, next,sizes"-->
+                                            <!--:total="tableData2.length" >-->
+                                          <!--    </el-pagination>-->
+                                          <!--</div>-->
+                                           <div class="yema">
+                                              <el-pagination background
+                                            @size-change="handleSizeChange"
+                                            @current-change="handleCurrentChange"
+                                            :current-page="currentPage"
+
+                                            layout="prev, pager, next"
+                                            :total="tableData2.length" >
+                                              </el-pagination>
+                                          </div>
+
 
 
                             </el-tab-pane >
@@ -447,7 +473,7 @@
 
                                     <button @click="searchCargo3" class="btn" style="text-align:center;width:60px;height:32px;font-size:15px">Search</button>
 
-                                    <el-table :data="tableData3" height="800" border style="width: 100%" @row-click="display_mail">
+                                    <el-table :data="tableData3.slice((currentPage-1)*pagesize,currentPage*pagesize)" height="800" border style="width: 100%" @row-click="display_mail">
                                             <el-table-column prop="Account" label="Account" width="130">
                                             </el-table-column>
                                             <el-table-column prop="Quantity" label="Quantity" width="150">
@@ -470,16 +496,29 @@
                                             </el-table-column>
                                     </el-table>
 
-                                     <!--// 处理分页-->
-                                     <el-pagination
-                                        @size-change="handleSizeChange"
-                                        @current-change="handleCurrentChange"
-                                        :current-page="currentPage"
-                                        :page-sizes="[10, 20, 30, 40]"
-                                        :page-size="pageSize"
-                                        layout="total, sizes, prev, next, jumper"
-                                        :total="totalCount"
-                                      ></el-pagination>
+                                     <!--&lt;!&ndash;// 处理分页&ndash;&gt;-->
+                                          <!--<div class="yema">-->
+                                          <!--    <el-pagination background-->
+                                            <!--@size-change="handleSizeChange"-->
+                                            <!--@current-change="handleCurrentChange"-->
+                                            <!--:current-page="currentPage"-->
+                                            <!--:page-sizes="[5,10,15]"-->
+                                            <!--:page-size="pagesize"-->
+                                            <!--layout="total,jumper,prev, pager, next,sizes"-->
+                                            <!--:total="tableData3.length" >-->
+                                          <!--    </el-pagination>-->
+                                          <!--</div>-->
+                                        <div class="yema">
+                                              <el-pagination background
+                                            @size-change="handleSizeChange"
+                                            @current-change="handleCurrentChange"
+                                            :current-page="currentPage"
+
+                                            layout="prev, pager, next"
+                                            :total="tableData3.length" >
+                                              </el-pagination>
+                                          </div>
+
 
 
                           </el-tab-pane>
@@ -542,15 +581,9 @@
           tableData3: [],
           text: '',
 
-          //存储分页，搜索数据
-
-          params:{
-            page:1,
-            pageSize:3,
-            categoryId:undefined,
-            keywords:undefined
-          },
-
+          // //存储分页，搜索数据
+          currentPage:1,
+           pagesize:20,
 
         //定义Open Date日期的组件js部分
           value_a_1: '',
@@ -971,6 +1004,9 @@
 
            };
       },
+
+
+
       mounted() {
         var self = this;
         // var tableData2 = new Array();
@@ -1039,6 +1075,14 @@
           this.text = row['mail_text']
 
         },
+
+         ///处理分页 初始页currentPage、初始每页数据数pagesize和数据tableDate1,tableDate2,tableDate3
+          handleSizeChange:function(size){
+              this.pagesize=size;
+          },
+          handleCurrentChange:function(currentPage){
+              this.currentPage=currentPage;
+          },
 
 
         // 搜素框方法
@@ -1202,22 +1246,6 @@
           console.log(tab, event);
         },
 
-        //处理分页
-
-         // 每页显示数据变更
-         handleSizeChange(val) {
-            // console.log("每页" + val + "条");
-            //this.pageSize 是请求表格数据接口中的参数 设置表格每页显示多少条数据
-            this.pageSize = val;
-            this.loadTableData(); //调表格数据的接口
-         },
-         // 页码变更
-         handleCurrentChange(val) {
-           // console.log("当前页" + val);
-           //this.currentPage 是请求表格数据接口中的参数 设置表格当前处于多少页
-           this.currentPage = val;
-           this.loadTableData();
-         },
 
 
 
