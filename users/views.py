@@ -1,15 +1,18 @@
 # -*- coding: UTF-8 -*-
 # -*- coding: utf-8 -*-
+from __future__ import unicode_literals
+
+from django.views.decorators.csrf import csrf_exempt
 from django.http import JsonResponse
 from django.views.decorators.http import require_http_methods
 from django.core import serializers
-import requests
-from django.utils.encoding import force_text, python_2_unicode_compatible
 import json
 from users.models import Cargo_Card
 from users.models import Tonnage_Card
 from users.models import TC_Card
-from django.views.decorators.csrf import csrf_exempt
+import datetime
+
+DWT_ARRAY = [0, 10000, 40000, 35000, 40000.50000, 65000]
 
 
 # tonnage_card
@@ -41,7 +44,7 @@ def search_tonnage(request, content):
         print("tests:")
         # users = User.objects.filter(email=email)
         # user = Cargo_Cards.objects.filter()
-        user = Tonnage_Card.objects.filter(Vessel_name__contains=content)
+        user = Tonnage_Card.objects.filter(Vessel_name__icontains=content)
         # print(user.toJSON())
         # response['list'] = json.loads(serializers.serialize("json", users))
         response['list'] = json.loads(serializers.serialize("json", user))
@@ -52,6 +55,7 @@ def search_tonnage(request, content):
         response['error_num'] = 1
     return JsonResponse(response)
 
+
 @csrf_exempt
 @require_http_methods(["GET"])
 def search_tonnage_data(request, content):
@@ -60,7 +64,7 @@ def search_tonnage_data(request, content):
         print("tests:")
         # users = User.objects.filter(email=email)
         # user = Cargo_Cards.objects.filter()
-        user = Tonnage_Card.objects.filter(Open_date_S__contains=content,Open_date_E__contains=content)
+        user = Tonnage_Card.objects.filter(Open_date_S__icontains=content, Open_date_E__icontains=content)
         # print(user.toJSON())
         # response['list'] = json.loads(serializers.serialize("json", users))
         response['list'] = json.loads(serializers.serialize("json", user))
@@ -104,7 +108,7 @@ def search_cargo(request, content):
         print("tests:")
         # users = User.objects.filter(email=email)
         # user = Cargo_Cards.objects.filter()
-        user = Cargo_Card.objects.filter(Cargo_name__contains=content)
+        user = Cargo_Card.objects.filter(Cargo_name__icontains=content)
         # print(user.toJSON())
         # response['list'] = json.loads(serializers.serialize("json", users))
         response['list'] = json.loads(serializers.serialize("json", user))
@@ -136,6 +140,7 @@ def get_tc(request):
         response['error_num'] = 1
     return JsonResponse(response)
 
+
 @csrf_exempt
 @require_http_methods(["GET"])
 def search_tc(request, content):
@@ -144,7 +149,7 @@ def search_tc(request, content):
         print("tests:")
         # users = User.objects.filter(email=email)
         # user = Cargo_Cards.objects.filter()
-        user = TC_Card.objects.filter(Account__contains=content)
+        user = TC_Card.objects.filter(Account__icontains=content)
         # print(user.toJSON())
         # response['list'] = json.loads(serializers.serialize("json", users))
         response['list'] = json.loads(serializers.serialize("json", user))
@@ -153,4 +158,114 @@ def search_tc(request, content):
     except Exception as  e:
         response['msg'] = str(e)
         response['error_num'] = 1
+    return JsonResponse(response)
+
+
+# {
+# 	"vessel_name":"PACIFIC ACE",
+# 	"sender_mail":"0",
+# 	"opendate_start":"2019-03-02",
+# 	"opendate_end":"2019-03-02",
+# 	"days":1,
+# 	"built":5,
+# 	"account":"mouses",
+# 	"dwt":0
+# }
+
+@csrf_exempt
+@require_http_methods(["POST"])
+def tonnage_card_search(request):
+    response = {}
+    try:
+        request_body = json.loads(request.body.decode())
+        # print("request_body:", request_body)
+        vessel_name = request_body['vessel_name']
+        print(vessel_name)
+        sender_mail = request_body['sender_mail']
+        opendate_start = request_body['opendate_start']
+        opendate_end = request_body['opendate_end']
+        days = request_body['days']
+        built = request_body['built']
+        account = request_body['account']
+        # dwt -1 represent all
+        dwt = request_body['dwt']
+
+        # BLT应该为int型，容易比较大小
+        # datetime.date(int(opendate_start[0:4]), int(opendate_start[5:7]),
+        #               int(opendate_start[8:10])
+        #               )
+        # .filter(Vessel_name__icontains='A') \
+        # '2018-03-08'
+        q1 = Tonnage_Card.objects.filter(Vessel_name__icontains=vessel_name,
+                                         Open_date_S__gte=datetime.date(int(opendate_start[0:4]), int(opendate_start[5:7]),
+                                           int(opendate_start[8:10])) ,
+                                         Open_date_E__lte=datetime.date(int(opendate_end[0:4]), int(opendate_end[5:7]),
+                                              int(opendate_end[8:10])) ,
+                                         BLT__gte=datetime.datetime.today().year-int(built),
+                                         BLT__lte= datetime.datetime.today().year ,
+        )
+
+
+        list = [vessel_name, sender_mail, opendate_start, opendate_end, days, built, account, dwt]
+        print(list)
+        print(json.loads(serializers.serialize("json", q1)))
+        response['result'] = json.loads(serializers.serialize("json", q1))
+        response['err_num'] = 0
+    except Exception as e:
+        response['msg'] = str(e)
+        response['err_num'] = 2
+    return JsonResponse(response)
+
+# to do
+@csrf_exempt
+@require_http_methods(["POST"])
+def cargo_card_search(request):
+    response = {}
+    try:
+        # get data from POST request
+        request_body = json.loads(request.body)
+        vessel_name = request_body['vessel_name']
+        sender_mail = request_body['sender_mail']
+        opendate_start = request_body['opendate_start']
+        opendate_end = request_body['opendate_end']
+        days = request_body['days']
+        built = request_body['built']
+        account = request_body['account']
+        dwt = request_body['dwt']
+        list = [vessel_name, sender_mail, opendate_start, opendate_end, days, built, account, dwt]
+        print(list)
+
+        response['result'] = "test_cargo"
+        response['err_num'] = 0
+
+    except Exception as e:
+        response['msg'] = str(e)
+        response['err_num'] = 2
+    return JsonResponse(response)
+
+# to do
+@csrf_exempt
+@require_http_methods(["POST"])
+def tc_card_search(request):
+    response = {}
+    try:
+        # get data from POST request
+        request_body = json.loads(request.body)
+        vessel_name = request_body['vessel_name']
+        sender_mail = request_body['sender_mail']
+        opendate_start = request_body['opendate_start']
+        opendate_end = request_body['opendate_end']
+        days = request_body['days']
+        built = request_body['built']
+        account = request_body['account']
+        dwt = request_body['dwt']
+        list = [vessel_name, sender_mail, opendate_start, opendate_end, days, built, account, dwt]
+        print(list)
+
+        response['result'] = "test_cargo"
+        response['err_num'] = 0
+
+    except Exception as e:
+        response['msg'] = str(e)
+        response['err_num'] = 2
     return JsonResponse(response)
