@@ -160,7 +160,11 @@ def search_tc(request, content):
         response['error_num'] = 1
     return JsonResponse(response)
 
+<<<<<<< HEAD
 #
+=======
+
+>>>>>>> 87c7e40a371b6d6935fa377c7ccf391057ffc9c4
 # {
 # 	"vessel_name":"PACIFIC ACE",
 # 	"sender_mail":"0",
@@ -216,6 +220,7 @@ def tonnage_card_search(request):
         response['err_num'] = 2
     return JsonResponse(response)
 
+<<<<<<< HEAD
 #
 # {
 # 	"cargo_name":"Coal",
@@ -228,6 +233,8 @@ def tonnage_card_search(request):
 #
 # }
 
+=======
+>>>>>>> 87c7e40a371b6d6935fa377c7ccf391057ffc9c4
 # to do
 @csrf_exempt
 @require_http_methods(["POST"])
@@ -235,6 +242,7 @@ def cargo_card_search(request):
     response = {}
     try:
         # get data from POST request
+<<<<<<< HEAD
         request_body = json.loads(request.body.decode())
         cargo_name = request_body['cargo_name']
         print(cargo_name)
@@ -258,6 +266,21 @@ def cargo_card_search(request):
 
         print(json.loads(serializers.serialize("json", q1)))
         response['result'] = json.loads(serializers.serialize("json", q1))
+=======
+        request_body = json.loads(request.body)
+        vessel_name = request_body['vessel_name']
+        sender_mail = request_body['sender_mail']
+        opendate_start = request_body['opendate_start']
+        opendate_end = request_body['opendate_end']
+        days = request_body['days']
+        built = request_body['built']
+        account = request_body['account']
+        dwt = request_body['dwt']
+        list = [vessel_name, sender_mail, opendate_start, opendate_end, days, built, account, dwt]
+        print(list)
+
+        response['result'] = "test_cargo"
+>>>>>>> 87c7e40a371b6d6935fa377c7ccf391057ffc9c4
         response['err_num'] = 0
 
     except Exception as e:
@@ -265,6 +288,7 @@ def cargo_card_search(request):
         response['err_num'] = 2
     return JsonResponse(response)
 
+<<<<<<< HEAD
 # {
 # 	"acc":"TONGLI TIANJIN",
 # 	"sender_mail":"0",
@@ -275,6 +299,8 @@ def cargo_card_search(request):
 # 	"account":"mouses"
 #
 # }
+=======
+>>>>>>> 87c7e40a371b6d6935fa377c7ccf391057ffc9c4
 # to do
 @csrf_exempt
 @require_http_methods(["POST"])
@@ -282,6 +308,7 @@ def tc_card_search(request):
     response = {}
     try:
         # get data from POST request
+<<<<<<< HEAD
         request_body = json.loads(request.body.decode())
         acc = request_body['acc']
         print(acc)
@@ -305,9 +332,28 @@ def tc_card_search(request):
 
         print(json.loads(serializers.serialize("json", q1)))
         response['result'] = json.loads(serializers.serialize("json", q1))
+=======
+        request_body = json.loads(request.body)
+        vessel_name = request_body['vessel_name']
+        sender_mail = request_body['sender_mail']
+        opendate_start = request_body['opendate_start']
+        opendate_end = request_body['opendate_end']
+        days = request_body['days']
+        built = request_body['built']
+        account = request_body['account']
+        dwt = request_body['dwt']
+        list = [vessel_name, sender_mail, opendate_start, opendate_end, days, built, account, dwt]
+        print(list)
+
+        response['result'] = "test_cargo"
+>>>>>>> 87c7e40a371b6d6935fa377c7ccf391057ffc9c4
         response['err_num'] = 0
 
     except Exception as e:
         response['msg'] = str(e)
         response['err_num'] = 2
+<<<<<<< HEAD
     return JsonResponse(response)
+=======
+    return JsonResponse(response)
+>>>>>>> 87c7e40a371b6d6935fa377c7ccf391057ffc9c4
