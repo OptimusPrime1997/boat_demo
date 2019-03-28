@@ -11,4 +11,9 @@ urlpatterns = [
     url(r'^tonnage$', users.views.get_tonnage),
     url(r'^tc$', users.views.get_tc),
 
+    # query
+    url(r'^tonnage_search$', users.views.tonnage_card_search, ),
+    url(r'^cargo_search$', users.views.cargo_card_search, ),
+    url(r'^tc_search$', users.views.tc_card_search, ),
+
 ]

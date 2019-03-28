@@ -38,6 +38,7 @@
                                                   v-model="value_a_1"
                                                   type="daterange"
                                                   range-separator="--"
+                                                  @change="changeStartTime"
                                                   start-placeholder="Start Date"
                                                   end-placeholder="End Date" style="height:30px;" >
                                                 </el-date-picker>
@@ -305,7 +306,9 @@
                                     <el-table-column prop="Cargo_name" label="Cargo Name" width="130">
                                     </el-table-column>
 
-                                    <el-table-column prop="Quantity" label="Quantity" width="130">
+                                    <el-table-column prop="Quantity_s" label="Quantity_s" width="100">
+                                    </el-table-column>
+                                      <el-table-column prop="Quantity_e" label="Quantity_e" width="100">
                                     </el-table-column>
 
                                     <el-table-column prop="Loading_Port" label="Loading Port" width="130">
@@ -314,16 +317,16 @@
                                     <el-table-column
                                       prop="Discharging_Port"
                                       label="Discharging Port"
-                                      width="180"
+                                      width="140"
                                     >
                                     </el-table-column>
 
-                                    <el-table-column prop="LayCan_S" label="LayCan_Start" width="130">
+                                    <el-table-column prop="LayCan_S" label="LayCan_Start" width="120">
                                     </el-table-column>
-                                    <el-table-column prop="LayCan_E" label="LayCan_End" width="130">
+                                    <el-table-column prop="LayCan_E" label="LayCan_End" width="120">
                                     </el-table-column>
 
-                                    <el-table-column prop="Sent" label="Sent" width="130">
+                                    <el-table-column prop="Sent" label="Sent" width="120">
                                     </el-table-column>
 
 
@@ -474,11 +477,13 @@
                                     <button @click="searchCargo3" class="btn" style="text-align:center;width:60px;height:32px;font-size:15px">Search</button>
 
                                     <el-table :data="tableData3.slice((currentPage-1)*pagesize,currentPage*pagesize)" height="800" border style="width: 100%" @row-click="display_mail">
-                                            <el-table-column prop="Account" label="Account" width="130">
+                                            <el-table-column prop="Account" label="Account" width="90">
                                             </el-table-column>
-                                            <el-table-column prop="Quantity" label="Quantity" width="150">
+                                            <el-table-column prop="Quantity_s" label="Quantity_s" width="100">
                                             </el-table-column>
-                                            <el-table-column prop="Delivery_area" label="Delivery Area" width="130">
+                                            <el-table-column prop="Quantity_e" label="Quantity_e" width="100">
+                                            </el-table-column>
+                                            <el-table-column prop="Delivery_area" label="Delivery Area" width="120">
                                             </el-table-column>
                                             <el-table-column
                                               prop="Redelivery_area"
@@ -491,7 +496,8 @@
                                             </el-table-column>
                                             <el-table-column prop="LayCan_E" label="LayCan End" width="110">
                                             </el-table-column>
-                                            <el-table-column prop="DUR" label="DUR" width="80"> </el-table-column>
+                                            <el-table-column prop="DUR_S" label="DUR_S" width="70"> </el-table-column>
+                                            <el-table-column prop="DUR_E" label="DUR_E" width="70"> </el-table-column>
                                             <el-table-column prop="Sent" label="Sent" width="80">
                                             </el-table-column>
                                     </el-table>
@@ -1068,6 +1074,11 @@
         // console.log("test");
       },
       methods: {
+        // 将日期显示为yyyy-mm-dd
+        changeStartTime(time) {
+        console.log('starttime',time);
+        this.formdata2.travelStartTime = time;
+        },
         // tonnage talbe行 点击方法
         display_mail(row) {
           // console.log("display mail method");
@@ -1094,12 +1105,6 @@
           console.log(searchText1);
           //console.log(searchText.text);
 
-          // var data1_1 = new Array();
-          // var tab1_data = document.getElementById("tab1_data").value;
-          //  console.log(ddddddddddddddd);
-          // console.log(tab1_data);
-
-          // if (searchText1) {
             this.axios({
               method: "get",
               url: "http://127.0.0.1:8888/users/search_tonnage/" + searchText1,
@@ -1121,16 +1126,35 @@
                 console.log(error);
               });
             return data1;
-          // }else if(tab1_data){
+
+
+// {
+// 	"vessel_name":"PACIFIC ACE",
+// 	"sender_mail":"0",
+// 	"opendate_start":"2019-03-02",
+// 	"opendate_end":"2019-03-02",
+// 	"days":1,
+// 	"built":5,
+// 	"account":"mouses",
+// 	"dwt":0
+// }
+
+          // var self = this;
+          // this.tableData1.splice(0, this.tableData1.length);
+          // var data1 = new Array();
+          // var searchText1 = document.getElementById("searchText1").value;
+          // console.log(searchText1);
+          // //console.log(searchText.text);
+          //
           //   this.axios({
-          //     method: "get",
-          //     url: "http://127.0.0.1:8888/users/search_tonnage/" + search_tonnage_data,
+          //     method: "post",
+          //     url: "http://127.0.0.1:8888/users/tonnage_card_search/" ,
           //   })
           //     .then(function (response) {
           //       console.log("axios method");
           //       console.log(response);
           //       console.log(eval(response.data));
-          //       // self.tableData2.splice(0, tableData1.length);
+          //       // self.tableData1.splice(0, tableData1.length);
           //       var a = eval(response.data);
           //       for (var i = 0; i < a.list.length; i++) {
           //         self.tableData1.push(a.list[i].fields);
@@ -1142,12 +1166,9 @@
           //     .catch(function (error) {
           //       console.log(error);
           //     });
-          //   return data1_1;
+          //   return data1;
 
 
-
-
-          //}
 
 
 
@@ -1215,33 +1236,6 @@
         },
 
 
-
-
-
-
-
-        // dj() {
-        //   var self = this;
-        //   this.axios({
-        //     method: "get",
-        //     url: "http://127.0.0.1:8888/users/search_cargo/"
-        //   })
-        //     .then(function (response) {
-        //       console.log("axios method");
-        //       console.log(response);
-        //       console.log(eval(response.data));
-        //       var a = eval(response.data);
-        //       for (var i = 0; i < a.list.length; i++) {
-        //         self.tableData2.push(a.list[i].fields);
-        //         //JSON.stringify(a.list[i].fields)
-        //       }
-        //       console.log(self.tableData2);
-        //       //this.tableData1.splice(xxx,xxx,xxx);
-        //     })
-        //     .catch(function (error) {
-        //       console.log(error);
-        //     });
-        // },
         handleClick(tab, event) {
           console.log(tab, event);
         },
