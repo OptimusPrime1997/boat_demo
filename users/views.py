@@ -12,7 +12,7 @@ from users.models import Tonnage_Card
 from users.models import TC_Card
 import datetime
 
-DWT_ARRAY = [0, 10000, 40000, 35000, 40000.50000, 65000]
+DWT_ARRAY = [0, 10000, 40000, 35000, 40000 , 50000, 65000]
 
 
 # tonnage_card
@@ -160,11 +160,6 @@ def search_tc(request, content):
         response['error_num'] = 1
     return JsonResponse(response)
 
-<<<<<<< HEAD
-#
-=======
-
->>>>>>> 87c7e40a371b6d6935fa377c7ccf391057ffc9c4
 # {
 # 	"vessel_name":"PACIFIC ACE",
 # 	"sender_mail":"0",
@@ -201,40 +196,30 @@ def tonnage_card_search(request):
         # .filter(Vessel_name__icontains='A') \
         # '2018-03-08'
         q1 = Tonnage_Card.objects.filter(Vessel_name__icontains=vessel_name,
+                                         DWT__gt=dwt,
                                          Open_date_S__gte=datetime.date(int(opendate_start[0:4]), int(opendate_start[5:7]),
                                            int(opendate_start[8:10])) ,
                                          Open_date_E__lte=datetime.date(int(opendate_end[0:4]), int(opendate_end[5:7]),
                                               int(opendate_end[8:10])) ,
-                                         BLT__gte=datetime.datetime.today().year-int(built),
-                                         BLT__lte= datetime.datetime.today().year ,
+                                         # BLT__gte=datetime.datetime.today().year-int(built),
+                                         # BLT__lte= datetime.datetime.today().year ,
+
         )
+
+        # if dwt!="":
+        #     q2=q1.filter(DWT_gt=dwt,)
 
 
         list = [vessel_name, sender_mail, opendate_start, opendate_end, days, built, account, dwt]
         print(list)
         print(json.loads(serializers.serialize("json", q1)))
-        response['result'] = json.loads(serializers.serialize("json", q1))
+        response['list'] = json.loads(serializers.serialize("json", q1))
         response['err_num'] = 0
     except Exception as e:
         response['msg'] = str(e)
         response['err_num'] = 2
     return JsonResponse(response)
 
-<<<<<<< HEAD
-#
-# {
-# 	"cargo_name":"Coal",
-# 	"sender_mail":"0",
-# 	"laycan_start":"2018-03-20",
-# 	"laycan_end":"2018-03-31",
-# 	"days":1,
-#   "quantity":0,
-# 	"account":"mouses"
-#
-# }
-
-=======
->>>>>>> 87c7e40a371b6d6935fa377c7ccf391057ffc9c4
 # to do
 @csrf_exempt
 @require_http_methods(["POST"])
@@ -242,7 +227,6 @@ def cargo_card_search(request):
     response = {}
     try:
         # get data from POST request
-<<<<<<< HEAD
         request_body = json.loads(request.body.decode())
         cargo_name = request_body['cargo_name']
         print(cargo_name)
@@ -253,34 +237,20 @@ def cargo_card_search(request):
         quantity = request_body['quantity']
         account = request_body['account']
         q1 = Cargo_Card.objects.filter(Cargo_name__icontains=cargo_name,
-                                         LayCan_S__gte=datetime.date(int(laycan_start[0:4]),
-                                                                        int(laycan_start[5:7]),
-                                                                        int(laycan_start[8:10])),
-                                         LayCan_E__lte=datetime.date(int(laycan_end[0:4]), int(laycan_end[5:7]),
-                                                                        int(laycan_end[8:10])),
+                                       Quantity_s__gt=quantity,
+                                       LayCan_S__gte=datetime.date(int(laycan_start[0:4]),
+                                                                   int(laycan_start[5:7]),
+                                                                   int(laycan_start[8:10])),
+                                       LayCan_E__lte=datetime.date(int(laycan_end[0:4]), int(laycan_end[5:7]),
+                                                                   int(laycan_end[8:10])),
 
-                                         )
+                                       )
 
-        list = [cargo_name , sender_mail, laycan_start, laycan_end, days,quantity, account]
+        list = [cargo_name, sender_mail, laycan_start, laycan_end, days, quantity, account]
         print(list)
 
         print(json.loads(serializers.serialize("json", q1)))
-        response['result'] = json.loads(serializers.serialize("json", q1))
-=======
-        request_body = json.loads(request.body)
-        vessel_name = request_body['vessel_name']
-        sender_mail = request_body['sender_mail']
-        opendate_start = request_body['opendate_start']
-        opendate_end = request_body['opendate_end']
-        days = request_body['days']
-        built = request_body['built']
-        account = request_body['account']
-        dwt = request_body['dwt']
-        list = [vessel_name, sender_mail, opendate_start, opendate_end, days, built, account, dwt]
-        print(list)
-
-        response['result'] = "test_cargo"
->>>>>>> 87c7e40a371b6d6935fa377c7ccf391057ffc9c4
+        response['list'] = json.loads(serializers.serialize("json", q1))
         response['err_num'] = 0
 
     except Exception as e:
@@ -288,19 +258,6 @@ def cargo_card_search(request):
         response['err_num'] = 2
     return JsonResponse(response)
 
-<<<<<<< HEAD
-# {
-# 	"acc":"TONGLI TIANJIN",
-# 	"sender_mail":"0",
-# 	"laycan_start":"2018-03-06",
-# 	"laycan_end":"2018-03-10",
-# 	"days":1,
-#   "quantity":0,
-# 	"account":"mouses"
-#
-# }
-=======
->>>>>>> 87c7e40a371b6d6935fa377c7ccf391057ffc9c4
 # to do
 @csrf_exempt
 @require_http_methods(["POST"])
@@ -308,7 +265,6 @@ def tc_card_search(request):
     response = {}
     try:
         # get data from POST request
-<<<<<<< HEAD
         request_body = json.loads(request.body.decode())
         acc = request_body['acc']
         print(acc)
@@ -319,41 +275,24 @@ def tc_card_search(request):
         quantity = request_body['quantity']
         account = request_body['account']
         q1 = TC_Card.objects.filter(Account__icontains=acc,
-                                       LayCan_S__gte=datetime.date(int(laycan_start[0:4]),
-                                                                   int(laycan_start[5:7]),
-                                                                   int(laycan_start[8:10])),
-                                       LayCan_E__lte=datetime.date(int(laycan_end[0:4]), int(laycan_end[5:7]),
-                                                                   int(laycan_end[8:10])),
+                                    Quantity_s__gt=quantity,
 
-                                       )
+                                    LayCan_S__gte=datetime.date(int(laycan_start[0:4]),
+                                                                int(laycan_start[5:7]),
+                                                                int(laycan_start[8:10])),
+                                    LayCan_E__lte=datetime.date(int(laycan_end[0:4]), int(laycan_end[5:7]),
+                                                                int(laycan_end[8:10])),
+
+                                    )
 
         list = [acc, sender_mail, laycan_start, laycan_end, days, quantity, account]
         print(list)
 
         print(json.loads(serializers.serialize("json", q1)))
-        response['result'] = json.loads(serializers.serialize("json", q1))
-=======
-        request_body = json.loads(request.body)
-        vessel_name = request_body['vessel_name']
-        sender_mail = request_body['sender_mail']
-        opendate_start = request_body['opendate_start']
-        opendate_end = request_body['opendate_end']
-        days = request_body['days']
-        built = request_body['built']
-        account = request_body['account']
-        dwt = request_body['dwt']
-        list = [vessel_name, sender_mail, opendate_start, opendate_end, days, built, account, dwt]
-        print(list)
-
-        response['result'] = "test_cargo"
->>>>>>> 87c7e40a371b6d6935fa377c7ccf391057ffc9c4
+        response['list'] = json.loads(serializers.serialize("json", q1))
         response['err_num'] = 0
 
     except Exception as e:
         response['msg'] = str(e)
         response['err_num'] = 2
-<<<<<<< HEAD
     return JsonResponse(response)
-=======
-    return JsonResponse(response)
->>>>>>> 87c7e40a371b6d6935fa377c7ccf391057ffc9c4

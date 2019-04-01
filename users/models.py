@@ -50,7 +50,7 @@ class TC_Card(models.Model):  # 该类与数据库同步的时候会创建该表
 
 class Tonnage_Card(models.Model):  # 该类与数据库同步的时候会创建该表，如果使用之前的库和表，class 后就写数据库中你想要用的表
     Vessel_name = models.CharField(max_length=30, verbose_name='Vessel_name')
-    DWT = models.IntegerField(max_length=10, verbose_name='DWT')
+    DWT = models.IntegerField(max_length=60, verbose_name='DWT')
     BLT = models.IntegerField(max_length=60, verbose_name='BLT')
     Open_area = models.CharField(max_length=30, verbose_name='Open_area')
     Open_date_S = models.DateField(default=date(1900, 1, 1), max_length=50, verbose_name='Open_date_S')
