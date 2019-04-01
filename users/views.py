@@ -227,6 +227,7 @@ def cargo_card_search(request):
     response = {}
     try:
         # get data from POST request
+<<<<<<< HEAD
         request_body = json.loads(request.body.decode())
         cargo_name = request_body['cargo_name']
         print(cargo_name)
@@ -251,6 +252,21 @@ def cargo_card_search(request):
 
         print(json.loads(serializers.serialize("json", q1)))
         response['list'] = json.loads(serializers.serialize("json", q1))
+=======
+        request_body = json.loads(request.body)
+        vessel_name = request_body['vessel_name']
+        sender_mail = request_body['sender_mail']
+        opendate_start = request_body['opendate_start']
+        opendate_end = request_body['opendate_end']
+        days = request_body['days']
+        built = request_body['built']
+        account = request_body['account']
+        dwt = request_body['dwt']
+        list = [vessel_name, sender_mail, opendate_start, opendate_end, days, built, account, dwt]
+        print(list)
+
+        response['list'] = "test_cargo"
+>>>>>>> d18cb0f9e000f656401513a8f0f930165fc6881e
         response['err_num'] = 0
 
     except Exception as e:
@@ -265,6 +281,7 @@ def tc_card_search(request):
     response = {}
     try:
         # get data from POST request
+<<<<<<< HEAD
         request_body = json.loads(request.body.decode())
         acc = request_body['acc']
         print(acc)
@@ -290,9 +307,28 @@ def tc_card_search(request):
 
         print(json.loads(serializers.serialize("json", q1)))
         response['list'] = json.loads(serializers.serialize("json", q1))
+=======
+        request_body = json.loads(request.body)
+        vessel_name = request_body['vessel_name']
+        sender_mail = request_body['sender_mail']
+        opendate_start = request_body['opendate_start']
+        opendate_end = request_body['opendate_end']
+        days = request_body['days']
+        built = request_body['built']
+        account = request_body['account']
+        dwt = request_body['dwt']
+        list = [vessel_name, sender_mail, opendate_start, opendate_end, days, built, account, dwt]
+        print(list)
+
+        response['list'] = "test_cargo"
+>>>>>>> d18cb0f9e000f656401513a8f0f930165fc6881e
         response['err_num'] = 0
 
     except Exception as e:
         response['msg'] = str(e)
         response['err_num'] = 2
+<<<<<<< HEAD
     return JsonResponse(response)
+=======
+    return JsonResponse(response)
+>>>>>>> d18cb0f9e000f656401513a8f0f930165fc6881e

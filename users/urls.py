@@ -15,4 +15,8 @@ urlpatterns = [
     url(r'^tonnage_search$', users.views.tonnage_card_search, ),
     url(r'^cargo_search$', users.views.cargo_card_search, ),
     url(r'^tc_search$', users.views.tc_card_search, ),
+<<<<<<< HEAD
 ]
+=======
+]
+>>>>>>> d18cb0f9e000f656401513a8f0f930165fc6881e
