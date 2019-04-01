@@ -12,7 +12,7 @@ from users.models import Tonnage_Card
 from users.models import TC_Card
 import datetime
 
-DWT_ARRAY = [0, 10000, 40000, 35000, 40000 , 50000, 65000]
+DWT_ARRAY = [0, 10000, 40000, 35000, 40000, 50000, 65000]
 
 
 # tonnage_card
@@ -160,6 +160,7 @@ def search_tc(request, content):
         response['error_num'] = 1
     return JsonResponse(response)
 
+
 # {
 # 	"vessel_name":"PACIFIC ACE",
 # 	"sender_mail":"0",
@@ -197,18 +198,18 @@ def tonnage_card_search(request):
         # '2018-03-08'
         q1 = Tonnage_Card.objects.filter(Vessel_name__icontains=vessel_name,
                                          DWT__gt=dwt,
-                                         Open_date_S__gte=datetime.date(int(opendate_start[0:4]), int(opendate_start[5:7]),
-                                           int(opendate_start[8:10])) ,
+                                         Open_date_S__gte=datetime.date(int(opendate_start[0:4]),
+                                                                        int(opendate_start[5:7]),
+                                                                        int(opendate_start[8:10])),
                                          Open_date_E__lte=datetime.date(int(opendate_end[0:4]), int(opendate_end[5:7]),
-                                              int(opendate_end[8:10])) ,
+                                                                        int(opendate_end[8:10])),
                                          # BLT__gte=datetime.datetime.today().year-int(built),
                                          # BLT__lte= datetime.datetime.today().year ,
 
-        )
+                                         )
 
         # if dwt!="":
         #     q2=q1.filter(DWT_gt=dwt,)
-
 
         list = [vessel_name, sender_mail, opendate_start, opendate_end, days, built, account, dwt]
         print(list)
@@ -220,6 +221,7 @@ def tonnage_card_search(request):
         response['err_num'] = 2
     return JsonResponse(response)
 
+
 # to do
 @csrf_exempt
 @require_http_methods(["POST"])
@@ -227,7 +229,6 @@ def cargo_card_search(request):
     response = {}
     try:
         # get data from POST request
-<<<<<<< HEAD
         request_body = json.loads(request.body.decode())
         cargo_name = request_body['cargo_name']
         print(cargo_name)
@@ -252,27 +253,13 @@ def cargo_card_search(request):
 
         print(json.loads(serializers.serialize("json", q1)))
         response['list'] = json.loads(serializers.serialize("json", q1))
-=======
-        request_body = json.loads(request.body)
-        vessel_name = request_body['vessel_name']
-        sender_mail = request_body['sender_mail']
-        opendate_start = request_body['opendate_start']
-        opendate_end = request_body['opendate_end']
-        days = request_body['days']
-        built = request_body['built']
-        account = request_body['account']
-        dwt = request_body['dwt']
-        list = [vessel_name, sender_mail, opendate_start, opendate_end, days, built, account, dwt]
-        print(list)
-
-        response['list'] = "test_cargo"
->>>>>>> d18cb0f9e000f656401513a8f0f930165fc6881e
         response['err_num'] = 0
 
     except Exception as e:
         response['msg'] = str(e)
         response['err_num'] = 2
     return JsonResponse(response)
+
 
 # to do
 @csrf_exempt
@@ -281,7 +268,6 @@ def tc_card_search(request):
     response = {}
     try:
         # get data from POST request
-<<<<<<< HEAD
         request_body = json.loads(request.body.decode())
         acc = request_body['acc']
         print(acc)
@@ -307,28 +293,9 @@ def tc_card_search(request):
 
         print(json.loads(serializers.serialize("json", q1)))
         response['list'] = json.loads(serializers.serialize("json", q1))
-=======
-        request_body = json.loads(request.body)
-        vessel_name = request_body['vessel_name']
-        sender_mail = request_body['sender_mail']
-        opendate_start = request_body['opendate_start']
-        opendate_end = request_body['opendate_end']
-        days = request_body['days']
-        built = request_body['built']
-        account = request_body['account']
-        dwt = request_body['dwt']
-        list = [vessel_name, sender_mail, opendate_start, opendate_end, days, built, account, dwt]
-        print(list)
-
-        response['list'] = "test_cargo"
->>>>>>> d18cb0f9e000f656401513a8f0f930165fc6881e
         response['err_num'] = 0
 
     except Exception as e:
         response['msg'] = str(e)
         response['err_num'] = 2
-<<<<<<< HEAD
     return JsonResponse(response)
-=======
-    return JsonResponse(response)
->>>>>>> d18cb0f9e000f656401513a8f0f930165fc6881e
