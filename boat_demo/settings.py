@@ -84,13 +84,21 @@ WSGI_APPLICATION = 'boat_demo.wsgi.application'
 # }
 
 DATABASES = {
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.mysql',
+    #     'HOST': 'localhost',  # 数据库主机
+    #     'PORT': 3306,  # 数据库端口
+    #     'USER': 'root',  # 数据库用户名
+    #     'PASSWORD':'jinjing9',  # 数据库用户密码
+    #     'NAME': 'boat' , # 数据库名字
+    # }
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'HOST': 'localhost',  # 数据库主机
         'PORT': 3306,  # 数据库端口
         'USER': 'root',  # 数据库用户名
-        'PASSWORD':'jinjing9',  # 数据库用户密码
-        'NAME': 'boat' , # 数据库名字
+        'PASSWORD':'123456',  # 数据库用户密码
+        'NAME': 'trade_mail' , # 数据库名字
     }
 }
 
@@ -145,6 +153,7 @@ CORS_ORIGIN_ALLOW_ALL = True
 CORS_ORIGIN_WHITELIST = (
     '127.0.0.1:8080',
     'localhost:8080',
+    '0.0.0.0:8080',
     # 'www.meiduo.site:8080',
     # 'api.meiduo.site:8000'
 )
