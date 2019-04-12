@@ -622,23 +622,49 @@
                   @row-click="display_mail2"
 
                 >
+
+                  <el-table-column
+                    prop="ID"
+                    label="ID"
+                    width="40"
+                  >
+                    <template slot-scope="scope">
+                          <template  v-if="scope.row.edit">
+                              <el-input class="edit-input" size="small" v-model="scope.row.ID"></el-input>
+                          </template>
+                          <span v-else>{{ scope.row.ID }}</span>
+                    </template>
+
+
+                  </el-table-column>
+
+
                   <el-table-column
                     prop="Cargo_name"
                     label="Cargo Name"
-                    width="130"
+                    width="120"
                     :formatter="deal_Cargo_name"
                   >
+                    <template slot-scope="scope">
+                      <template  v-if="scope.row.edit">
+                          <el-input class="edit-input" size="small" v-model="scope.row.Cargo_name"></el-input>
+                      </template>
+                      <span v-else>{{ scope.row.Cargo_name }}</span>
+                    </template>
+
+
                   </el-table-column>
 
                   <!--实现Quantity_s和Quantity_e的合并-->
                   <el-table-column
                     label="Quantity"
-                    width="130"
+                    width="120"
                     :formatter="deal_Quantity2"
                   >
                      <!--<template slot-scope="scope">-->
                         <!--{{scope.row.Quantity_s + '-'+scope.row.Quantity_e}}-->
                       <!--</template>-->
+
                   </el-table-column>
                   <!--<el-table-column-->
                     <!--prop="Quantity_e"-->e
@@ -650,17 +676,30 @@
                   <el-table-column
                     prop="Loading_Port"
                     label="Loading Port"
-                    width="150"
+                    width="130"
                     :formatter="deal_Loading_Port"
                   >
+                    <template slot-scope="scope">
+                      <template  v-if="scope.row.edit">
+                          <el-input class="edit-input" size="small" v-model="scope.row.Loading_Port"></el-input>
+                      </template>
+                      <span v-else>{{ scope.row.Loading_Port }}</span>
+                    </template>
                   </el-table-column>
 
                   <el-table-column
                     prop="Discharging_Port"
                     label="Discharging Port"
-                    width="150"
+                    width="130"
                     :formatter="deal_Discharging_Port"
                   >
+                    <template slot-scope="scope">
+                      <template  v-if="scope.row.edit">
+                          <el-input class="edit-input" size="small" v-model="scope.row.Discharging_Port"></el-input>
+                      </template>
+                      <span v-else>{{ scope.row.Discharging_Port }}</span>
+                    </template>
+
                   </el-table-column>
 
                   <!--实现LayCan_S和LayCan_E的合并-->
@@ -682,8 +721,15 @@
                   <!--&gt;-->
                   <!--</el-table-column>-->
 
-                  <el-table-column prop="Sent" label="Sent" width="200" :formatter="deal_Sent2">
+                  <el-table-column prop="Sent" label="Sent" width="130" :formatter="deal_Sent2">
                   </el-table-column>
+
+                  <el-table-column label="Operation">
+                      <template slot-scope="scope">
+                          <el-button v-if="scope.row.edit" type="success" @click="confirmEdit2(scope.$index, scope.row)" size="small" icon="el-icon-circle-check-outline">Save</el-button>
+                          <el-button v-else type="primary" @click='scope.row.edit=!scope.row.edit' size="small" icon="el-icon-edit">Edit</el-button>
+                      </template>
+                   </el-table-column>
 
                 </el-table>
 
@@ -915,13 +961,35 @@
                   style="width: 100%"
                   @row-click="display_mail3"
                 >
-                  <el-table-column prop="Account" label="Account" width="130":formatter="deal_Account">
+                  <el-table-column
+                    prop="ID"
+                    label="ID"
+                    width="40"
+                  >
+                    <template slot-scope="scope">
+                          <template  v-if="scope.row.edit">
+                              <el-input class="edit-input" size="small" v-model="scope.row.ID"></el-input>
+                          </template>
+                          <span v-else>{{ scope.row.ID }}</span>
+                    </template>
+
+
+                  </el-table-column>
+
+
+                  <el-table-column prop="Account" label="Account" width="110":formatter="deal_Account">
+                    <template slot-scope="scope">
+                          <template  v-if="scope.row.edit">
+                              <el-input class="edit-input" size="small" v-model="scope.row.Account"></el-input>
+                          </template>
+                          <span v-else>{{ scope.row.Account }}</span>
+                    </template>
                   </el-table-column>
 
                   <!--实现Quantity_s和Quantity_e的合并-->
                   <el-table-column
                     label="Quantity"
-                    width="130"
+                    width="110"
                     :formatter="deal_Quantity3"
                   >
                      <!--<template slot-scope="scope" prop="Quantity" >-->
@@ -937,23 +1005,36 @@
                   <el-table-column
                     prop="Delivery_area"
                     label="Delivery Area"
-                    width="140"
+                    width="120"
                     :formatter="deal_Delivery_area"
                   >
+                     <template slot-scope="scope">
+                          <template  v-if="scope.row.edit">
+                              <el-input class="edit-input" size="small" v-model="scope.row.Delivery_area"></el-input>
+                          </template>
+                          <span v-else>{{ scope.row.Delivery_area }}</span>
+                    </template>
                   </el-table-column>
                   <el-table-column
                     prop="Redelivery_area"
                     label="Redelivery Area"
-                    width="140"
+                    width="130"
                     :formatter="deal_Redelivery_area"
                   >
+                     <template slot-scope="scope">
+                          <template  v-if="scope.row.edit">
+                              <el-input class="edit-input" size="small" v-model="scope.row.Redelivery_area"></el-input>
+                          </template>
+                          <span v-else>{{ scope.row.Redelivery_area }}</span>
+                    </template>
+
                   </el-table-column>
 
                   <!--实现LayCan_S和LayCan_E的合并-->
                   <el-table-column
 
                     label="LayCan"
-                    width="200"
+                    width="180"
                     :formatter="deal_LayCan3"
                   >
                     <!--<template slot-scope="scope">-->
@@ -968,7 +1049,7 @@
                   <!--</el-table-column>-->
 
                   <!--实现DUR_S和DUR_E的合并-->
-                  <el-table-column  label="DUR" width="90" :formatter="deal_DUR">
+                  <el-table-column  label="DUR" width="80" :formatter="deal_DUR">
                     <!--<template slot-scope="scope">-->
                         <!--{{scope.row.DUR_S + '—'+scope.row.DUR_E}}-->
                       <!--</template>-->
@@ -978,8 +1059,17 @@
                   <!--<el-table-column prop="Sent" label="Sent" width="130">-->
                   <!--</el-table-column>-->
                   <!--处理sent 中为0的数据不显示-->
-                  <el-table-column prop="Sent" label="Sent" width="130" :formatter="deal_Sent3">
+                  <el-table-column prop="Sent" label="Sent" width="120" :formatter="deal_Sent3">
                   </el-table-column>
+
+                  <el-table-column label="Operation">
+                      <template slot-scope="scope">
+                          <el-button v-if="scope.row.edit" type="success" @click="confirmEdit3(scope.$index, scope.row)" size="small" icon="el-icon-circle-check-outline">Save</el-button>
+                          <el-button v-else type="primary" @click='scope.row.edit=!scope.row.edit' size="small" icon="el-icon-edit">Edit</el-button>
+                      </template>
+                   </el-table-column>
+
+
 
 
 
@@ -1486,7 +1576,10 @@ export default {
       .then(function (response) {
         var a = eval(response.data);
         for (var i = 0; i < a.list.length; i++) {
-          self.tableData2.push(a.list[i].fields);
+          // self.tableData2.push(a.list[i].fields);
+          var t=a.list[i].fields;
+          t["ID"]=a.list[i].pk;
+          self.tableData2.push(t);
           //JSON.stringify(a.list[i].fields)
         }
         console.log("tableData2")
@@ -1505,8 +1598,8 @@ export default {
         var a = eval(response.data);
         for (var i = 0; i < a.list.length; i++) {
            var t=a.list[i].fields;
-                  t["ID"]=a.list[i].pk;
-                  self.tableData1.push(t);
+          t["ID"]=a.list[i].pk;
+          self.tableData1.push(t);
           //JSON.stringify(a.list[i].fields)
         }
         console.log("tableData1")
@@ -1524,7 +1617,10 @@ export default {
       .then(function (response) {
         var a = eval(response.data);
         for (var i = 0; i < a.list.length; i++) {
-          self.tableData3.push(a.list[i].fields);
+          // self.tableData3.push(a.list[i].fields);
+          var t=a.list[i].fields;
+          t["ID"]=a.list[i].pk;
+          self.tableData3.push(t);
           //JSON.stringify(a.list[i].fields)
         }
         console.log("tableData3")
@@ -2090,7 +2186,7 @@ export default {
                 // self.tableData1.splice(0, tableData1.length);
                 var a = eval(response.data);
                 for (var i = 0; i < a.list.length; i++) {
-                   var t=a.list[i].fields;
+                  var t=a.list[i].fields;
                   t["ID"]=a.list[i].pk;
                   self.tableData1.push(t);
                   //JSON.stringify(a.list[i].fields)
@@ -2160,7 +2256,10 @@ export default {
                 // self.tableData1.splice(0, tableData2.length);
                 var a = eval(response.data);
                 for (var i = 0; i < a.list.length; i++) {
-                  self.tableData2.push(a.list[i].fields);
+                  // self.tableData2.push(a.list[i].fields);
+                  var t=a.list[i].fields;
+                  t["ID"]=a.list[i].pk;
+                  self.tableData2.push(t);
                   //JSON.stringify(a.list[i].fields)
                 }
                 //console.log(data2);
@@ -2192,7 +2291,10 @@ export default {
                 // self.tableData1.splice(0, tableData1.length);
                 var a = eval(response.data);
                 for (var i = 0; i < a.list.length; i++) {
-                  self.tableData2.push(a.list[i].fields);
+                  // self.tableData2.push(a.list[i].fields);
+                  var t=a.list[i].fields;
+                  t["ID"]=a.list[i].pk;
+                  self.tableData2.push(t);
                   //JSON.stringify(a.list[i].fields)
                 }
                 //console.log(data2);
@@ -2224,7 +2326,10 @@ export default {
                 // self.tableData3.splice(0, tableData3.length);
                 var a = eval(response.data);
                 for (var i = 0; i < a.list.length; i++) {
-                  self.tableData3.push(a.list[i].fields);
+                  // self.tableData3.push(a.list[i].fields);
+                  var t=a.list[i].fields;
+                  t["ID"]=a.list[i].pk;
+                  self.tableData3.push(t);
                   //JSON.stringify(a.list[i].fields)
                 }
                 //console.log(data3);
@@ -2256,7 +2361,10 @@ export default {
                 // self.tableData3.splice(0, tableData3.length);
                 var a = eval(response.data);
                 for (var i = 0; i < a.list.length; i++) {
-                  self.tableData3.push(a.list[i].fields);
+                  // self.tableData3.push(a.list[i].fields);
+                  var t=a.list[i].fields;
+                  t["ID"]=a.list[i].pk;
+                  self.tableData3.push(t);
                   //JSON.stringify(a.list[i].fields)
                 }
                 //console.log(data3);
@@ -2361,7 +2469,10 @@ export default {
           // self.tableData1.splice(0, tableData2.length);
           var a = eval(response.data);
           for (var i = 0; i < a.list.length; i++) {
-            self.tableData2.push(a.list[i].fields);
+            // self.tableData2.push(a.list[i].fields);
+                  var t=a.list[i].fields;
+                  t["ID"]=a.list[i].pk;
+                  self.tableData2.push(t);
             //JSON.stringify(a.list[i].fields)
           }
           //console.log(data2);
@@ -2459,7 +2570,10 @@ export default {
           // self.tableData1.splice(0, tableData1.length);
           var a = eval(response.data);
           for (var i = 0; i < a.list.length; i++) {
-            self.tableData3.push(a.list[i].fields);
+            // self.tableData3.push(a.list[i].fields);
+            var t=a.list[i].fields;
+            t["ID"]=a.list[i].pk;
+            self.tableData3.push(t);
             //JSON.stringify(a.list[i].fields)
           }
           //console.log(data3);
@@ -2617,6 +2731,7 @@ export default {
       // console.log(row.valueOf().DWT)
       // console.log(row.valueOf().Open_area)
       // console.log(row.valueOf().Vessel_name)
+      var data1 = new Array();
       var conditions = {
         "Vessel_name":row.valueOf().Vessel_name,
         "DWT":row.valueOf().DWT,
@@ -2657,6 +2772,141 @@ export default {
           console.log(error);
         });
       return data1;
+
+
+
+
+
+    },
+
+    confirmEdit2(index,row){
+    row.edit = false;
+    this.$message({
+        message: 'The message has been modified successfully',
+        type: 'success'
+        });
+    var data2 = new Array();
+
+      // console.log("编辑后修改的数据");
+      //
+      // console.log(row.valueOf())
+      // console.log(row.valueOf().ID)
+      // console.log(row.valueOf().BLT)
+      // console.log(row.valueOf().DWT)
+      // console.log(row.valueOf().Open_area)
+      // console.log(row.valueOf().Vessel_name)
+      var conditions = {
+        	"Cargo_name":row.valueOf().Cargo_name,
+          "Loading_Port":row.valueOf().Loading_Port,
+          "Discharging_Port":row.valueOf().Discharging_Port,
+          "Sent":row.valueOf().Sent,
+          "ID":row.valueOf().ID,
+          "LayCan_S":row.valueOf().LayCan_S,
+          "LayCan_E":row.valueOf().LayCan_E,
+          "Quantity_s":row.valueOf().Quantity_s,
+          "Quantity_e":row.valueOf().Quantity_e,
+           "mail_text":row.valueOf().mail_text
+
+
+      };
+
+      this.axios({
+        method: "put",
+        url: "http://127.0.0.1:8888/users/cargo_update",
+        data:conditions
+      })
+        .then(function (response) {
+
+          // console.log("axios method");
+          // console.log(response);
+          // console.log(eval(response.data));
+          // // self.tableData1.splice(0, tableData1.length);
+          // var a = eval(response.data);
+          // for (var i = 0; i < a.list.length; i++) {
+          //    var t=a.list[i].fields;
+          //         t["ID"]=a.list[i].pk;
+          //         self.tableData1.push(t);
+          //   //JSON.stringify(a.list[i].fields)
+          // }
+          //  alert("The message has been update successfully")
+          //console.log(data2);
+          //this.tableData1.splice(xxx,xxx,xxx);
+        }
+
+        )
+        .catch(function (error) {
+          console.log(error);
+        });
+      return data2;
+
+
+
+
+
+    },
+
+    confirmEdit3(index,row){
+    row.edit = false;
+    this.$message({
+        message: 'The message has been modified successfully',
+        type: 'success'
+        });
+    var data3 = new Array();
+
+      // console.log("编辑后修改的数据");
+      //
+      // console.log(row.valueOf())
+      // console.log(row.valueOf().ID)
+      // console.log(row.valueOf().BLT)
+      // console.log(row.valueOf().DWT)
+      // console.log(row.valueOf().Open_area)
+      // console.log(row.valueOf().Vessel_name)
+      var conditions = {
+
+          "Account":row.valueOf().Account,
+          "Delivery_area":row.valueOf().Delivery_area,
+          "Redelivery_area":row.valueOf().Redelivery_area,
+          "Sent":row.valueOf().Sent,
+          "ID":row.valueOf().ID,
+          "LayCan_E":row.valueOf().LayCan_E,
+          "LayCan_S":row.valueOf().LayCan_S,
+          "mail_text":row.valueOf().mail_text,
+          "Quantity_s":row.valueOf().Quantity_s,
+          "Quantity_e":row.valueOf().Quantity_e,
+          "DUR_S":row.valueOf().DUR_S,
+          "DUR_E":row.valueOf().DUR_E
+
+
+      };
+
+      this.axios({
+        method: "put",
+        url: "http://127.0.0.1:8888/users/tc_update",
+        data:conditions
+      })
+        .then(function (response) {
+
+          // console.log("axios method");
+          // console.log(response);
+          // console.log(eval(response.data));
+          // // self.tableData1.splice(0, tableData1.length);
+          // var a = eval(response.data);
+          // for (var i = 0; i < a.list.length; i++) {
+          //    var t=a.list[i].fields;
+          //         t["ID"]=a.list[i].pk;
+          //         self.tableData1.push(t);
+          //   //JSON.stringify(a.list[i].fields)
+          // }
+          //  alert("The message has been update successfully")
+          //console.log(data2);
+          //this.tableData1.splice(xxx,xxx,xxx);
+        }
+
+        )
+        .catch(function (error) {
+          console.log(error);
+        });
+      return data3;
 
 
 
