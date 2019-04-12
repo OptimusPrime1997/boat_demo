@@ -13,7 +13,7 @@ from users.models import TC_Card
 import datetime
 from django.db.models import Q
 
-DWT_ARRAY = [0, 10000, 40000, 35000, 40000 , 50000, 65000]
+DWT_ARRAY = [0, 10000, 40000, 35000, 40000, 50000, 65000]
 
 
 # tonnage_card
@@ -161,6 +161,7 @@ def search_tc(request, content):
         response['error_num'] = 1
     return JsonResponse(response)
 
+
 # {
 # 	"vessel_name":"PACIFIC ACE",
 # 	"sender_mail":"0",
@@ -229,7 +230,7 @@ def tonnage_card_search(request):
                                          # BLT__gte=datetime.datetime.today().year-int(built),
                                          # BLT__lte= datetime.datetime.today().year ,
 
-        )
+                                         )
 
         # if dwt!="":
         #     q2=q1.filter(DWT_gt=dwt,)
@@ -245,7 +246,9 @@ def tonnage_card_search(request):
         response['err_num'] = 2
     return JsonResponse(response)
 
+
 #  cargo 搜索方法
+
 @csrf_exempt
 @require_http_methods(["POST"])
 def cargo_card_search(request):
@@ -308,7 +311,11 @@ def cargo_card_search(request):
         response['err_num'] = 2
     return JsonResponse(response)
 
+
 # tc 搜索方法
+
+
+
 @csrf_exempt
 @require_http_methods(["POST"])
 def tc_card_search(request):
@@ -368,6 +375,7 @@ def tc_card_search(request):
 
         print(json.loads(serializers.serialize("json", q1)))
         response['list'] = json.loads(serializers.serialize("json", q1))
+
         response['err_num'] = 0
 
     except Exception as e:
@@ -585,11 +593,13 @@ def tonnage_update(request):
         list = [acc1, acc2, acc3, acc4, acc5, acc6, acc7, acc8, acc9]
 
         response['result'] = "success"
+
         response['err_num'] = 0
 
     except Exception as e:
         response['msg'] = str(e)
         response['err_num'] = 2
+
     return JsonResponse(response)
 
 # # cargo 编辑更新方法
@@ -688,6 +698,7 @@ def tc_update(request):
         response['msg'] = str(e)
         response['err_num'] = 2
     return JsonResponse(response)
+
 
 
 
