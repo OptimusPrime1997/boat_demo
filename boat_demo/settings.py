@@ -158,3 +158,5 @@ CORS_ORIGIN_WHITELIST = (
     # 'api.meiduo.site:8000'
 )
 CORS_ALLOW_CREDENTIALS = True  # 允许携带cookie
+
+ALLOWED_HOSTS = ['*']
