@@ -1576,7 +1576,7 @@ export default {
     // var tableData2 = new Array();
     this.axios({
       method: "get",
-      url: "http://127.0.0.1:8888/users/cargo"
+      url: "http://202.120.32.222:8888/users/cargo"
     })
       .then(function (response) {
         var a = eval(response.data);
@@ -1597,7 +1597,7 @@ export default {
     // var tableData1 = new Array();
     this.axios({
       method: "get",
-      url: "http://127.0.0.1:8888/users/tonnage"
+      url: "http://202.120.32.222:8888/users/tonnage"
     })
       .then(function (response) {
         var a = eval(response.data);
@@ -1617,7 +1617,7 @@ export default {
     // var tableData3 = new Array();
     this.axios({
       method: "get",
-      url: "http://127.0.0.1:8888/users/tc"
+      url: "http://202.120.32.222:8888/users/tc"
     })
       .then(function (response) {
         var a = eval(response.data);
@@ -2073,7 +2073,7 @@ export default {
     //
     //         this.axios({
     //           method: "get",
-    //           url: "http://127.0.0.1:8888/users/search_tonnage/" + searchText1,
+    //           url: "http://202.120.32.222:8888/users/search_tonnage/" + searchText1,
     //         })
     //           .then(function (response) {
     //
@@ -2164,7 +2164,7 @@ export default {
 
       this.axios({
         method: "post",
-        url: "http://127.0.0.1:8888/users/tonnage_search",
+        url: "http://202.120.32.222:8888/users/tonnage_search",
         data:conditions
       })
         .then(function (response) {
@@ -2200,7 +2200,7 @@ export default {
 
             this.axios({
               method: "get",
-              url: "http://127.0.0.1:8888/users/ton_incomplete" ,
+              url: "http://202.120.32.222:8888/users/ton_incomplete" ,
             })
               .then(function (response) {
 
@@ -2234,7 +2234,7 @@ export default {
 
             this.axios({
               method: "get",
-              url: "http://127.0.0.1:8888/users/ton_complete" ,
+              url: "http://202.120.32.222:8888/users/ton_complete" ,
             })
               .then(function (response) {
 
@@ -2270,7 +2270,7 @@ export default {
 
             this.axios({
               method: "get",
-              url: "http://127.0.0.1:8888/users/car_incomplete" ,
+              url: "http://202.120.32.222:8888/users/car_incomplete" ,
             })
               .then(function (response) {
 
@@ -2305,7 +2305,7 @@ export default {
 
             this.axios({
               method: "get",
-              url: "http://127.0.0.1:8888/users/car_complete" ,
+              url: "http://202.120.32.222:8888/users/car_complete" ,
             })
               .then(function (response) {
 
@@ -2340,7 +2340,7 @@ export default {
 
             this.axios({
               method: "get",
-              url: "http://127.0.0.1:8888/users/tc_incomplete" ,
+              url: "http://202.120.32.222:8888/users/tc_incomplete" ,
             })
               .then(function (response) {
 
@@ -2375,7 +2375,7 @@ export default {
 
             this.axios({
               method: "get",
-              url: "http://127.0.0.1:8888/users/tc_complete" ,
+              url: "http://202.120.32.222:8888/users/tc_complete" ,
             })
               .then(function (response) {
 
@@ -2414,7 +2414,7 @@ export default {
      //      //console.log(searchText.text);
      //      this.axios({
      //        method: "get",
-     //        url: "http://127.0.0.1:8888/users/search_cargo/" + searchText2,
+     //        url: "http://202.120.32.222:8888/users/search_cargo/" + searchText2,
      //      })
      //        .then(function (response) {
      //          console.log("axios method");
@@ -2483,7 +2483,7 @@ export default {
 
       this.axios({
         method: "post",
-        url: "http://127.0.0.1:8888/users/cargo_search",
+        url: "http://202.120.32.222:8888/users/cargo_search",
         data:conditions
       })
         .then(function (response) {
@@ -2516,7 +2516,7 @@ export default {
         //   //console.log(searchText.text);
         //   this.axios({
         //     method: "get",
-        //     url: "http://127.0.0.1:8888/users/search_tc/" + searchText3,
+        //     url: "http://202.120.32.222:8888/users/search_tc/" + searchText3,
         //   })
         //     .then(function (response) {
         //       console.log("axios method");
@@ -2584,7 +2584,7 @@ export default {
 
       this.axios({
         method: "post",
-        url: "http://127.0.0.1:8888/users/tc_search",
+        url: "http://202.120.32.222:8888/users/tc_search",
         data:conditions
       })
         .then(function (response) {
@@ -2770,7 +2770,7 @@ export default {
 
       this.axios({
         method: "put",
-        url: "http://127.0.0.1:8888/users/tonnage_update",
+        url: "http://202.120.32.222:8888/users/tonnage_update",
         data:conditions
       })
         .then(function (response) {
@@ -2836,7 +2836,7 @@ export default {
 
       this.axios({
         method: "put",
-        url: "http://127.0.0.1:8888/users/cargo_update",
+        url: "http://202.120.32.222:8888/users/cargo_update",
         data:conditions
       })
         .then(function (response) {
@@ -2905,7 +2905,7 @@ export default {
 
       this.axios({
         method: "put",
-        url: "http://127.0.0.1:8888/users/tc_update",
+        url: "http://202.120.32.222:8888/users/tc_update",
         data:conditions
       })
         .then(function (response) {
@@ -2976,7 +2976,7 @@ export default {
     //   };
     //   this.axios({
     //     method: "put",
-    //     url: "http://127.0.0.1:8888/users/ton_flag",
+    //     url: "http://202.120.32.222:8888/users/ton_flag",
     //     data:data
     //   })
     //     .then(function (response) {
