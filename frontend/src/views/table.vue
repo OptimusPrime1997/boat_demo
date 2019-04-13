@@ -273,7 +273,8 @@
 
                 >
 
-                  <!--<el-table-column type="selection" width="55">-->
+                  <!--<el-table-column type="selection" width="55"  :formatter="tonFlagChange">-->
+
                   <!--</el-table-column>-->
 
                   <el-table-column
@@ -1107,9 +1108,9 @@
               <el-tab-pane label="Mail">
                 <!-- talbe行 点击 获取邮件方法的实现-->
                 <!--<div style="overflow-x:hidden ;height:650px">-->
-                <div  style="overflow:auto;height:650px">
+                <div  style="overflow:auto;height:650px;color: #060606;font-weight: bold;">
                   <!--<pre ><v-clamp  autoresize :max-lines="10" id="light1" >{{ text }}</v-clamp></pre>-->
-                  <pre style="width: 100px; "  xml:lang id="light1">  {{ text }}</pre>
+                  <pre style="width: 100px;"  xml:lang id="light1">  {{ text }}</pre>
 
                 </div>
 
@@ -1575,7 +1576,7 @@ export default {
     // var tableData2 = new Array();
     this.axios({
       method: "get",
-      url: "http://202.120.32.222:8888/users/cargo"
+      url: "http://127.0.0.1:8888/users/cargo"
     })
       .then(function (response) {
         var a = eval(response.data);
@@ -1596,7 +1597,7 @@ export default {
     // var tableData1 = new Array();
     this.axios({
       method: "get",
-      url: "http://202.120.32.222:8888/users/tonnage"
+      url: "http://127.0.0.1:8888/users/tonnage"
     })
       .then(function (response) {
         var a = eval(response.data);
@@ -1616,7 +1617,7 @@ export default {
     // var tableData3 = new Array();
     this.axios({
       method: "get",
-      url: "http://202.120.32.222:8888/users/tc"
+      url: "http://127.0.0.1:8888/users/tc"
     })
       .then(function (response) {
         var a = eval(response.data);
@@ -1943,8 +1944,8 @@ export default {
 
       var str = this.text;
 
-      var newstr = str.replace(reg, "<span style=\"color:#5df3ff\">$1</span>").replace(reg1, "<span style=\"color:#5df3ff\">$1</span>")
-        .replace(reg2, "<span style=\"color:#5df3ff\">$1</span>").replace(reg3, "<span style=\"color:#5df3ff\">$1</span>");
+      var newstr = str.replace(reg, "<span style=\"color:#2594ff\">$1</span>").replace(reg1, "<span style=\"color:#2594ff\">$1</span>")
+        .replace(reg2, "<span style=\"color:#2594ff\">$1</span>").replace(reg3, "<span style=\"color:#2594ff\">$1</span>");
 
       // document.write(newstr + "<br />")
 
@@ -1979,10 +1980,10 @@ export default {
 
       var str = this.text;
 
-      var newstr = str.replace(reg, "<span style=\"color:#5df3ff\">$1</span>")
-        .replace(reg1, "<span style=\"color:#5df3ff\">$1</span>")
-       .replace(reg2, "<span style=\"color:#5df3ff\">$1</span>")
-        .replace(reg3, "<span style=\"color:#5df3ff\">$1</span>");
+      var newstr = str.replace(reg, "<span style=\"color:#2594ff\">$1</span>")
+        .replace(reg1, "<span style=\"color:#2594ff\">$1</span>")
+       .replace(reg2, "<span style=\"color:#2594ff\">$1</span>")
+        .replace(reg3, "<span style=\"color:#2594ff\">$1</span>");
 
       // document.write(newstr + "<br />")
 
@@ -2018,10 +2019,10 @@ export default {
 
       var str = this.text;
 
-      var newstr = str.replace(reg, "<span style=\"color:#5df3ff\">$1</span>")
-       .replace(reg1, "<span style=\"color:#5df3ff\">$1</span>")
-        .replace(reg2, "<span style=\"color:#5df3ff\">$1</span>")
-      .replace(reg3, "<span style=\"color:#5df3ff\">$1</span>").replace(reg4, "<span style=\"color:#5df3ff\">$1</span>");
+      var newstr = str.replace(reg, "<span style=\"color:#2594ff\">$1</span>")
+       .replace(reg1, "<span style=\"color:#2594ff\">$1</span>")
+        .replace(reg2, "<span style=\"color:#2594ff\">$1</span>")
+      .replace(reg3, "<span style=\"color:#2594ff\">$1</span>").replace(reg4, "<span style=\"color:#2594ff\">$1</span>");
 
       // document.write(newstr + "<br />")
 
@@ -2072,7 +2073,7 @@ export default {
     //
     //         this.axios({
     //           method: "get",
-    //           url: "http://202.120.32.222:8888/users/search_tonnage/" + searchText1,
+    //           url: "http://127.0.0.1:8888/users/search_tonnage/" + searchText1,
     //         })
     //           .then(function (response) {
     //
@@ -2163,7 +2164,7 @@ export default {
 
       this.axios({
         method: "post",
-        url: "http://202.120.32.222:8888/users/tonnage_search",
+        url: "http://127.0.0.1:8888/users/tonnage_search",
         data:conditions
       })
         .then(function (response) {
@@ -2199,7 +2200,7 @@ export default {
 
             this.axios({
               method: "get",
-              url: "http://202.120.32.222:8888/users/ton_incomplete" ,
+              url: "http://127.0.0.1:8888/users/ton_incomplete" ,
             })
               .then(function (response) {
 
@@ -2233,7 +2234,7 @@ export default {
 
             this.axios({
               method: "get",
-              url: "http://202.120.32.222:8888/users/ton_complete" ,
+              url: "http://127.0.0.1:8888/users/ton_complete" ,
             })
               .then(function (response) {
 
@@ -2269,7 +2270,7 @@ export default {
 
             this.axios({
               method: "get",
-              url: "http://202.120.32.222:8888/users/car_incomplete" ,
+              url: "http://127.0.0.1:8888/users/car_incomplete" ,
             })
               .then(function (response) {
 
@@ -2304,7 +2305,7 @@ export default {
 
             this.axios({
               method: "get",
-              url: "http://202.120.32.222:8888/users/car_complete" ,
+              url: "http://127.0.0.1:8888/users/car_complete" ,
             })
               .then(function (response) {
 
@@ -2339,7 +2340,7 @@ export default {
 
             this.axios({
               method: "get",
-              url: "http://202.120.32.222:8888/users/tc_incomplete" ,
+              url: "http://127.0.0.1:8888/users/tc_incomplete" ,
             })
               .then(function (response) {
 
@@ -2374,7 +2375,7 @@ export default {
 
             this.axios({
               method: "get",
-              url: "http://202.120.32.222:8888/users/tc_complete" ,
+              url: "http://127.0.0.1:8888/users/tc_complete" ,
             })
               .then(function (response) {
 
@@ -2413,7 +2414,7 @@ export default {
      //      //console.log(searchText.text);
      //      this.axios({
      //        method: "get",
-     //        url: "http://202.120.32.222:8888/users/search_cargo/" + searchText2,
+     //        url: "http://127.0.0.1:8888/users/search_cargo/" + searchText2,
      //      })
      //        .then(function (response) {
      //          console.log("axios method");
@@ -2482,7 +2483,7 @@ export default {
 
       this.axios({
         method: "post",
-        url: "http://202.120.32.222:8888/users/cargo_search",
+        url: "http://127.0.0.1:8888/users/cargo_search",
         data:conditions
       })
         .then(function (response) {
@@ -2515,7 +2516,7 @@ export default {
         //   //console.log(searchText.text);
         //   this.axios({
         //     method: "get",
-        //     url: "http://202.120.32.222:8888/users/search_tc/" + searchText3,
+        //     url: "http://127.0.0.1:8888/users/search_tc/" + searchText3,
         //   })
         //     .then(function (response) {
         //       console.log("axios method");
@@ -2583,7 +2584,7 @@ export default {
 
       this.axios({
         method: "post",
-        url: "http://202.120.32.222:8888/users/tc_search",
+        url: "http://127.0.0.1:8888/users/tc_search",
         data:conditions
       })
         .then(function (response) {
@@ -2769,7 +2770,7 @@ export default {
 
       this.axios({
         method: "put",
-        url: "http://202.120.32.222:8888/users/tonnage_update",
+        url: "http://127.0.0.1:8888/users/tonnage_update",
         data:conditions
       })
         .then(function (response) {
@@ -2835,7 +2836,7 @@ export default {
 
       this.axios({
         method: "put",
-        url: "http://202.120.32.222:8888/users/cargo_update",
+        url: "http://127.0.0.1:8888/users/cargo_update",
         data:conditions
       })
         .then(function (response) {
@@ -2904,7 +2905,7 @@ export default {
 
       this.axios({
         method: "put",
-        url: "http://202.120.32.222:8888/users/tc_update",
+        url: "http://127.0.0.1:8888/users/tc_update",
         data:conditions
       })
         .then(function (response) {
@@ -2964,7 +2965,31 @@ export default {
      },
      handleSelectionChange(val) {
        this.multipleSelection = val;
-     }
+     },
+
+
+    // tonFlagChange(index,row){
+    //   console.log("execute tonFlagChange");
+    //   var data={
+    //     "ID":row.valueOf().ID,
+    //     "value":1
+    //   };
+    //   this.axios({
+    //     method: "put",
+    //     url: "http://127.0.0.1:8888/users/ton_flag",
+    //     data:data
+    //   })
+    //     .then(function (response) {
+    //       res=eval(response);
+    //       console.log(res);
+    //       alert(res);
+    //     }
+    //     )
+    //     .catch(function (error) {
+    //       console.log(error);
+    //     });
+    //
+    // }
 
 
 
@@ -3005,7 +3030,7 @@ export default {
 }
 .el-main {
   background-color: rgba(214, 57, 67, 0.01);
-  color: #bdb9ab;
+  color: #c7c3b2;
   text-align: center;
   line-height: 20px;
 }
