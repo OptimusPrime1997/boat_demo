@@ -246,12 +246,12 @@
 
 
 
-                <!-- 批量删除按钮 -->
-                <div align="right" style="margin-top: 0px;text-align:right;" >
+                <!--&lt;!&ndash; 批量删除按钮 &ndash;&gt;-->
+                <!--<div align="right" style="margin-top: 0px;text-align:right;" >-->
 
-                    <el-button @click="batchDelete">Batch delete</el-button>
-                    <el-button @click="toggleSelection()">Deselect</el-button>
-                </div>
+                    <!--<el-button @click="batchDelete">Batch delete</el-button>-->
+                    <!--<el-button @click="toggleSelection()">Deselect</el-button>-->
+                <!--</div>-->
 
 
 
@@ -273,8 +273,8 @@
 
                 >
 
-                  <el-table-column type="selection" width="55">
-                  </el-table-column>
+                  <!--<el-table-column type="selection" width="55">-->
+                  <!--</el-table-column>-->
 
                   <el-table-column
                     prop="ID"
@@ -690,7 +690,7 @@
                   <el-table-column
                     prop="Discharging_Port"
                     label="Discharging Port"
-                    width="130"
+                    width="135"
                     :formatter="deal_Discharging_Port"
                   >
                     <template slot-scope="scope">
@@ -748,8 +748,8 @@
                 <div class="yema">
                   <el-pagination
                     background
-                    @size-change="handleSizeChange"
-                    @current-change="handleCurrentChange"
+                    @size-change="handleSizeChange2"
+                    @current-change="handleCurrentChange2"
                     :current-page="currentPage"
                     layout="prev, pager, next"
                     :total="tableData2.length"
@@ -1090,8 +1090,8 @@
                 <div class="yema">
                   <el-pagination
                     background
-                    @size-change="handleSizeChange"
-                    @current-change="handleCurrentChange"
+                    @size-change="handleSizeChange3"
+                    @current-change="handleCurrentChange3"
                     :current-page="currentPage"
                     layout="prev, pager, next"
                     :total="tableData3.length"
@@ -1142,6 +1142,8 @@ export default {
 
     return {
 
+
+
       //定义时间选择器的初始存储
       datepickerList:[],
       cargo_dateList:[],
@@ -1154,7 +1156,7 @@ export default {
 
 
       // 添加删除
-      multipleSelection: [],
+      // multipleSelection: [],
 
       tableData2: [],
       tableData3: [],
@@ -1568,6 +1570,8 @@ export default {
   },
   mounted() {
     var self = this;
+    // var h = "202.120.32.222";
+
     // var tableData2 = new Array();
     this.axios({
       method: "get",
@@ -1962,22 +1966,23 @@ export default {
       // console.log(row.Vessel_name.valueOf());
 
       // 高亮显示code
-      var content = row.Cargo_name.valueOf();
-      // var content1 = row.BLT.valueOf();
-      // // var content2 = row.Open_area.valueOf().slice(0,8);
-      // var content3 = row.DWT.valueOf().toString().slice(0,2)+",";
+      var content = row.Cargo_name.valueOf().toUpperCase() ;
+      var content1 = row.Loading_Port.valueOf().slice(0,4);
+      var content2 = row.Discharging_Port.valueOf().slice(0,3);
+      var content3 = row.Quantity_s.valueOf().toString().slice(0,2);
 
 
       var reg = new RegExp("(" + content + ")", "g");
-      // var reg1 = new RegExp("(" + content1 + ")", "g");
-      // var reg2 = new RegExp("(" + content2 + ")", "g");
-      // var reg3 = new RegExp("(" + content3 + ")", "g");
+      var reg1 = new RegExp("(" + content1 + ")", "g");
+      var reg2 = new RegExp("(" + content2 + ")", "g");
+      var reg3 = new RegExp("(" + content3 + ")", "g");
 
       var str = this.text;
 
-      var newstr = str.replace(reg, "<span style=\"color:#5df3ff\">$1</span>");
-        // .replace(reg1, "<span style=\"color:#5df3ff\">$1</span>")
-        // .replace(reg2, "<span style=\"color:#5df3ff\">$1</span>").replace(reg3, "<span style=\"color:#5df3ff\">$1</span>");
+      var newstr = str.replace(reg, "<span style=\"color:#5df3ff\">$1</span>")
+        .replace(reg1, "<span style=\"color:#5df3ff\">$1</span>")
+       .replace(reg2, "<span style=\"color:#5df3ff\">$1</span>")
+        .replace(reg3, "<span style=\"color:#5df3ff\">$1</span>");
 
       // document.write(newstr + "<br />")
 
@@ -1999,21 +2004,24 @@ export default {
 
       // 高亮显示code
       var content = row.Account.valueOf();
-      // var content1 = row.BLT.valueOf();
-      // // var content2 = row.Open_area.valueOf().slice(0,8);
-      // var content3 = row.DWT.valueOf().toString().slice(0,2)+",";
+      var content1 = row.Delivery_area.valueOf().slice(0,4);
+      var content2 = row.Redelivery_area.valueOf().slice(0,4);
+      var content3 = row.DUR_S.valueOf().toString();
+      var content4 = row.Quantity_s.valueOf().toString();
 
 
       var reg = new RegExp("(" + content + ")", "g");
-      // var reg1 = new RegExp("(" + content1 + ")", "g");
-      // var reg2 = new RegExp("(" + content2 + ")", "g");
-      // var reg3 = new RegExp("(" + content3 + ")", "g");
+      var reg1 = new RegExp("(" + content1 + ")", "g");
+      var reg2 = new RegExp("(" + content2 + ")", "g");
+      var reg3 = new RegExp("(" + content3 + ")", "g");
+      var reg4 = new RegExp("(" + content3 + ")", "g");
 
       var str = this.text;
 
-      var newstr = str.replace(reg, "<span style=\"color:#5df3ff\">$1</span>");
-        // .replace(reg1, "<span style=\"color:#5df3ff\">$1</span>")
-        // .replace(reg2, "<span style=\"color:#5df3ff\">$1</span>").replace(reg3, "<span style=\"color:#5df3ff\">$1</span>");
+      var newstr = str.replace(reg, "<span style=\"color:#5df3ff\">$1</span>")
+       .replace(reg1, "<span style=\"color:#5df3ff\">$1</span>")
+        .replace(reg2, "<span style=\"color:#5df3ff\">$1</span>")
+      .replace(reg3, "<span style=\"color:#5df3ff\">$1</span>").replace(reg4, "<span style=\"color:#5df3ff\">$1</span>");
 
       // document.write(newstr + "<br />")
 
@@ -2037,6 +2045,21 @@ export default {
       this.currentPage = currentPage;
     },
 
+    handleSizeChange2: function (size) {
+      this.pagesize = size;
+    },
+    handleCurrentChange2: function (currentPage) {
+      this.currentPage = currentPage;
+    },
+
+    handleSizeChange3: function (size) {
+      this.pagesize = size;
+    },
+    handleCurrentChange3: function (currentPage) {
+      this.currentPage = currentPage;
+    },
+
+
 
     // 搜素框方法
     // searchCargoSimple1(){
@@ -2049,7 +2072,7 @@ export default {
     //
     //         this.axios({
     //           method: "get",
-    //           url: "http://127.0.0.1:8888/users/search_tonnage/" + searchText1,
+    //           url: "http://202.120.32.222:8888/users/search_tonnage/" + searchText1,
     //         })
     //           .then(function (response) {
     //
@@ -2390,7 +2413,7 @@ export default {
      //      //console.log(searchText.text);
      //      this.axios({
      //        method: "get",
-     //        url: "http://127.0.0.1:8888/users/search_cargo/" + searchText2,
+     //        url: "http://202.120.32.222:8888/users/search_cargo/" + searchText2,
      //      })
      //        .then(function (response) {
      //          console.log("axios method");
@@ -2492,7 +2515,7 @@ export default {
         //   //console.log(searchText.text);
         //   this.axios({
         //     method: "get",
-        //     url: "http://127.0.0.1:8888/users/search_tc/" + searchText3,
+        //     url: "http://202.120.32.222:8888/users/search_tc/" + searchText3,
         //   })
         //     .then(function (response) {
         //       console.log("axios method");
