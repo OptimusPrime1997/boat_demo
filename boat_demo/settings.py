@@ -151,6 +151,7 @@ CORS_ORIGIN_ALLOW_ALL = True
 
 # CORS
 CORS_ORIGIN_WHITELIST = (
+    '202.120.32.222',
     '127.0.0.1:8080',
     'localhost:8080',
     '0.0.0.0:8080',
