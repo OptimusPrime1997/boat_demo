@@ -699,6 +699,79 @@ def tc_update(request):
         response['err_num'] = 2
     return JsonResponse(response)
 
+# ton增加星标的方法
+@csrf_exempt
+@require_http_methods(["PUT"])
+def ton_flag(request):
+    response = {}
+    try:
+        # get data from POST request
+        request_body = json.loads(request.body.decode())
+        acc1 = request_body['ID']
+        value=request_body['value']
+        Tonnage_Card.objects.filter(ID=acc1).update(flag=value)
+
+        # q1 = TC_Card.objects.filter(Account__icontains=acc,
+        #                             Quantity_s__gt=quantity,
+        #
+        #                             LayCan_S__gte=datetime.date(int(laycan_start[0:4]),
+        #                                                         int(laycan_start[5:7]),
+        #                                                         int(laycan_start[8:10])),
+        #                             LayCan_E__lte=datetime.date(int(laycan_end[0:4]), int(laycan_end[5:7]),
+        #                                                         int(laycan_end[8:10])),
+        #
+        #                             )
+
+        # list = [acc1, acc2, acc3, acc4, acc5, acc6, acc7, acc8, acc9, acc10, acc11, acc12]
+        # print(list)
+        # print(json.loads(serializers.serialize("json", tc_card)))
+        response['result'] = "success"
+        response['err_num'] = 0
+
+    except Exception as e:
+        response['msg'] = str(e)
+        response['err_num'] = 2
+    return JsonResponse(response)
+
+# cargo增加星标的方法
+@csrf_exempt
+@require_http_methods(["PUT"])
+def cargo_flag(request):
+    response = {}
+    try:
+        # get data from POST request
+        request_body = json.loads(request.body.decode())
+        acc1 = request_body['ID']
+        value=request_body['value']
+        Cargo_Card.objects.filter(ID=acc1).update(flag=value)
+
+        response['result'] = "success"
+        response['err_num'] = 0
+
+    except Exception as e:
+        response['msg'] = str(e)
+        response['err_num'] = 2
+    return JsonResponse(response)
+
+# tc增加星标的方法
+@csrf_exempt
+@require_http_methods(["PUT"])
+def tc_flag(request):
+    response = {}
+    try:
+        # get data from POST request
+        request_body = json.loads(request.body.decode())
+        acc1 = request_body['ID']
+        value=request_body['value']
+        TC_Card.objects.filter(ID=acc1).update(flag=value)
+
+        response['result'] = "success"
+        response['err_num'] = 0
+
+    except Exception as e:
+        response['msg'] = str(e)
+        response['err_num'] = 2
+    return JsonResponse(response)
 
 
 

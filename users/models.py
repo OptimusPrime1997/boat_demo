@@ -21,6 +21,7 @@ class Cargo_Card(models.Model):  # 该类与数据库同步的时候会创建该
     Sent = models.CharField(max_length=50, verbose_name='Sent')
     ID = models.IntegerField(max_length=11, verbose_name='ID', primary_key=True)
     mail_text = models.TextField(verbose_name='mail_text')
+    flag = models.IntegerField(max_length=1, verbose_name='flag')
 
     class Meta:
         db_table = "cargo_card"
@@ -43,6 +44,7 @@ class TC_Card(models.Model):  # 该类与数据库同步的时候会创建该表
     Sent = models.CharField(max_length=50, verbose_name='Sent')
     ID = models.IntegerField(max_length=11, verbose_name='ID', primary_key=True)
     mail_text = models.TextField(verbose_name='mail_text')
+    flag = models.IntegerField(max_length=1, verbose_name='flag')
 
     class Meta:
         db_table = "tc_card"
@@ -58,6 +60,7 @@ class Tonnage_Card(models.Model):  # 该类与数据库同步的时候会创建�
     Sent = models.CharField(max_length=50, verbose_name='Sent')
     ID = models.IntegerField(max_length=11, verbose_name='ID', primary_key=True)
     mail_text = models.TextField(verbose_name='mail_text')
+    flag = models.IntegerField(max_length=1, verbose_name='flag')
 
     class Meta:
         db_table = "tonnage_card"

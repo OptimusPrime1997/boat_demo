@@ -36,5 +36,9 @@ urlpatterns = [
     url(r'^tonnage_update$', users.views.tonnage_update, ),
     url(r'^cargo_update$', users.views.cargo_update, ),
 
+    #flag
+    url(r'^ton_flag$', users.views.ton_flag, ),
+    url(r'^tc_flag$', users.views.tc_flag, ),
+    url(r'^cargo_flag$', users.views.cargo_flag, ),
 
 ]
