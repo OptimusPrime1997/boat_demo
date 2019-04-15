@@ -277,6 +277,19 @@
 
                   <!--</el-table-column>-->
 
+                  <el-table-column prop="flag" label="Flag" width="50">
+                      <!--<template slot-scope="scope">-->
+                          <!--<el-button v-if="scope.row.ok"  @click="tonFlagChange(scope.$index, scope.row)" size="small" icon="el-icon-star-on"></el-button>-->
+                          <!--<el-button v-else  @click='scope.row.ok=!scope.row.ok' size="small" icon="el-icon-star-off"></el-button>-->
+                      <!--</template>  -->
+                    <template slot-scope="scope">
+                         <!--<el-button type="warning" icon="el-icon-star-off" circle></el-button>-->
+                         <el-button  style="margin: 0;padding: 0;font-size: 100%;"   icon="el-icon-star-on" v-if="scope.row.flag==1  " @click=' switchChange2(scope.$index, scope.row)' ></el-button>
+                         <el-button  style="margin: 0;padding: 0;font-size: 100%;"   icon="el-icon-star-off" v-else="!scope.row.flag==0" @click=' switchChange(scope.$index, scope.row)' ></el-button>
+                   </template>
+
+                   </el-table-column>
+
                   <el-table-column
                     prop="ID"
                     label="ID"
@@ -623,6 +636,19 @@
                   @row-click="display_mail2"
 
                 >
+                  <el-table-column prop="flag" label="Flag" width="50">
+                      <!--<template slot-scope="scope">-->
+                          <!--<el-button v-if="scope.row.ok"  @click="tonFlagChange(scope.$index, scope.row)" size="small" icon="el-icon-star-on"></el-button>-->
+                          <!--<el-button v-else  @click='scope.row.ok=!scope.row.ok' size="small" icon="el-icon-star-off"></el-button>-->
+                      <!--</template>  -->
+                    <template slot-scope="scope">
+                         <!--<el-button type="warning" icon="el-icon-star-off" circle></el-button>-->
+                         <el-button  icon="el-icon-star-on" style="margin: 0;padding: 0;font-size: 100%;"  v-if="scope.row.flag==1  " @click=' switchChange2_c(scope.$index, scope.row)' size="small"></el-button>
+                         <el-button  icon="el-icon-star-off" style="margin: 0;padding: 0;font-size: 100%;"  v-else="!scope.row.flag==0" @click=' switchChange_c(scope.$index, scope.row)' size="small"></el-button>
+                   </template>
+
+                   </el-table-column>
+
 
                   <el-table-column
                     prop="ID"
@@ -707,7 +733,7 @@
                   <el-table-column
 
                     label="LayCan"
-                    width="200"
+                    width="150"
                     :formatter="deal_LayCan2"
                   >
                      <!--<template slot-scope="scope">-->
@@ -722,7 +748,7 @@
                   <!--&gt;-->
                   <!--</el-table-column>-->
 
-                  <el-table-column prop="Sent" label="Sent" width="130" :formatter="deal_Sent2">
+                  <el-table-column prop="Sent" label="Sent" width="120" :formatter="deal_Sent2">
                   </el-table-column>
 
                   <el-table-column label="Operation">
@@ -962,6 +988,18 @@
                   style="width: 100%"
                   @row-click="display_mail3"
                 >
+                  <el-table-column prop="flag" label="Flag" width="50">
+                      <!--<template slot-scope="scope">-->
+                          <!--<el-button v-if="scope.row.ok"  @click="tonFlagChange(scope.$index, scope.row)" size="small" icon="el-icon-star-on"></el-button>-->
+                          <!--<el-button v-else  @click='scope.row.ok=!scope.row.ok' size="small" icon="el-icon-star-off"></el-button>-->
+                      <!--</template>  -->
+                    <template slot-scope="scope">
+                         <!--<el-button type="warning" icon="el-icon-star-off" circle></el-button>-->
+                         <el-button  icon="el-icon-star-on" style="margin: 0;padding: 0;font-size: 100%;"  v-if="scope.row.flag==1  " @click=' switchChange2_t(scope.$index, scope.row)' size="small"></el-button>
+                         <el-button  icon="el-icon-star-off" style="margin: 0;padding: 0;font-size: 100%;"  v-else="!scope.row.flag==0" @click=' switchChange_t(scope.$index, scope.row)' size="small"></el-button>
+                   </template>
+
+                   </el-table-column>
                   <el-table-column
                     prop="ID"
                     label="ID"
@@ -1035,7 +1073,7 @@
                   <el-table-column
 
                     label="LayCan"
-                    width="180"
+                    width="140"
                     :formatter="deal_LayCan3"
                   >
                     <!--<template slot-scope="scope">-->
@@ -1060,7 +1098,7 @@
                   <!--<el-table-column prop="Sent" label="Sent" width="130">-->
                   <!--</el-table-column>-->
                   <!--处理sent 中为0的数据不显示-->
-                  <el-table-column prop="Sent" label="Sent" width="120" :formatter="deal_Sent3">
+                  <el-table-column prop="Sent" label="Sent" width="110" :formatter="deal_Sent3">
                   </el-table-column>
 
                   <el-table-column label="Operation">
@@ -2967,8 +3005,184 @@ export default {
        this.multipleSelection = val;
      },
 
+    // 增加星标的方法
+     switchChange(index,row){
+      console.log("第二次点击");
+      row.flag = !row.flag ;
+      var data={
+          "ID":row.valueOf().ID,
+          "value":1
+      };
+      this.axios({
+        method: "put",
+        url: "http://202.120.32.222:8888/users/ton_flag",
+        data:data
+      })
+        .then(function (response) {
+          // res=eval(response);
+          // console.log(res);
+          // alert(res);
+
+          // icon="el-icon-star-on"
+          // document.getElementById('light1').innerHTML=icon;
+            if(row.valueOf().flag){
+             console.log("ok");
+            // alert("ok")
+          }
+
+
+        }
+        )
+        .catch(function (error) {
+          console.log(error);
+        });
+
+
+      },
+    switchChange2(index,row){
+      console.log("第一次点击");
+      row.flag = !row.flag ;
+      var data={
+          "ID":row.valueOf().ID,
+          "value":0
+      };
+      this.axios({
+        method: "put",
+        url: "http://202.120.32.222:8888/users/ton_flag",
+        data:data
+      })
+        .then(function (response) {
+          // res=eval(response);
+          // console.log(res);
+          // alert(res);
+
+        }
+        )
+        .catch(function (error) {
+          console.log(error);
+        });
+
+      },
+
+     switchChange_c(index,row){
+      console.log("第二次点击");
+      row.flag = !row.flag ;
+      var data={
+          "ID":row.valueOf().ID,
+          "value":1
+      };
+      this.axios({
+        method: "put",
+        url: "http://202.120.32.222:8888/users/cargo_flag",
+        data:data
+      })
+        .then(function (response) {
+          // res=eval(response);
+          // console.log(res);
+          // alert(res);
+
+          // icon="el-icon-star-on"
+          // document.getElementById('light1').innerHTML=icon;
+            if(row.valueOf().flag){
+             console.log("ok");
+            // alert("ok")
+          }
+
+
+        }
+        )
+        .catch(function (error) {
+          console.log(error);
+        });
+
+
+      },
+    switchChange2_c(index,row){
+      console.log("第一次点击");
+      row.flag = !row.flag ;
+      var data={
+          "ID":row.valueOf().ID,
+          "value":0
+      };
+      this.axios({
+        method: "put",
+        url: "http://202.120.32.222:8888/users/cargo_flag",
+        data:data
+      })
+        .then(function (response) {
+          // res=eval(response);
+          // console.log(res);
+          // alert(res);
+
+        }
+        )
+        .catch(function (error) {
+          console.log(error);
+        });
+
+      },
+
+     switchChange_t(index,row){
+      console.log("第二次点击");
+      row.flag = !row.flag ;
+      var data={
+          "ID":row.valueOf().ID,
+          "value":1
+      };
+      this.axios({
+        method: "put",
+        url: "http://202.120.32.222:8888/users/tc_flag",
+        data:data
+      })
+        .then(function (response) {
+          // res=eval(response);
+          // console.log(res);
+          // alert(res);
+
+          // icon="el-icon-star-on"
+          // document.getElementById('light1').innerHTML=icon;
+            if(row.valueOf().flag){
+             console.log("ok");
+            // alert("ok")
+          }
+
+
+        }
+        )
+        .catch(function (error) {
+          console.log(error);
+        });
+
+
+      },
+    switchChange2_t(index,row){
+      console.log("第一次点击");
+      row.flag = !row.flag ;
+      var data={
+          "ID":row.valueOf().ID,
+          "value":0
+      };
+      this.axios({
+        method: "put",
+        url: "http://202.120.32.222:8888/users/tc_flag",
+        data:data
+      })
+        .then(function (response) {
+          // res=eval(response);
+          // console.log(res);
+          // alert(res);
+
+        }
+        )
+        .catch(function (error) {
+          console.log(error);
+        });
+
+      },
+
 
     // tonFlagChange(index,row){
+    //   row.ok = false;
     //   console.log("execute tonFlagChange");
     //   var data={
     //     "ID":row.valueOf().ID,
@@ -2980,9 +3194,14 @@ export default {
     //     data:data
     //   })
     //     .then(function (response) {
-    //       res=eval(response);
-    //       console.log(res);
-    //       alert(res);
+    //       // res=eval(response);
+    //       // console.log(res);
+    //       // alert(res);
+    //
+    //         // icon="el-icon-star-on"
+    //         // document.getElementById('light1').innerHTML=icon;
+    //
+    //
     //     }
     //     )
     //     .catch(function (error) {
