@@ -93,13 +93,13 @@ DATABASES = {
     #     'NAME': 'boat' , # 数据库名字
     # }
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'HOST': 'localhost',  # 数据库主机
-        'PORT': 3306,  # 数据库端口
-        'USER': 'root',  # 数据库用户名
-        'PASSWORD':'123456',  # 数据库用户密码
-        'NAME': 'trade_mail' , # 数据库名字
-    }
+                'ENGINE': 'django.db.backends.mysql',
+                'HOST': 'localhost',  # 数据库主机
+                'PORT': 3306,  # 数据库端口
+                'USER': 'root',  # 数据库用户名
+                'PASSWORD':'123456',  # 数据库用户密码
+                'NAME': 'trade_mail' , # 数据库名字
+            }
 }
 
 # Password validation
@@ -151,7 +151,7 @@ CORS_ORIGIN_ALLOW_ALL = True
 
 # CORS
 CORS_ORIGIN_WHITELIST = (
-    '202.120.32.222',
+    '202.120.32.222:8080',
     '127.0.0.1:8080',
     'localhost:8080',
     '0.0.0.0:8080',
