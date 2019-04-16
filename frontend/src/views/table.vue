@@ -1752,7 +1752,9 @@ export default {
       if(row.Sent.valueOf()==0){
           return '';
       }
-        return row.Sent;
+        // return row.Sent;
+      var dateee = new Date(row.Sent.valueOf()).toJSON();
+        return new Date(+new Date(dateee) + 8 * 3600 * 1000).toISOString().replace(/T/g, ' ').replace(/\.[\d]{3}Z/, '');
     },
 
     //将Delivery_area 中 标识string转换为空
@@ -1855,7 +1857,8 @@ export default {
       if(row.Sent.valueOf()==0){
           return '';
       }
-        return row.Sent;
+      var dateee = new Date(row.Sent.valueOf()).toJSON();
+        return new Date(+new Date(dateee) + 8 * 3600 * 1000).toISOString().replace(/T/g, ' ').replace(/\.[\d]{3}Z/, '');
     },
     //将Quantity 中 标识string转换为空
     deal_Quantity2(row, column) {
@@ -1895,7 +1898,8 @@ export default {
       if(row.Sent.valueOf()==0){
           return '';
       }
-        return row.Sent;
+      var dateee = new Date(row.Sent.valueOf()).toJSON();
+        return new Date(+new Date(dateee) + 8 * 3600 * 1000).toISOString().replace(/T/g, ' ').replace(/\.[\d]{3}Z/, '');
     },
     //将Open_area 中 标识sting转换为空
     deal_Open_area(row, column) {
