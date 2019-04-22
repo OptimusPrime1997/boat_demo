@@ -773,6 +773,72 @@ def tc_flag(request):
         response['err_num'] = 2
     return JsonResponse(response)
 
+# ton修改日期方法
+@csrf_exempt
+@require_http_methods(["PUT"])
+def ton_date(request):
+    response = {}
+    try:
+        # get data from POST request
+        request_body = json.loads(request.body.decode())
+        acc1 = request_body['ID']
+        opendate_start=request_body['opendate_start']
+        opendate_end=request_body['opendate_end']
+        Tonnage_Card.objects.filter(ID=acc1).update(Open_date_S=opendate_start)
+        Tonnage_Card.objects.filter(ID=acc1).update(Open_date_E=opendate_end)
+
+        response['result'] = "success"
+        response['err_num'] = 0
+
+    except Exception as e:
+        response['msg'] = str(e)
+        response['err_num'] = 2
+    return JsonResponse(response)
+
+# cargo修改日期方法
+@csrf_exempt
+@require_http_methods(["PUT"])
+def cargo_date(request):
+    response = {}
+    try:
+        # get data from POST request
+        request_body = json.loads(request.body.decode())
+        acc1 = request_body['ID']
+        laycan_start=request_body['laycan_start']
+        laycan_end=request_body['laycan_end']
+        Cargo_Card.objects.filter(ID=acc1).update(LayCan_S=laycan_start)
+        Cargo_Card.objects.filter(ID=acc1).update(LayCan_E=laycan_end)
+
+        response['result'] = "success"
+        response['err_num'] = 0
+
+    except Exception as e:
+        response['msg'] = str(e)
+        response['err_num'] = 2
+    return JsonResponse(response)
+
+# tc修改日期方法
+@csrf_exempt
+@require_http_methods(["PUT"])
+def tc_date(request):
+    response = {}
+    try:
+        # get data from POST request
+        request_body = json.loads(request.body.decode())
+        acc1 = request_body['ID']
+        laycan_start=request_body['laycan_start']
+        laycan_end=request_body['laycan_end']
+        TC_Card.objects.filter(ID=acc1).update(LayCan_S=laycan_start)
+        TC_Card.objects.filter(ID=acc1).update(LayCan_E=laycan_end)
+
+        response['result'] = "success"
+        response['err_num'] = 0
+
+    except Exception as e:
+        response['msg'] = str(e)
+        response['err_num'] = 2
+    return JsonResponse(response)
+
 
 
 

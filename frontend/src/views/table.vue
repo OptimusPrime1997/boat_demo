@@ -56,6 +56,7 @@
                       >Open Date : &nbsp;&nbsp;&nbsp;</span
                     >
                     <el-date-picker
+                      unlink-panels
                       v-model="value_a_1"
                       id="tab1_data"
                       value-format="yyyy-MM-dd"
@@ -295,12 +296,12 @@
                     label="ID"
                     width="40"
                   >
-                    <template slot-scope="scope">
-                          <template  v-if="scope.row.edit">
-                              <el-input class="edit-input" size="small" v-model="scope.row.ID"></el-input>
-                          </template>
-                          <span v-else>{{ scope.row.ID }}</span>
-                    </template>
+                    <!--<template slot-scope="scope">-->
+                          <!--<template  v-if="scope.row.edit">-->
+                              <!--<el-input class="edit-input" size="small" v-model="scope.row.ID"></el-input>-->
+                          <!--</template>-->
+                          <!--<span v-else>{{ scope.row.ID }}</span>-->
+                    <!--</template>-->
 
 
                   </el-table-column>
@@ -342,35 +343,83 @@
 
                   </el-table-column>
 
+                  <!--<el-table-column-->
+                    <!--prop="Open_area"-->
+                    <!--label="Open Area"-->
+                    <!--width="150"-->
+                    <!--:formatter="deal_Open_area"-->
+                  <!--&gt;-->
+                     <!--<template slot-scope="scope">-->
+                          <!--<template  v-if="scope.row.edit">-->
+                              <!--<el-input class="edit-input" size="small" v-model="scope.row.Open_area"></el-input>-->
+                          <!--</template>-->
+                          <!--<span v-else>{{ scope.row.Open_area }}</span>-->
+                       <!--</template>-->
+
+                  <!--</el-table-column> -->
+
                   <el-table-column
                     prop="Open_area"
                     label="Open Area"
                     width="150"
-                    :formatter="deal_Open_area"
                   >
                      <template slot-scope="scope">
                           <template  v-if="scope.row.edit">
                               <el-input class="edit-input" size="small" v-model="scope.row.Open_area"></el-input>
                           </template>
-                          <span v-else>{{ scope.row.Open_area }}</span>
+                          <span v-else v-html="deal_Open_area(scope.row,scope.column)"></span>
                        </template>
 
                   </el-table-column>
 
 
                   <!--实现Open_date_S和Open_date_E的合并-->
+                  <!--<el-table-column-->
+
+                    <!--label="Open Date"-->
+                    <!--width="200"-->
+                    <!--:formatter="deal_Open_Date"-->
+                    <!--prop="Open_date"-->
+                  <!--&gt;-->
+                      <!--<template slot-scope="scope">-->
+                          <!--<template  v-if="scope.row.edit">-->
+                              <!--<el-input class="edit-input" size="small" v-model="scope.row.Open_date"></el-input>-->
+                          <!--</template>-->
+                          <!--<span v-else>{{ scope.row.Open_date }}</span>-->
+                       <!--</template>-->
+                    <!---->
+                      <!--&lt;!&ndash;<template slot-scope="scope" >&ndash;&gt;-->
+                        <!--&lt;!&ndash;{{scope.row.Open_date_S + '&#45;&#45;'+scope.row.Open_date_E}}&ndash;&gt;-->
+                      <!--&lt;!&ndash;</template>&ndash;&gt;-->
+                  <!--</el-table-column> -->
                   <el-table-column
+                    id="date_1"
                     label="Open Date"
                     width="200"
-                    :formatter="deal_Open_Date"
+                    props=[Open_date_S,Open_date_E]
+
                   >
+                      <template slot-scope="scope">
+                          <template v-if="scope.row.edit" >
+                                <el-date-picker
+                                  unlink-panels
+                                  v-model="value13_1 "
+                                  class="edit-input"
+                                  value-format="yyyy-MM-dd"
+                                  type="daterange"
+                                  style="width: 150px"
+                                  start-placeholder="Start"
+                                  end-placeholder="End"
+                                  @change="chooseTimeRange1_1"
+                                  @blur="changeTimeValue1_1(scope.row, scope.column)"
+                                  :default-time="['00:00:00', '23:59:59']" >
+
+                                </el-date-picker>
+                          </template>
+                          <span  v-else v-html="deal_Open_Date(scope.row, scope.column)"></span>
+                       </template>
 
 
-
-
-                      <!--<template slot-scope="scope" >-->
-                        <!--{{scope.row.Open_date_S + '&#45;&#45;'+scope.row.Open_date_E}}-->
-                      <!--</template>-->
                   </el-table-column>
                   <!--<el-table-column-->
                     <!--prop="Open_date_E"-->
@@ -474,6 +523,7 @@
                       >Laycan : &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;</span
                     >
                     <el-date-picker
+                      unlink-panels
                       v-model="value_b_1"
                       id="tab2_data"
                       type="daterange"
@@ -670,13 +720,13 @@
                     prop="Cargo_name"
                     label="Cargo Name"
                     width="120"
-                    :formatter="deal_Cargo_name"
+
                   >
                     <template slot-scope="scope">
                       <template  v-if="scope.row.edit">
                           <el-input class="edit-input" size="small" v-model="scope.row.Cargo_name"></el-input>
                       </template>
-                      <span v-else>{{ scope.row.Cargo_name }}</span>
+                      <span v-else v-html="deal_Cargo_name(scope.row,scope.column)"></span>
                     </template>
 
 
@@ -704,13 +754,12 @@
                     prop="Loading_Port"
                     label="Loading Port"
                     width="130"
-                    :formatter="deal_Loading_Port"
                   >
                     <template slot-scope="scope">
                       <template  v-if="scope.row.edit">
                           <el-input class="edit-input" size="small" v-model="scope.row.Loading_Port"></el-input>
                       </template>
-                      <span v-else>{{ scope.row.Loading_Port }}</span>
+                      <span v-else v-html="deal_Loading_Port(scope.row,scope.column)"></span>
                     </template>
                   </el-table-column>
 
@@ -718,24 +767,47 @@
                     prop="Discharging_Port"
                     label="Discharging Port"
                     width="135"
-                    :formatter="deal_Discharging_Port"
                   >
                     <template slot-scope="scope">
                       <template  v-if="scope.row.edit">
                           <el-input class="edit-input" size="small" v-model="scope.row.Discharging_Port"></el-input>
                       </template>
-                      <span v-else>{{ scope.row.Discharging_Port }}</span>
+                      <span v-else v-html="deal_Discharging_Port(scope.row,scope.column)"></span>
                     </template>
 
                   </el-table-column>
 
-                  <!--实现LayCan_S和LayCan_E的合并-->
+
+                  <!--实现LayCan_S和LayCan_E 日期的合并-->
                   <el-table-column
 
                     label="LayCan"
                     width="150"
-                    :formatter="deal_LayCan2"
+                    props=[LayCan_S,LayCan_E]
                   >
+                    <template slot-scope="scope">
+                      <template  v-if="scope.row.edit">
+                        <el-date-picker
+                            unlink-panels
+                            v-model="value13_2"
+                            id="tab2_data"
+                            type="daterange"
+                            class="edit-input"
+                            value-format="yyyy-MM-dd"
+                            style="width: 150px"
+                            start-placeholder="Start"
+                            end-placeholder="End"
+                            @change="chooseTimeRange2_1"
+                            @blur="changeTimeValue2_1(scope.row,scope.column)"
+                            :default-time="['00:00:00', '23:59：59']"
+
+                          >
+                          </el-date-picker>
+
+                      </template>
+                      <span v-else v-html="deal_LayCan2(scope.row,scope.column)"></span>
+                    </template>
+
                      <!--<template slot-scope="scope">-->
                         <!--{{scope.row.LayCan_S + '&#45;&#45;'+scope.row.LayCan_E}}-->
                       <!--</template>-->
@@ -829,6 +901,7 @@
                       >Laycan : &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;</span
                     >
                     <el-date-picker
+                      unlink-panels
                       v-model="value_c_1"
                       id="tab3_data"
                       value-format="yyyy-MM-dd"
@@ -1016,12 +1089,12 @@
                   </el-table-column>
 
 
-                  <el-table-column prop="Account" label="Account" width="110":formatter="deal_Account">
+                  <el-table-column prop="Account" label="Account" width="110">
                     <template slot-scope="scope">
                           <template  v-if="scope.row.edit">
                               <el-input class="edit-input" size="small" v-model="scope.row.Account"></el-input>
                           </template>
-                          <span v-else>{{ scope.row.Account }}</span>
+                          <span v-else v-html="deal_Account(scope.row,scope.column)"></span>
                     </template>
                   </el-table-column>
 
@@ -1045,26 +1118,24 @@
                     prop="Delivery_area"
                     label="Delivery Area"
                     width="120"
-                    :formatter="deal_Delivery_area"
                   >
                      <template slot-scope="scope">
                           <template  v-if="scope.row.edit">
                               <el-input class="edit-input" size="small" v-model="scope.row.Delivery_area"></el-input>
                           </template>
-                          <span v-else>{{ scope.row.Delivery_area }}</span>
+                          <span v-else v-html="deal_Delivery_area(scope.row,scope.column)"></span>
                     </template>
                   </el-table-column>
                   <el-table-column
                     prop="Redelivery_area"
                     label="Redelivery Area"
                     width="130"
-                    :formatter="deal_Redelivery_area"
                   >
                      <template slot-scope="scope">
                           <template  v-if="scope.row.edit">
                               <el-input class="edit-input" size="small" v-model="scope.row.Redelivery_area"></el-input>
                           </template>
-                          <span v-else>{{ scope.row.Redelivery_area }}</span>
+                          <span v-else v-html="deal_Redelivery_area(scope.row,scope.column)"></span>
                     </template>
 
                   </el-table-column>
@@ -1074,8 +1145,35 @@
 
                     label="LayCan"
                     width="140"
-                    :formatter="deal_LayCan3"
+                    props=[LayCan_S,LayCan_E]
                   >
+                    <template slot-scope="scope">
+                      <template  v-if="scope.row.edit">
+                        <el-date-picker
+                            unlink-panels
+                            v-model="value13_3"
+                            id="tab3_data"
+                            type="daterange"
+                            class="edit-input"
+                            value-format="yyyy-MM-dd"
+                            style="width: 150px"
+                            start-placeholder="Start"
+                            end-placeholder="End"
+                            @change="chooseTimeRange3_1"
+                            @blur="changeTimeValue3_1(scope.row,scope.column)"
+                            :default-time="['00:00:00', '23:59：59']"
+
+                          >
+                          </el-date-picker>
+
+                      </template>
+                      <span v-else v-html="deal_LayCan3(scope.row,scope.column)"></span>
+                    </template>
+
+
+
+
+
                     <!--<template slot-scope="scope">-->
                         <!--{{scope.row.LayCan_S + '&#45;&#45;'+scope.row.LayCan_E}}-->
                       <!--</template>-->
@@ -1180,8 +1278,15 @@ export default {
   data() {
 
     return {
-
-
+      // ton 修改table日期的方法
+      value13_1: '',
+      datepickertableList:[],
+      // cargo 修改table日期的方法
+      value13_2: '',
+      datepickertable2List:[],
+      // tc 修改table日期的方法
+      value13_3: '',
+      datepickertable3List:[],
 
       //定义时间选择器的初始存储
       datepickerList:[],
@@ -1803,8 +1908,24 @@ export default {
       if(row.LayCan_S+'--'+row.LayCan_E.valueOf()=='1900-01-01--1900-01-01'){
           return '';
       }
-        // return row.LayCan_S+'--'+row.LayCan_E;
-      // 此处定义时间的英文显示
+      //   // return row.LayCan_S+'--'+row.LayCan_E;
+      // // 此处定义时间的英文显示
+      // let date = new Date(row.LayCan_S.replace(/-/g,'/')); //Wed Jan 02 2019 00:00:00 GMT+0800 (China Standard Time)
+      // let date2 = new Date(row.LayCan_E.replace(/-/g,'/')); //Wed Jan 02 2019 00:00:00 GMT+0800 (China Standard Time)
+      //
+      // let chinaDate = date.toDateString(); //"Tue, 01 Jan 2019 16:00:00 GMT"
+      // let chinaDate2 = date2.toDateString(); //"Tue, 01 Jan 2019 16:00:00 GMT"
+      // //注意：此处时间为中国时区，如果是全球项目，需要转成【协调世界时】（UTC）
+      // // let globalDate = date.toUTCString(); //"Wed Jan 02 2019"
+      //
+      // //之后的处理是一样的
+      // // let chinaDateArray = chinaDate.split(' '); //["Wed", "Jan", "02", "2019"]
+      //
+      // // let displayDate = `${chinaDateArray[1]} ${chinaDateArray[2]}, ${chinaDateArray[3]}`; //"Jan 02, 2019"
+      // let total_date= chinaDate+"--"+chinaDate2
+      //
+      // return total_date
+         // 此处定义时间的英文显示
       let date = new Date(row.LayCan_S.replace(/-/g,'/')); //Wed Jan 02 2019 00:00:00 GMT+0800 (China Standard Time)
       let date2 = new Date(row.LayCan_E.replace(/-/g,'/')); //Wed Jan 02 2019 00:00:00 GMT+0800 (China Standard Time)
 
@@ -1815,11 +1936,26 @@ export default {
 
       //之后的处理是一样的
       // let chinaDateArray = chinaDate.split(' '); //["Wed", "Jan", "02", "2019"]
-
       // let displayDate = `${chinaDateArray[1]} ${chinaDateArray[2]}, ${chinaDateArray[3]}`; //"Jan 02, 2019"
-      let total_date= chinaDate+"--"+chinaDate2
+      let chinaDateArray = chinaDate.split(' '); //["Wed", "Jan", "02", "2019"]
+      let chinaDateArray2 = chinaDate2.split(' '); //["Wed", "Jan", "02", "2019"]
 
-      return total_date
+      if (chinaDateArray[3]!=chinaDateArray2[3]){
+          let displayDate = `${chinaDateArray[1]} ${chinaDateArray[2]},${chinaDateArray[3]}`; //"Jan 02, 2019"
+          let displayDate2 = `${chinaDateArray2[1]} ${chinaDateArray2[2]},${chinaDateArray2[3]}`; //"Jan 02, 2019"
+
+         // let total_date= chinaDate+"--"+chinaDate2;
+          let total_date= displayDate+"--"+displayDate2;
+          return total_date
+      }else {
+        let displayDate = `${chinaDateArray[1]} ${chinaDateArray[2]}`; //"Jan 02, 2019"
+        let displayDate2 = `${chinaDateArray2[1]} ${chinaDateArray2[2]}`; //"Jan 02, 2019"
+
+        // let total_date= chinaDate+"--"+chinaDate2;
+        let total_date = displayDate + "--" + displayDate2;
+        return total_date
+      }
+
     },
     //将DUR中 标识sting转换为空
     deal_DUR(row, column) {
@@ -1872,8 +2008,24 @@ export default {
       if(row.LayCan_S+'--'+row.LayCan_E.valueOf()=='1900-01-01--1900-01-01'){
           return '';
       }
-        // return row.LayCan_S+'--'+row.LayCan_E;
-      // 此处定义时间的英文显示
+      //   // return row.LayCan_S+'--'+row.LayCan_E;
+      // // 此处定义时间的英文显示
+      // let date = new Date(row.LayCan_S.replace(/-/g,'/')); //Wed Jan 02 2019 00:00:00 GMT+0800 (China Standard Time)
+      // let date2 = new Date(row.LayCan_E.replace(/-/g,'/')); //Wed Jan 02 2019 00:00:00 GMT+0800 (China Standard Time)
+      //
+      // let chinaDate = date.toDateString(); //"Tue, 01 Jan 2019 16:00:00 GMT"
+      // let chinaDate2 = date2.toDateString(); //"Tue, 01 Jan 2019 16:00:00 GMT"
+      // //注意：此处时间为中国时区，如果是全球项目，需要转成【协调世界时】（UTC）
+      // // let globalDate = date.toUTCString(); //"Wed Jan 02 2019"
+      //
+      // //之后的处理是一样的
+      // // let chinaDateArray = chinaDate.split(' '); //["Wed", "Jan", "02", "2019"]
+      //
+      // // let displayDate = `${chinaDateArray[1]} ${chinaDateArray[2]}, ${chinaDateArray[3]}`; //"Jan 02, 2019"
+      // let total_date= chinaDate+"--"+chinaDate2
+      //
+      // return total_date
+         // 此处定义时间的英文显示
       let date = new Date(row.LayCan_S.replace(/-/g,'/')); //Wed Jan 02 2019 00:00:00 GMT+0800 (China Standard Time)
       let date2 = new Date(row.LayCan_E.replace(/-/g,'/')); //Wed Jan 02 2019 00:00:00 GMT+0800 (China Standard Time)
 
@@ -1884,11 +2036,25 @@ export default {
 
       //之后的处理是一样的
       // let chinaDateArray = chinaDate.split(' '); //["Wed", "Jan", "02", "2019"]
-
       // let displayDate = `${chinaDateArray[1]} ${chinaDateArray[2]}, ${chinaDateArray[3]}`; //"Jan 02, 2019"
-      let total_date= chinaDate+"--"+chinaDate2
+      let chinaDateArray = chinaDate.split(' '); //["Wed", "Jan", "02", "2019"]
+      let chinaDateArray2 = chinaDate2.split(' '); //["Wed", "Jan", "02", "2019"]
 
-      return total_date
+      if (chinaDateArray[3]!=chinaDateArray2[3]){
+          let displayDate = `${chinaDateArray[1]} ${chinaDateArray[2]},${chinaDateArray[3]}`; //"Jan 02, 2019"
+          let displayDate2 = `${chinaDateArray2[1]} ${chinaDateArray2[2]},${chinaDateArray2[3]}`; //"Jan 02, 2019"
+
+         // let total_date= chinaDate+"--"+chinaDate2;
+          let total_date= displayDate+"--"+displayDate2;
+          return total_date
+      }else {
+        let displayDate = `${chinaDateArray[1]} ${chinaDateArray[2]}`; //"Jan 02, 2019"
+        let displayDate2 = `${chinaDateArray2[1]} ${chinaDateArray2[2]}`; //"Jan 02, 2019"
+
+        // let total_date= chinaDate+"--"+chinaDate2;
+        let total_date = displayDate + "--" + displayDate2;
+        return total_date
+      }
 
     },
 
@@ -1909,6 +2075,44 @@ export default {
         return row.Open_area;
     },
     //将Open_Date 中 标识sting转换为空
+    // deal_Open_Date(row, column) {
+    //   if(row.Open_date_S+'--'+row.Open_date_E.valueOf()=='1900-01-01--1900-01-01'){
+    //       return '';
+    //   }
+    //     // return row.Open_date_S+'--'+row.Open_date_E;
+    //
+    //   // 此处定义时间的英文显示
+    //   let date = new Date(row.Open_date_S.replace(/-/g,'/')); //Wed Jan 02 2019 00:00:00 GMT+0800 (China Standard Time)
+    //   let date2 = new Date(row.Open_date_E.replace(/-/g,'/')); //Wed Jan 02 2019 00:00:00 GMT+0800 (China Standard Time)
+    //
+    //   let chinaDate = date.toDateString(); //"Tue, 01 Jan 2019 16:00:00 GMT"
+    //   let chinaDate2 = date2.toDateString(); //"Tue, 01 Jan 2019 16:00:00 GMT"
+    //   //注意：此处时间为中国时区，如果是全球项目，需要转成【协调世界时】（UTC）
+    //   // let globalDate = date.toUTCString(); //"Wed Jan 02 2019"
+    //
+    //   //之后的处理是一样的
+    //   // let chinaDateArray = chinaDate.split(' '); //["Wed", "Jan", "02", "2019"]
+    //   // let displayDate = `${chinaDateArray[1]} ${chinaDateArray[2]}, ${chinaDateArray[3]}`; //"Jan 02, 2019"
+    //   let chinaDateArray = chinaDate.split(' '); //["Wed", "Jan", "02", "2019"]
+    //   let chinaDateArray2 = chinaDate2.split(' '); //["Wed", "Jan", "02", "2019"]
+    //
+    //   if (chinaDateArray[3]!=chinaDateArray2[3]){
+    //       let displayDate = `${chinaDateArray[1]} ${chinaDateArray[2]},${chinaDateArray[3]}`; //"Jan 02, 2019"
+    //       let displayDate2 = `${chinaDateArray2[1]} ${chinaDateArray2[2]},${chinaDateArray2[3]}`; //"Jan 02, 2019"
+    //
+    //      // let total_date= chinaDate+"--"+chinaDate2;
+    //       let total_date= displayDate+"--"+displayDate2;
+    //       return total_date
+    //   }else {
+    //       let displayDate = `${chinaDateArray[1]} ${chinaDateArray[2]}`; //"Jan 02, 2019"
+    //       let displayDate2 = `${chinaDateArray2[1]} ${chinaDateArray2[2]}`; //"Jan 02, 2019"
+    //
+    //      // let total_date= chinaDate+"--"+chinaDate2;
+    //       let total_date= displayDate+"--"+displayDate2;
+    //       return total_date
+    //   }
+    //
+    // },
     deal_Open_Date(row, column) {
       if(row.Open_date_S+'--'+row.Open_date_E.valueOf()=='1900-01-01--1900-01-01'){
           return '';
@@ -1926,13 +2130,26 @@ export default {
 
       //之后的处理是一样的
       // let chinaDateArray = chinaDate.split(' '); //["Wed", "Jan", "02", "2019"]
-
       // let displayDate = `${chinaDateArray[1]} ${chinaDateArray[2]}, ${chinaDateArray[3]}`; //"Jan 02, 2019"
-      let total_date= chinaDate+"--"+chinaDate2;
+      let chinaDateArray = chinaDate.split(' '); //["Wed", "Jan", "02", "2019"]
+      let chinaDateArray2 = chinaDate2.split(' '); //["Wed", "Jan", "02", "2019"]
 
+      if (chinaDateArray[3]!=chinaDateArray2[3]){
+          let displayDate = `${chinaDateArray[1]} ${chinaDateArray[2]},${chinaDateArray[3]}`; //"Jan 02, 2019"
+          let displayDate2 = `${chinaDateArray2[1]} ${chinaDateArray2[2]},${chinaDateArray2[3]}`; //"Jan 02, 2019"
 
+         // let total_date= chinaDate+"--"+chinaDate2;
+          let total_date= displayDate+"--"+displayDate2;
+          return total_date
+      }else {
+          let displayDate = `${chinaDateArray[1]} ${chinaDateArray[2]}`; //"Jan 02, 2019"
+          let displayDate2 = `${chinaDateArray2[1]} ${chinaDateArray2[2]}`; //"Jan 02, 2019"
 
-      return total_date
+         // let total_date= chinaDate+"--"+chinaDate2;
+          let total_date= displayDate+"--"+displayDate2;
+          return total_date
+      }
+
     },
 
 
@@ -2789,6 +3006,7 @@ export default {
         type: 'success'
         });
 
+     var data1 = new Array();
       // console.log("编辑后修改的数据");
       //
       // console.log(row.valueOf())
@@ -2797,7 +3015,6 @@ export default {
       // console.log(row.valueOf().DWT)
       // console.log(row.valueOf().Open_area)
       // console.log(row.valueOf().Vessel_name)
-      var data1 = new Array();
       var conditions = {
         "Vessel_name":row.valueOf().Vessel_name,
         "DWT":row.valueOf().DWT,
@@ -2817,30 +3034,15 @@ export default {
       })
         .then(function (response) {
 
-          // console.log("axios method");
-          // console.log(response);
-          // console.log(eval(response.data));
-          // // self.tableData1.splice(0, tableData1.length);
-          // var a = eval(response.data);
-          // for (var i = 0; i < a.list.length; i++) {
-          //    var t=a.list[i].fields;
-          //         t["ID"]=a.list[i].pk;
-          //         self.tableData1.push(t);
-          //   //JSON.stringify(a.list[i].fields)
-          // }
-          //  alert("The message has been update successfully")
-          //console.log(data2);
-          //this.tableData1.splice(xxx,xxx,xxx);
-        }
+            console.log(response);
+
+          }
 
         )
         .catch(function (error) {
           console.log(error);
         });
-      return data1;
-
-
-
+       return data1;
 
 
     },
@@ -3009,8 +3211,8 @@ export default {
        this.multipleSelection = val;
      },
 
-    // 增加星标的方法
-     switchChange(index,row){
+    // ton 增加星标的方法
+    switchChange(index,row){
       console.log("第二次点击");
       row.flag = !row.flag ;
       var data={
@@ -3068,7 +3270,8 @@ export default {
 
       },
 
-     switchChange_c(index,row){
+    // cargo 增加星标的方法
+    switchChange_c(index,row){
       console.log("第二次点击");
       row.flag = !row.flag ;
       var data={
@@ -3126,7 +3329,8 @@ export default {
 
       },
 
-     switchChange_t(index,row){
+     // tc 增加星标的方法
+    switchChange_t(index,row){
       console.log("第二次点击");
       row.flag = !row.flag ;
       var data={
@@ -3185,34 +3389,158 @@ export default {
       },
 
 
-    // tonFlagChange(index,row){
-    //   row.ok = false;
-    //   console.log("execute tonFlagChange");
-    //   var data={
-    //     "ID":row.valueOf().ID,
-    //     "value":1
-    //   };
-    //   this.axios({
-    //     method: "put",
-    //     url: "http://202.120.32.222:8888/users/ton_flag",
-    //     data:data
-    //   })
-    //     .then(function (response) {
-    //       // res=eval(response);
-    //       // console.log(res);
-    //       // alert(res);
-    //
-    //         // icon="el-icon-star-on"
-    //         // document.getElementById('light1').innerHTML=icon;
-    //
-    //
-    //     }
-    //     )
-    //     .catch(function (error) {
-    //       console.log(error);
-    //     });
-    //
-    // }
+    // ton 修改table日期的方法
+    chooseTimeRange1_1(t) {
+
+      this.datepickertableList.splice(0,this.datepickertableList.length);
+       for(var i=0;i<t.length;i++){
+         this.datepickertableList.push(t[i]);
+       }
+      console.log("哈哈哈")
+      console.log(this.datepickertableList);//结果为一个数组，如：["2018-08-04", "2018-08-06"]
+
+
+    },
+    changeTimeValue1_1(row, column){
+      console.log("嘻嘻嘻")
+      console.log(this.datepickertableList);
+      console.log(row.valueOf().ID)
+      var data_s = this.datepickertableList[0];
+      var data_e = this.datepickertableList[1];
+
+      console.log(data_s)
+      console.log(data_e)
+
+      var conditions = {
+        "ID":row.valueOf().ID,
+        "opendate_start": data_s,
+        "opendate_end": data_e
+      }
+
+      console.log(conditions)
+
+      this.axios({
+        method: "put",
+        url: "http://202.120.32.222:8888/users/ton_date",
+        data:conditions
+      })
+        .then(function (response) {
+          window.location.reload(true);
+
+
+        }
+
+        )
+        .catch(function (error) {
+          console.log(error);
+        });
+
+
+      },
+
+
+    // cargo 修改table日期的方法
+    chooseTimeRange2_1(t) {
+
+      this.datepickertable2List.splice(0,this.datepickertable2List.length);
+       for(var i=0;i<t.length;i++){
+         this.datepickertable2List.push(t[i]);
+       }
+      console.log("哈哈哈")
+      console.log(this.datepickertable2List);//结果为一个数组，如：["2018-08-04", "2018-08-06"]
+
+
+    },
+    changeTimeValue2_1(row, column){
+      console.log("嘻嘻嘻")
+      console.log(this.datepickertable2List);
+      console.log(row.valueOf().ID)
+      var data_s = this.datepickertable2List[0];
+      var data_e = this.datepickertable2List[1];
+
+      console.log(data_s)
+      console.log(data_e)
+
+      var conditions2 = {
+        "ID":row.valueOf().ID,
+        "laycan_start": data_s,
+        "laycan_end": data_e
+      }
+
+      console.log(conditions2)
+
+      this.axios({
+        method: "put",
+        url: "http://202.120.32.222:8888/users/cargo_date",
+        data:conditions2
+      })
+        .then(function (response) {
+          window.location.reload(true);
+
+
+        }
+
+        )
+        .catch(function (error) {
+          console.log(error);
+        });
+
+
+      },
+
+
+    // tc修改table日期的方法
+    chooseTimeRange3_1(t) {
+
+      this.datepickertable3List.splice(0,this.datepickertable3List.length);
+       for(var i=0;i<t.length;i++){
+         this.datepickertable3List.push(t[i]);
+       }
+      console.log("哈哈哈")
+      console.log(this.datepickertable3List);//结果为一个数组，如：["2018-08-04", "2018-08-06"]
+
+
+    },
+    changeTimeValue3_1(row, column){
+      console.log("嘻嘻嘻")
+      console.log(this.datepickertable3List);
+      console.log(row.valueOf().ID)
+      var data_s = this.datepickertable3List[0];
+      var data_e = this.datepickertable3List[1];
+
+      console.log(data_s)
+      console.log(data_e)
+
+      var conditions3 = {
+        "ID":row.valueOf().ID,
+        "laycan_start": data_s,
+        "laycan_end": data_e
+      }
+
+      console.log(conditions3)
+
+      this.axios({
+        method: "put",
+        url: "http://202.120.32.222:8888/users/tc_date",
+        data:conditions3
+      })
+        .then(function (response) {
+          window.location.reload(true);
+
+
+        }
+
+        )
+        .catch(function (error) {
+          console.log(error);
+        });
+
+
+      },
+
+
+
+
 
 
 

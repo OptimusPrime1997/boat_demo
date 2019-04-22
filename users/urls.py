@@ -41,4 +41,9 @@ urlpatterns = [
     url(r'^tc_flag$', users.views.tc_flag, ),
     url(r'^cargo_flag$', users.views.cargo_flag, ),
 
+    # change date
+    url(r'^ton_date$', users.views.ton_date),
+    url(r'^cargo_date', users.views.cargo_date),
+    url(r'^tc_date', users.views.tc_date),
+
 ]
