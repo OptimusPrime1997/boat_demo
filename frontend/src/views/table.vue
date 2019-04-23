@@ -731,10 +731,20 @@
 
                   <!--实现Quantity_s和Quantity_e的合并-->
                   <el-table-column
+                    props=[Quantity_s,Quantity_e]
                     label="Quantity"
                     width="120"
-                    :formatter="deal_Quantity2"
                   >
+                     <template slot-scope="scope">
+                      <template  v-if="scope.row.edit">
+                          <el-input width="10px" height="10px" class="edit-input"  size="small"  v-model="scope.row.Quantity_s"></el-input>
+                          <el-input width="10px" height="10px" class="edit-input"  size="small" v-model="scope.row.Quantity_e"></el-input>
+                      </template>
+                      <span v-else v-html="deal_Quantity2(scope.row,scope.column)"></span>
+                    </template>
+
+
+
                      <!--<template slot-scope="scope">-->
                         <!--{{scope.row.Quantity_s + '-'+scope.row.Quantity_e}}-->
                       <!--</template>-->
@@ -1104,10 +1114,19 @@
 
                   <!--实现Quantity_s和Quantity_e的合并-->
                   <el-table-column
+                    props=[Quantity_s,Quantity_e]
                     label="Quantity"
                     width="110"
-                    :formatter="deal_Quantity3"
                   >
+                    <template slot-scope="scope">
+                          <template  v-if="scope.row.edit">
+                              <el-input width="10px" height="10px" class="edit-input" size="small" v-model="scope.row.Quantity_s"></el-input>
+                              <el-input width="10px" height="10px" class="edit-input" size="small" v-model="scope.row.Quantity_e"></el-input>
+                          </template>
+                          <span v-else v-html="deal_Quantity3(scope.row,scope.column)"></span>
+                    </template>
+
+
                      <!--<template slot-scope="scope" prop="Quantity" >-->
                         <!--{{scope.row.Quantity_s + '-'+scope.row.Quantity_e}}-->
                       <!--</template>-->
@@ -1190,7 +1209,16 @@
                   <!--</el-table-column>-->
 
                   <!--实现DUR_S和DUR_E的合并-->
-                  <el-table-column  label="DUR" width="80" :formatter="deal_DUR">
+                  <el-table-column  label="DUR" width="80" props=[DUR_S,DUR_E]>
+                    <template slot-scope="scope">
+                          <template  v-if="scope.row.edit">
+                              <el-input width="10px" height="10px" class="edit-input" size="small" v-model="scope.row.DUR_S"></el-input>
+                              <el-input width="10px" height="10px" class="edit-input" size="small" v-model="scope.row.DUR_E"></el-input>
+                          </template>
+                          <span v-else v-html="deal_DUR(scope.row,scope.column)"></span>
+                    </template>
+
+
                     <!--<template slot-scope="scope">-->
                         <!--{{scope.row.DUR_S + '—'+scope.row.DUR_E}}-->
                       <!--</template>-->
@@ -1727,7 +1755,7 @@ export default {
     // var tableData2 = new Array();
     this.axios({
       method: "get",
-      url: "http://202.120.32.222:8888/users/cargo"
+      url: "http://127.0.0.1:8888/users/cargo"
     })
       .then(function (response) {
         var a = eval(response.data);
@@ -1748,7 +1776,7 @@ export default {
     // var tableData1 = new Array();
     this.axios({
       method: "get",
-      url: "http://202.120.32.222:8888/users/tonnage"
+      url: "http://127.0.0.1:8888/users/tonnage"
     })
       .then(function (response) {
         var a = eval(response.data);
@@ -1768,7 +1796,7 @@ export default {
     // var tableData3 = new Array();
     this.axios({
       method: "get",
-      url: "http://202.120.32.222:8888/users/tc"
+      url: "http://127.0.0.1:8888/users/tc"
     })
       .then(function (response) {
         var a = eval(response.data);
@@ -2339,7 +2367,7 @@ export default {
     //
     //         this.axios({
     //           method: "get",
-    //           url: "http://202.120.32.222:8888/users/search_tonnage/" + searchText1,
+    //           url: "http://127.0.0.1:8888/users/search_tonnage/" + searchText1,
     //         })
     //           .then(function (response) {
     //
@@ -2430,7 +2458,7 @@ export default {
 
       this.axios({
         method: "post",
-        url: "http://202.120.32.222:8888/users/tonnage_search",
+        url: "http://127.0.0.1:8888/users/tonnage_search",
         data:conditions
       })
         .then(function (response) {
@@ -2466,7 +2494,7 @@ export default {
 
             this.axios({
               method: "get",
-              url: "http://202.120.32.222:8888/users/ton_incomplete" ,
+              url: "http://127.0.0.1:8888/users/ton_incomplete" ,
             })
               .then(function (response) {
 
@@ -2500,7 +2528,7 @@ export default {
 
             this.axios({
               method: "get",
-              url: "http://202.120.32.222:8888/users/ton_complete" ,
+              url: "http://127.0.0.1:8888/users/ton_complete" ,
             })
               .then(function (response) {
 
@@ -2536,7 +2564,7 @@ export default {
 
             this.axios({
               method: "get",
-              url: "http://202.120.32.222:8888/users/car_incomplete" ,
+              url: "http://127.0.0.1:8888/users/car_incomplete" ,
             })
               .then(function (response) {
 
@@ -2571,7 +2599,7 @@ export default {
 
             this.axios({
               method: "get",
-              url: "http://202.120.32.222:8888/users/car_complete" ,
+              url: "http://127.0.0.1:8888/users/car_complete" ,
             })
               .then(function (response) {
 
@@ -2606,7 +2634,7 @@ export default {
 
             this.axios({
               method: "get",
-              url: "http://202.120.32.222:8888/users/tc_incomplete" ,
+              url: "http://127.0.0.1:8888/users/tc_incomplete" ,
             })
               .then(function (response) {
 
@@ -2641,7 +2669,7 @@ export default {
 
             this.axios({
               method: "get",
-              url: "http://202.120.32.222:8888/users/tc_complete" ,
+              url: "http://127.0.0.1:8888/users/tc_complete" ,
             })
               .then(function (response) {
 
@@ -2680,7 +2708,7 @@ export default {
      //      //console.log(searchText.text);
      //      this.axios({
      //        method: "get",
-     //        url: "http://202.120.32.222:8888/users/search_cargo/" + searchText2,
+     //        url: "http://127.0.0.1:8888/users/search_cargo/" + searchText2,
      //      })
      //        .then(function (response) {
      //          console.log("axios method");
@@ -2749,7 +2777,7 @@ export default {
 
       this.axios({
         method: "post",
-        url: "http://202.120.32.222:8888/users/cargo_search",
+        url: "http://127.0.0.1:8888/users/cargo_search",
         data:conditions
       })
         .then(function (response) {
@@ -2782,7 +2810,7 @@ export default {
         //   //console.log(searchText.text);
         //   this.axios({
         //     method: "get",
-        //     url: "http://202.120.32.222:8888/users/search_tc/" + searchText3,
+        //     url: "http://127.0.0.1:8888/users/search_tc/" + searchText3,
         //   })
         //     .then(function (response) {
         //       console.log("axios method");
@@ -2850,7 +2878,7 @@ export default {
 
       this.axios({
         method: "post",
-        url: "http://202.120.32.222:8888/users/tc_search",
+        url: "http://127.0.0.1:8888/users/tc_search",
         data:conditions
       })
         .then(function (response) {
@@ -3036,7 +3064,7 @@ export default {
 
       this.axios({
         method: "put",
-        url: "http://202.120.32.222:8888/users/tonnage_update",
+        url: "http://127.0.0.1:8888/users/tonnage_update",
         data:conditions
       })
         .then(function (response) {
@@ -3087,7 +3115,7 @@ export default {
 
       this.axios({
         method: "put",
-        url: "http://202.120.32.222:8888/users/cargo_update",
+        url: "http://127.0.0.1:8888/users/cargo_update",
         data:conditions
       })
         .then(function (response) {
@@ -3156,7 +3184,7 @@ export default {
 
       this.axios({
         method: "put",
-        url: "http://202.120.32.222:8888/users/tc_update",
+        url: "http://127.0.0.1:8888/users/tc_update",
         data:conditions
       })
         .then(function (response) {
@@ -3199,7 +3227,7 @@ export default {
       };
       this.axios({
         method: "put",
-        url: "http://202.120.32.222:8888/users/ton_flag",
+        url: "http://127.0.0.1:8888/users/ton_flag",
         data:data
       })
         .then(function (response) {
@@ -3232,7 +3260,7 @@ export default {
       };
       this.axios({
         method: "put",
-        url: "http://202.120.32.222:8888/users/ton_flag",
+        url: "http://127.0.0.1:8888/users/ton_flag",
         data:data
       })
         .then(function (response) {
@@ -3258,7 +3286,7 @@ export default {
       };
       this.axios({
         method: "put",
-        url: "http://202.120.32.222:8888/users/cargo_flag",
+        url: "http://127.0.0.1:8888/users/cargo_flag",
         data:data
       })
         .then(function (response) {
@@ -3291,7 +3319,7 @@ export default {
       };
       this.axios({
         method: "put",
-        url: "http://202.120.32.222:8888/users/cargo_flag",
+        url: "http://127.0.0.1:8888/users/cargo_flag",
         data:data
       })
         .then(function (response) {
@@ -3317,7 +3345,7 @@ export default {
       };
       this.axios({
         method: "put",
-        url: "http://202.120.32.222:8888/users/tc_flag",
+        url: "http://127.0.0.1:8888/users/tc_flag",
         data:data
       })
         .then(function (response) {
@@ -3350,7 +3378,7 @@ export default {
       };
       this.axios({
         method: "put",
-        url: "http://202.120.32.222:8888/users/tc_flag",
+        url: "http://127.0.0.1:8888/users/tc_flag",
         data:data
       })
         .then(function (response) {
@@ -3399,7 +3427,7 @@ export default {
 
       this.axios({
         method: "put",
-        url: "http://202.120.32.222:8888/users/ton_date",
+        url: "http://127.0.0.1:8888/users/ton_date",
         data:conditions
       })
         .then(function (response) {
@@ -3449,7 +3477,7 @@ export default {
 
       this.axios({
         method: "put",
-        url: "http://202.120.32.222:8888/users/cargo_date",
+        url: "http://127.0.0.1:8888/users/cargo_date",
         data:conditions2
       })
         .then(function (response) {
@@ -3499,7 +3527,7 @@ export default {
 
       this.axios({
         method: "put",
-        url: "http://202.120.32.222:8888/users/tc_date",
+        url: "http://127.0.0.1:8888/users/tc_date",
         data:conditions3
       })
         .then(function (response) {
