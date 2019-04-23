@@ -241,18 +241,8 @@
                 <!-- 添加导出Excel按钮-->
                 <button  @click="exportExcel"  class="btn" style="text-align:center;width:120px;height:32px;font-size:15px">Import Excel</button>
 
-
-
-
-
-
-
-                <!--&lt;!&ndash; 批量删除按钮 &ndash;&gt;-->
-                <!--<div align="right" style="margin-top: 0px;text-align:right;" >-->
-
-                    <!--<el-button @click="batchDelete">Batch delete</el-button>-->
-                    <!--<el-button @click="toggleSelection()">Deselect</el-button>-->
-                <!--</div>-->
+                <!-- 添加复选框按钮-->
+                 <el-button  @click="displaySelection"  class="btn" style="float:right;background:rgba(238,234,214,0)">Batch Choice </el-button>
 
 
 
@@ -264,7 +254,6 @@
                   tooltip-effect="dark"
                   @selection-change="handleSelectionChange"
 
-
                   :data=" tableData1.slice((currentPage - 1) * pagesize,currentPage * pagesize)"
                   height="800"
                   border
@@ -274,15 +263,12 @@
 
                 >
 
-                  <!--<el-table-column type="selection" width="55"  :formatter="tonFlagChange">-->
+                  <el-table-column type="selection" width="40"  >
 
-                  <!--</el-table-column>-->
+                  </el-table-column>
 
                   <el-table-column prop="flag" label="Flag" width="50">
-                      <!--<template slot-scope="scope">-->
-                          <!--<el-button v-if="scope.row.ok"  @click="tonFlagChange(scope.$index, scope.row)" size="small" icon="el-icon-star-on"></el-button>-->
-                          <!--<el-button v-else  @click='scope.row.ok=!scope.row.ok' size="small" icon="el-icon-star-off"></el-button>-->
-                      <!--</template>  -->
+
                     <template slot-scope="scope">
                          <!--<el-button type="warning" icon="el-icon-star-off" circle></el-button>-->
                          <el-button  style="margin: 0;padding: 0;font-size: 100%;"   icon="el-icon-star-on" v-if="scope.row.flag==1  " @click=' switchChange2(scope.$index, scope.row)' ></el-button>
@@ -310,7 +296,7 @@
                   <el-table-column
                     prop="Vessel_name"
                     label="Vessel Name"
-                    width="150"
+                    width="200"
                   >
                     <template slot-scope="scope">
                           <template  v-if="scope.row.edit">
@@ -361,7 +347,7 @@
                   <el-table-column
                     prop="Open_area"
                     label="Open Area"
-                    width="150"
+                    width="200"
                   >
                      <template slot-scope="scope">
                           <template  v-if="scope.row.edit">
@@ -428,7 +414,7 @@
                   <!--&gt;-->
                   <!--</el-table-column>-->
 
-                  <el-table-column prop="Sent" label="Sent" width="130" :formatter="deal_Sent1" >
+                  <el-table-column prop="Sent" label="Sent" width="160" :formatter="deal_Sent1" >
                   </el-table-column>
 
 
@@ -436,7 +422,7 @@
                   <!--<el-table-column prop="Sent" label="Sent"  :chargNull="chargNull" width="200">-->
                   <!--</el-table-column>-->
 
-                  <el-table-column label="Operation">
+                  <el-table-column label="Operation" width="120">
                       <template slot-scope="scope">
                           <el-button v-if="scope.row.edit" type="success" @click="confirmEdit(scope.$index, scope.row)" size="small" icon="el-icon-circle-check-outline">Save</el-button>
                           <el-button v-else type="primary" @click='scope.row.edit=!scope.row.edit' size="small" icon="el-icon-edit">Edit</el-button>
@@ -670,10 +656,18 @@
                 <!--// 添加导出Excel按钮-->
                  <button  @click="exportExcel2"  class="btn" style="text-align:center;width:120px;height:32px;font-size:15px">Import Excel</button>
 
+                <!-- 添加复选框按钮-->
+                 <el-button  @click="displaySelection2"  class="btn" style="float:right;background:rgba(238,234,214,0)">Batch Choice </el-button>
+
 
 
                 <el-table
                   id="mytable2"
+
+                  ref="multipleTable"
+                  tooltip-effect="dark"
+                  @selection-change="handleSelectionChange2"
+
                   :data="
                     tableData2.slice(
                       (currentPage - 1) * pagesize,
@@ -686,11 +680,14 @@
                   @row-click="display_mail2"
 
                 >
+
+                  <el-table-column type="selection" width="40"  >
+
+                  </el-table-column>
+
+
                   <el-table-column prop="flag" label="Flag" width="50">
-                      <!--<template slot-scope="scope">-->
-                          <!--<el-button v-if="scope.row.ok"  @click="tonFlagChange(scope.$index, scope.row)" size="small" icon="el-icon-star-on"></el-button>-->
-                          <!--<el-button v-else  @click='scope.row.ok=!scope.row.ok' size="small" icon="el-icon-star-off"></el-button>-->
-                      <!--</template>  -->
+
                     <template slot-scope="scope">
                          <!--<el-button type="warning" icon="el-icon-star-off" circle></el-button>-->
                          <el-button  icon="el-icon-star-on" style="margin: 0;padding: 0;font-size: 100%;"  v-if="scope.row.flag==1  " @click=' switchChange2_c(scope.$index, scope.row)' size="small"></el-button>
@@ -705,12 +702,12 @@
                     label="ID"
                     width="40"
                   >
-                    <template slot-scope="scope">
-                          <template  v-if="scope.row.edit">
-                              <el-input class="edit-input" size="small" v-model="scope.row.ID"></el-input>
-                          </template>
-                          <span v-else>{{ scope.row.ID }}</span>
-                    </template>
+                    <!--<template slot-scope="scope">-->
+                          <!--<template  v-if="scope.row.edit">-->
+                              <!--<el-input class="edit-input" size="small" v-model="scope.row.ID"></el-input>-->
+                          <!--</template>-->
+                          <!--<span v-else>{{ scope.row.ID }}</span>-->
+                    <!--</template>-->
 
 
                   </el-table-column>
@@ -719,7 +716,7 @@
                   <el-table-column
                     prop="Cargo_name"
                     label="Cargo Name"
-                    width="120"
+                    width="200"
 
                   >
                     <template slot-scope="scope">
@@ -753,7 +750,7 @@
                   <el-table-column
                     prop="Loading_Port"
                     label="Loading Port"
-                    width="130"
+                    width="200"
                   >
                     <template slot-scope="scope">
                       <template  v-if="scope.row.edit">
@@ -766,7 +763,7 @@
                   <el-table-column
                     prop="Discharging_Port"
                     label="Discharging Port"
-                    width="135"
+                    width="200"
                   >
                     <template slot-scope="scope">
                       <template  v-if="scope.row.edit">
@@ -782,7 +779,7 @@
                   <el-table-column
 
                     label="LayCan"
-                    width="150"
+                    width="200"
                     props=[LayCan_S,LayCan_E]
                   >
                     <template slot-scope="scope">
@@ -820,10 +817,10 @@
                   <!--&gt;-->
                   <!--</el-table-column>-->
 
-                  <el-table-column prop="Sent" label="Sent" width="120" :formatter="deal_Sent2">
+                  <el-table-column prop="Sent" label="Sent" width="160" :formatter="deal_Sent2">
                   </el-table-column>
 
-                  <el-table-column label="Operation">
+                  <el-table-column label="Operation" width="120">
                       <template slot-scope="scope">
                           <el-button v-if="scope.row.edit" type="success" @click="confirmEdit2(scope.$index, scope.row)" size="small" icon="el-icon-circle-check-outline">Save</el-button>
                           <el-button v-else type="primary" @click='scope.row.edit=!scope.row.edit' size="small" icon="el-icon-edit">Edit</el-button>
@@ -1046,10 +1043,16 @@
                 <!--// 添加导出Excel按钮-->
                  <button  @click="exportExcel3"  class="btn" style="text-align:center;width:120px;height:32px;font-size:15px">Import Excel</button>
 
+                <!-- 添加复选框按钮-->
+                 <el-button  @click="displaySelection3"  class="btn" style="float:right;background:rgba(238,234,214,0)">Batch Choice </el-button>
 
 
                 <el-table
                   id="mytable3"
+
+                  ref="multipleTable"
+                  tooltip-effect="dark"
+                  @selection-change="handleSelectionChange3"
                   :data="
                     tableData3.slice(
                       (currentPage - 1) * pagesize,
@@ -1061,11 +1064,12 @@
                   style="width: 100%"
                   @row-click="display_mail3"
                 >
+                  <el-table-column type="selection" width="40"  >
+
+                  </el-table-column>
+
                   <el-table-column prop="flag" label="Flag" width="50">
-                      <!--<template slot-scope="scope">-->
-                          <!--<el-button v-if="scope.row.ok"  @click="tonFlagChange(scope.$index, scope.row)" size="small" icon="el-icon-star-on"></el-button>-->
-                          <!--<el-button v-else  @click='scope.row.ok=!scope.row.ok' size="small" icon="el-icon-star-off"></el-button>-->
-                      <!--</template>  -->
+
                     <template slot-scope="scope">
                          <!--<el-button type="warning" icon="el-icon-star-off" circle></el-button>-->
                          <el-button  icon="el-icon-star-on" style="margin: 0;padding: 0;font-size: 100%;"  v-if="scope.row.flag==1  " @click=' switchChange2_t(scope.$index, scope.row)' size="small"></el-button>
@@ -1078,18 +1082,18 @@
                     label="ID"
                     width="40"
                   >
-                    <template slot-scope="scope">
-                          <template  v-if="scope.row.edit">
-                              <el-input class="edit-input" size="small" v-model="scope.row.ID"></el-input>
-                          </template>
-                          <span v-else>{{ scope.row.ID }}</span>
-                    </template>
+                    <!--<template slot-scope="scope">-->
+                          <!--<template  v-if="scope.row.edit">-->
+                              <!--<el-input class="edit-input" size="small" v-model="scope.row.ID"></el-input>-->
+                          <!--</template>-->
+                          <!--<span v-else>{{ scope.row.ID }}</span>-->
+                    <!--</template>-->
 
 
                   </el-table-column>
 
 
-                  <el-table-column prop="Account" label="Account" width="110">
+                  <el-table-column prop="Account" label="Account" width="200">
                     <template slot-scope="scope">
                           <template  v-if="scope.row.edit">
                               <el-input class="edit-input" size="small" v-model="scope.row.Account"></el-input>
@@ -1117,7 +1121,7 @@
                   <el-table-column
                     prop="Delivery_area"
                     label="Delivery Area"
-                    width="120"
+                    width="200"
                   >
                      <template slot-scope="scope">
                           <template  v-if="scope.row.edit">
@@ -1129,7 +1133,7 @@
                   <el-table-column
                     prop="Redelivery_area"
                     label="Redelivery Area"
-                    width="130"
+                    width="200"
                   >
                      <template slot-scope="scope">
                           <template  v-if="scope.row.edit">
@@ -1144,7 +1148,7 @@
                   <el-table-column
 
                     label="LayCan"
-                    width="140"
+                    width="200"
                     props=[LayCan_S,LayCan_E]
                   >
                     <template slot-scope="scope">
@@ -1196,10 +1200,10 @@
                   <!--<el-table-column prop="Sent" label="Sent" width="130">-->
                   <!--</el-table-column>-->
                   <!--处理sent 中为0的数据不显示-->
-                  <el-table-column prop="Sent" label="Sent" width="110" :formatter="deal_Sent3">
+                  <el-table-column prop="Sent" label="Sent" width="160" :formatter="deal_Sent3">
                   </el-table-column>
 
-                  <el-table-column label="Operation">
+                  <el-table-column label="Operation" width="120">
                       <template slot-scope="scope">
                           <el-button v-if="scope.row.edit" type="success" @click="confirmEdit3(scope.$index, scope.row)" size="small" icon="el-icon-circle-check-outline">Save</el-button>
                           <el-button v-else type="primary" @click='scope.row.edit=!scope.row.edit' size="small" icon="el-icon-edit">Edit</el-button>
@@ -1278,6 +1282,14 @@ export default {
   data() {
 
     return {
+      // ton 复选框方法
+      multipleSelection: [],
+      // cargo 复选框方法
+      multipleSelection2: [],
+      // tc 复选框方法
+      multipleSelection3: [],
+
+
       // ton 修改table日期的方法
       value13_1: '',
       datepickertableList:[],
@@ -1293,15 +1305,11 @@ export default {
       cargo_dateList:[],
       tc_dateList:[],
 
+      // 定义每次刷新时在first页面显示
       activeName2: 'first',
       // activeName2: 'second',
 
       tableData1: [],
-
-
-      // 添加删除
-      // multipleSelection: [],
-
       tableData2: [],
       tableData3: [],
       text: '',
@@ -2296,7 +2304,6 @@ export default {
 
 
 
-
     ///处理分页 初始页currentPage、初始每页数据数pagesize和数据tableDate1,tableDate2,tableDate3
     handleSizeChange: function (size) {
       this.pagesize = size;
@@ -2871,7 +2878,7 @@ export default {
       console.log(tab, event);
     },
 
-    // 导出Excel方法
+    // ton导出Excel方法
     exportExcel() {
       // 设置当前日期
       let date = new Date();
@@ -2915,7 +2922,7 @@ export default {
       }
       return wbout;
     },
-    // 导出Excel方法
+    // cargo导出Excel方法
     exportExcel2() {
       // 设置当前日期
       let date = new Date();
@@ -2956,7 +2963,7 @@ export default {
       }
       return wbout;
     },
-    // 导出Excel方法
+    // tc导出Excel方法
     exportExcel3() {
       // 设置当前日期
       let date = new Date();
@@ -2998,7 +3005,7 @@ export default {
       return wbout;
     },
 
-    // 添加编辑保存功能的方法
+    // 添加ton编辑保存功能的方法
     confirmEdit(index,row){
     row.edit = false;
     this.$message({
@@ -3046,7 +3053,7 @@ export default {
 
 
     },
-
+    // 添加cargo编辑保存功能的方法
     confirmEdit2(index,row){
     row.edit = false;
     this.$message({
@@ -3112,7 +3119,7 @@ export default {
 
 
     },
-
+    // 添加tc编辑保存功能的方法
     confirmEdit3(index,row){
     row.edit = false;
     this.$message({
@@ -3181,35 +3188,6 @@ export default {
 
 
     },
-
-
-    //添加批量删除方法
-    toggleSelection(rows) {
-       if (rows) {
-           rows.forEach(row => {
-           this.$refs.multipleTable.toggleRowSelection(row);
-       });
-       } else {
-           this.$refs.multipleTable.clearSelection();
-       }
-     },
-     batchDelete(){
-         let  multData = this.multipleSelection;
-         let  tableData =this.tableData1;
-         let  multDataLen = multData.length;
-         let  tableDataLen = tableData.length;
-         for(let i = 0; i < multDataLen ;i++){
-             for(let y=0;y < tableDataLen;y++){
-                 if(JSON.stringify(tableData[y]) == JSON.stringify(multData[i])){  //判断是否相等，相等就删除
-                   this.tableData1.splice(y,1)
-                   console.log("aa")
-                 }
-             }
-         }
-     },
-     handleSelectionChange(val) {
-       this.multipleSelection = val;
-     },
 
     // ton 增加星标的方法
     switchChange(index,row){
@@ -3539,7 +3517,77 @@ export default {
       },
 
 
+    // ton复选框选择 筛选EXCEL
+    handleSelectionChange(val) {
+        this.multipleSelection = val;
+    },
+    displaySelection(){
 
+      console.log("%%%%");
+      console.log( this.multipleSelection)
+
+      var array = new Array();
+      var arr = new Array();
+      for(var i=0;i<this.multipleSelection.length;i++) {
+         array.push(this.multipleSelection[i].ID)
+         for(var j=0;j<this.tableData1.length;j++){
+           if(this.multipleSelection[i].ID==this.tableData1[j].ID) {
+               arr.push(this.tableData1[j])
+             }
+           }
+      }
+      console.log(array)
+      console.log(arr)
+      this.tableData1= arr
+     },
+
+    // cargo复选框选择 筛选EXCEL
+    handleSelectionChange2(val) {
+        this.multipleSelection2 = val;
+    },
+    displaySelection2(){
+
+      console.log("%%%%");
+      console.log( this.multipleSelection2)
+
+      var array = new Array();
+      var arr = new Array();
+      for(var i=0;i<this.multipleSelection2.length;i++) {
+         array.push(this.multipleSelection2[i].ID)
+         for(var j=0;j<this.tableData2.length;j++){
+           if(this.multipleSelection2[i].ID==this.tableData2[j].ID) {
+               arr.push(this.tableData2[j])
+             }
+           }
+      }
+      console.log(array)
+      console.log(arr)
+      this.tableData2= arr
+     },
+
+    // tc复选框选择 筛选EXCEL
+    handleSelectionChange3(val) {
+        this.multipleSelection3 = val;
+    },
+    displaySelection3(){
+
+      console.log("%%%%");
+      console.log( this.multipleSelection3)
+
+      var array = new Array();
+      var arr = new Array();
+      for(var i=0;i<this.multipleSelection3.length;i++) {
+         array.push(this.multipleSelection3[i].ID)
+         for(var j=0;j<this.tableData3.length;j++){
+           if(this.multipleSelection3[i].ID==this.tableData3[j].ID) {
+               arr.push(this.tableData3[j])
+             }
+           }
+      }
+      console.log(array)
+      console.log(arr)
+      this.tableData3= arr
+     },
 
 
 
