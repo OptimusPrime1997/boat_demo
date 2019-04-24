@@ -13,184 +13,161 @@
               <el-tab-pane  label="Tonnage Cards" name="first"   >
 
 
-                <div >Tonnage offer cards</div>
-                <div >
-                  <!--Vessel Name 搜索框的实现-->
-                  <div
-                    class="search_tonnage"
-                    style="text-align:left; display:inline ;float:left"
-                  >
-                    Vessel Name :
-                    <input
-                      id="searchText1"
-                      type="text"
-                      class="searchBox"
-                      style="width:200px;height:25px;"
-                    />
-                  </div>
+               <div >Tonnage offer cards</div>
+                <el-row :gutter="10">
+                      <el-col :xs="24" :sm="24" :md="12" :lg="12" :xl="12">  <!--Vessel Name 搜索框的实现-->
+                            <div
+                              class="search_tonnage"
+                              style="text-align:left;"
+                            >
+                              Vessel Name :
+                              <input
+                                id="searchText1"
+                                type="text"
+                                class="searchBox"
+                                style="width:54%;height:25px;"
+                              />
+                            </div>
+                      </el-col>
+                      <el-col :xs="24" :sm="24" :md="12" :lg="12" :xl="12"> <!--Sender's Mail 搜索框的实现-->
+                            <div
+                              class="search_tonnage"
+                               style="text-align:left;"
+                            >
+                              Sender's
+                              Mail :
+                              <input
+                                id="senderMail1"
+                                type="text"
+                                class="searchBox"
+                                style="width:54%;height:25px;"
+                              />
+                            </div>
 
-                  <!--Sender's Mail 搜索框的实现-->
-                  <div
-                    class="search_tonnage"
-                    style="text-align:right; display:inline "
-                  >
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sender's
-                    Mail : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <input
-                      id="senderMail1"
-                      type="text"
-                      class="searchBox"
-                      style="width:200px;height:25px;"
-                    />
-                  </div>
-                </div>
-
-                <div>
-                  <!--Open Date 日期框的实现-->
-                  <div
-                    class="block"
-                    style="text-align:left;display:inline ;float:left "
-                  >
-                    <span class="demonstration"
-                      >Open Date : &nbsp;&nbsp;&nbsp;</span
-                    >
-                    <el-date-picker
-                      unlink-panels
-                      v-model="value_a_1"
-                      id="tab1_data"
-                      value-format="yyyy-MM-dd"
-                      type="daterange"
-                      range-separator="--"
-                      @change="chooseTimeRange1"
-                      start-placeholder="Start Date"
-                      end-placeholder="End Date"
-                      style="height:30px;"
-                    >
-                    </el-date-picker>
-                  </div>
-
-                  <!--Sent within 框的实现-->
-                  <div  style="text-align:left;display:inline ">
-                    &nbsp;&nbsp;Sent within : &nbsp;&nbsp;&nbsp;&nbsp;
-                    &nbsp;&nbsp;
-                    <el-select id="sentWithin1" v-model="value_a_2" placeholder="All">
-                      <el-option
-                        v-for="item in options_a_2"
-                        :key="item.value_a_2"
-                        :label="item.label"
-                        :value="item.value_a_2"
-                      >
-                      </el-option>
-                    </el-select>
-                    Days.
-                  </div>
-                </div>
-
-                <div>
-
-                  <!--Built 框的实现-->
-                  <div style="text-align:left ;display:inline ;float:left">
-                    Built :
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Under
-                    <el-select id="built1" v-model="value_a_3" placeholder="All">
-                      <el-option
-                        v-for="item in options_a_3"
-                        :key="item.value_a_3"
-                        :label="item.label"
-                        :value="item.value_a_3"
-                      >
-                      </el-option>
-                    </el-select>
-                    Year(s).
-                  </div>
+                      </el-col>
+                 </el-row>
 
 
-                  <!--Mail Account 框的实现-->
-                  <div style="text-align:left;display:inline ;">
-                    Mail Account
-                    :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <el-select id="mail_Account1" v-model="value_a_4" placeholder="All">
-                      <el-option
-                        v-for="item in options_a_4"
-                        :key="item.value_a_4"
-                        :label="item.label"
-                        :value="item.value_a_4"
-                      >
-                      </el-option>
-                    </el-select>
-                  </div>
+                <el-row :gutter="10">
+                      <el-col :xs="24" :sm="24" :md="12" :lg="12" :xl="12">
+                            <!--Open Date 日期框的实现-->
+                              <div
+                                class="block"
+                                style="text-align:left;"
+                              >
+                                <span class="demonstration"
+                                  >Open Date  :&nbsp;&nbsp;&nbsp;&nbsp; </span
+                                >
+                                <el-date-picker
+                                  unlink-panels
+                                  v-model="value_a_1"
+                                  id="tab1_data"
+                                  value-format="yyyy-MM-dd"
+                                  type="daterange"
+                                  range-separator="--"
+                                  @change="chooseTimeRange1"
+                                  start-placeholder="Start Date"
+                                  end-placeholder="End Date"
+                                  style="width:55%;height:35px;"
+                                >
+                                </el-date-picker>
+                              </div>
 
-                </div>
+                      </el-col>
+                      <el-col :xs="24" :sm="24" :md="12" :lg="12" :xl="12">
+                         <!--Sent within 框的实现-->
+                          <div  style="text-align:left;">
+                            Sent within :&nbsp;&nbsp;&nbsp;&nbsp;
+                            <el-select  id="sentWithin1" v-model="value_a_2" placeholder="All" style="width:45%;">
+                              <el-option
+                                v-for="item in options_a_2"
+                                :key="item.value_a_2"
+                                :label="item.label"
+                                :value="item.value_a_2"
+                              >
+                              </el-option>
+                            </el-select>
+                            Days.
+                          </div>
 
-                <div style="height: 50px">
+                      </el-col>
+                </el-row>
+
+                <el-row :gutter="10">
+                      <el-col :xs="24" :sm="24" :md="12" :lg="12" :xl="12">
+                          <!--Built 框的实现-->
+                          <div style="text-align:left ;">
+                            Built : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Under
+                            <el-select id="built1" v-model="value_a_3" placeholder="All" style="width: 30%">
+                              <el-option
+                                v-for="item in options_a_3"
+                                :key="item.value_a_3"
+                                :label="item.label"
+                                :value="item.value_a_3"
+                              >
+                              </el-option>
+                            </el-select>
+                            Year(s).
+                          </div>
+                      </el-col>
+                      <el-col :xs="24" :sm="24" :md="12" :lg="12" :xl="12">
+                         <!--Mail Account 框的实现-->
+                          <div style="text-align:left;">
+                            Mail Account
+                            :&nbsp;
+                            <el-select id="mail_Account1" v-model="value_a_4" placeholder="All" style="width: 55%">
+                              <el-option
+                                v-for="item in options_a_4"
+                                :key="item.value_a_4"
+                                :label="item.label"
+                                :value="item.value_a_4"
+                              >
+                              </el-option>
+                            </el-select>
+                          </div>
+                      </el-col>
+                </el-row>
+                <el-row :gutter="10">
+                      <el-col :xs="24" :sm="24" :md="12" :lg="12" :xl="12">
+                            <!--DWT 框的实现-->
+
+                            <div style="text-align:left ;">
+                              DWT :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;gte(>=)
+                              <input
+                                id="dwt1"
+                                type="text"
+                                class="searchBox"
+                                style="width:12%;height:25px;"
+                              />
+                              --
+                              <input
+                                id="dwt2"
+                                type="text"
+                                class="searchBox"
+                                style="width:12%;height:25px;"
+                              />lte(<=)
+                            </div>
+
+                      </el-col>
+                      <el-col :xs="24" :sm="24" :md="12" :lg="12" :xl="12">
+                          <!--Open Area 框的实现-->
+                            <div
+                              class="search_tonnage"
+                              style="text-align:left;"
+                            >
+                             Open area :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                              <input
+                                id="searchText_open_area"
+                                type="text"
+                                class="searchBox"
+                                style="height:25px;width:54%"
+                              />
+                            </div>
+
+                      </el-col>
+                </el-row>
 
 
-                  <!--DWT 框的实现-->
-
-                  <!--<div style="text-align:left ;display:inline ;float:left">-->
-                    <!--DWT-->
-                    <!--:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-->
-                    <!--<el-select v-model="value_a_5" placeholder="All">-->
-                      <!--<el-option-->
-                        <!--v-for="item in options_a_5"-->
-                        <!--:key="item.value_a_5"-->
-                        <!--:label="item.label"-->
-                        <!--:value="item.value_a_5"-->
-                      <!--&gt;-->
-                      <!--</el-option>-->
-                    <!--</el-select>-->
-                  <!--</div>-->
-
-                  <div style="text-align:left ;display:inline ;float:left">
-                    DWT :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;gte(>=)
-
-                    <input
-                      id="dwt1"
-                      type="text"
-                      class="searchBox"
-                      style="width:100px;height:25px;"
-                    />
-                    --
-                    <input
-                      id="dwt2"
-                      type="text"
-                      class="searchBox"
-                      style="width:100px;height:25px;"
-                    />
-                    lte(<=)
-                  </div>
-
-
-
-
-
-                  <!--Open Area 框的实现-->
-                  <div
-                    class="search_tonnage"
-                    style="text-align:left; display:inline;"
-                  >
-                   Open area :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <input
-                      id="searchText_open_area"
-                      type="text"
-                      class="searchBox"
-                      style="width:200px;height:25px;"
-                    />
-                  </div>
-                  <!--<div style="text-align:left;display:inline ;" >-->
-                  <!--&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Open Area :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-->
-                  <!--<el-select v-model="value_a_6" placeholder="None">-->
-                  <!--<el-option-->
-                  <!--v-for="item in options_a_6"-->
-                  <!--:key="item.value_a_6"-->
-                  <!--:label="item.label"-->
-                  <!--:value="item.value_a_6">-->
-                  <!--</el-option>-->
-                  <!--</el-select>-->
-
-                  <!--</div>-->
-                </div>
 
                 <!--<button-->
                   <!--@click="searchCargoSimple1"-->
@@ -467,151 +444,117 @@
 
               <el-tab-pane label="Cargo Cards " name="second">
                 <div>Cargo offer cards</div>
-                <div>
-                  <div
-                    class="search_cago"
-                    style="text-align:left; display:inline ;float:left"
-                  >
-                    Cargo Name :
-                    <input
-                      id="searchText2"
-                      type="text"
-                      class="searchBox"
-                      style="width:200px;height:25px;"
-                    />
-                  </div>
+                <el-row :gutter="10">
+                      <el-col :xs="24" :sm="24" :md="12" :lg="12" :xl="12">
+                          <div
+                              class="search_cago"
+                              style="text-align:left; "
+                            >
+                              Cargo Name :
+                              <input
+                                id="searchText2"
+                                type="text"
+                                class="searchBox"
+                                style="width:54%;height:25px;"
+                              />
+                            </div>
+                      </el-col>
+                      <el-col :xs="24" :sm="24" :md="12" :lg="12" :xl="12">
+                           <!--Sender's Mail 搜索框的实现-->
+                            <div
+                              class="search_tonnage"
+                              style="text-align:left; "
+                            >
+                              Sender's
+                              Mail :
+                              <input
+                                id="senderMail2"
+                                type="text"
+                                class="searchBox"
+                                style="width:54%;height:25px;"
+                              />
+                            </div>
+                      </el-col>
+                </el-row>
+                <el-row :gutter="10">
+                      <el-col :xs="24" :sm="24" :md="12" :lg="12" :xl="12">
+                            <!--Laycan 日期框的实现-->
+                            <div
+                              class="block"
+                              style="text-align:left;"
+                            >
+                              <span class="demonstration"
+                                >Laycan :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span
+                              >
+                              <el-date-picker
+                                unlink-panels
+                                v-model="value_b_1"
+                                id="tab2_data"
+                                type="daterange"
+                                value-format="yyyy-MM-dd"
+                                range-separator="--"
+                                start-placeholder="Start Date"
+                                end-placeholder="End Date"
+                                @change="chooseTimeRange2"
+                                style="width:55%;height:35px;"
+                              >
+                              </el-date-picker>
+                            </div>
+                      </el-col>
+                      <el-col :xs="24" :sm="24" :md="12" :lg="12" :xl="12">
+                            <!--Sent within 框的实现-->
+                            <div style="text-align:left; ">
+                              &nbsp;&nbsp;Sent within :&nbsp;&nbsp;
+                              <el-select id="sentWithin2" v-model="value_b_2" placeholder="All" style="width:45%;">
+                                <el-option
+                                  v-for="item in options_b_2"
+                                  :key="item.value_b_2"
+                                  :label="item.label"
+                                  :value="item.value_b_2"
+                                >
+                                </el-option>
+                              </el-select>
+                              Days.
+                            </div>
+                      </el-col>
+                </el-row>
+                <el-row :gutter="10">
+                      <el-col :xs="24" :sm="24" :md="12" :lg="12" :xl="12">
+                         <div style="text-align:left ">
+                            Quantity :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;gte(>=)
+                            <input
+                              id="Quantity1"
+                              type="text"
+                              class="searchBox"
+                              style="width:40%;height:25px;"
+                            />
 
-                  <!--Sender's Mail 搜索框的实现-->
-                  <div
-                    class="search_tonnage"
-                    style="text-align:right; display:inline "
-                  >
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sender's
-                    Mail : &nbsp;&nbsp;&nbsp;&nbsp;
-                    <input
-                      id="senderMail2"
-                      type="text"
-                      class="searchBox"
-                      style="width:200px;height:25px;"
-                    />
-                  </div>
-                </div>
+                          </div>
 
-                <div>
-                  <!--Laycan 日期框的实现-->
-                  <div
+                      </el-col>
+                      <el-col :xs="24" :sm="24" :md="12" :lg="12" :xl="12">
+                         <!--Mail Account 框的实现-->
+                          <div style="text-align:left;">
+                            Mail
+                            Account :&nbsp;
+                            <el-select id="mail_Account2" v-model="value_b_4" placeholder="All" style="width:55%;">
+                              <el-option
+                                v-for="item in options_b_4"
+                                :key="item.value_b_4"
+                                :label="item.label"
+                                :value="item.value_b_4"
+                              >
+                              </el-option>
+                            </el-select>
+                          </div>
 
-                    class="block"
-                    style="text-align:left;display:inline ;float:left "
-                  >
-                    <span class="demonstration"
-                      >Laycan : &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;</span
-                    >
-                    <el-date-picker
-                      unlink-panels
-                      v-model="value_b_1"
-                      id="tab2_data"
-                      type="daterange"
-                      value-format="yyyy-MM-dd"
-                      range-separator="--"
-                      start-placeholder="Start Date"
-                      end-placeholder="End Date"
-                      @change="chooseTimeRange2"
-                      style="height:30px;"
-                    >
-                    </el-date-picker>
-                  </div>
-
-                  <!--Sent within 框的实现-->
-                  <div style="text-align:left;display:inline ">
-                    &nbsp;&nbsp;Sent within : &nbsp;&nbsp; &nbsp;&nbsp;
-                    <el-select id="sentWithin2" v-model="value_b_2" placeholder="All">
-                      <el-option
-                        v-for="item in options_b_2"
-                        :key="item.value_b_2"
-                        :label="item.label"
-                        :value="item.value_b_2"
-                      >
-                      </el-option>
-                    </el-select>
-                    Days.
-                  </div>
-                </div>
-
-                <div style="height: 60px">
-                  <!--&lt;!&ndash;Loding Port 框的实现&ndash;&gt;-->
-                  <!--<div style="text-align:left ;display:inline ;float:left" >-->
-                  <!--Loding Port : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-->
-                  <!--<el-select v-model="value_b_3" placeholder="All">-->
-                  <!--<el-option-->
-                  <!--v-for="item in options_b_3"-->
-                  <!--:key="item.value_b_3"-->
-                  <!--:label="item.label"-->
-                  <!--:value="item.value_b_3">-->
-                  <!--</el-option>-->
-                  <!--</el-select>-->
-                  <!---->
-
-                  <!--</div>-->
-
-                  <!--Mail Account 框的实现-->
-                  <div style="text-align:left;display:inline ;">
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mail
-                    Account :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <el-select id="mail_Account2" v-model="value_b_4" placeholder="All">
-                      <el-option
-                        v-for="item in options_b_4"
-                        :key="item.value_b_4"
-                        :label="item.label"
-                        :value="item.value_b_4"
-                      >
-                      </el-option>
-                    </el-select>
-                  </div>
-                  <!--</div>-->
-                  <!--<div>-->
-
-                  <!--Qiantity 框的实现-->
-                  <!--<div style="text-align:left ;display:inline ;float:left">-->
-                    <!--Quantity :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-->
-                    <!--<el-select v-model="value_b_5" placeholder="All">-->
-                      <!--<el-option-->
-                        <!--v-for="item in options_b_5"-->
-                        <!--:key="item.value_b_5"-->
-                        <!--:label="item.label"-->
-                        <!--:value="item.value_b_5"-->
-                      <!--&gt;-->
-                      <!--</el-option>-->
-                    <!--</el-select>-->
-                  <!--</div>-->
-                  <!---->
-                  <div style="text-align:left ;display:inline ;float:left">
-                    Quantity :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;gte(>=)
-                    <input
-                      id="Quantity1"
-                      type="text"
-                      class="searchBox"
-                      style="width:200px;height:25px;"
-                    />
-
-                  </div>
+                      </el-col>
+                </el-row>
 
 
-                  <!--&lt;!&ndash;Disch. Port 框的实现&ndash;&gt;-->
-                  <!--<div style="text-align:left;display:inline ;" >-->
-                  <!--&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Disch. Port :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-->
-                  <!--<el-select v-model="value_b_6" placeholder="None">-->
-                  <!--<el-option-->
-                  <!--v-for="item in options_b_6"-->
-                  <!--:key="item.value_b_6"-->
-                  <!--:label="item.label"-->
-                  <!--:value="item.value_b_6">-->
-                  <!--</el-option>-->
-                  <!--</el-select>-->
 
-                  <!--</div>-->
-                </div>
+
+
 
                 <!--<button-->
                   <!--@click="searchCargoSimple2"-->
@@ -866,150 +809,112 @@
 
               <el-tab-pane label="TC Cards" name="third">
                 <div>TC offer cards</div>
-                <div>
-                  <div
-                    class="search_cago"
-                    style="text-align:left;display:inline ;float:left"
-                  >
-                    Account : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <input
-                      id="searchText3"
-                      type="text"
-                      class="searchBox"
-                      style="width:200px;height:25px;"
-                    />
-                  </div>
+                <el-row :gutter="10">
+                      <el-col :xs="24" :sm="24" :md="12" :lg="12" :xl="12">
+                            <div
+                              class="search_cago"
+                              style="text-align:left;"
+                            >
+                              Account :
+                              <input
+                                id="searchText3"
+                                type="text"
+                                class="searchBox"
+                                style="width:54%;height:25px;"
+                              />
+                            </div>
+                      </el-col>
+                      <el-col :xs="24" :sm="24" :md="12" :lg="12" :xl="12">
+                              <!--Sender's Mail 搜索框的实现-->
+                              <div
+                                class="search_tonnage"
+                                style="text-align:left;  "
+                              >
+                                Sender's Mail :
+                                <input
+                                  id="senderMail3"
+                                  type="text"
+                                  class="searchBox"
+                                  style="width:54%;height:25px;"
+                                />
+                              </div>
+                      </el-col>
+                </el-row>
+                <el-row :gutter="10">
+                      <el-col :xs="24" :sm="24" :md="12" :lg="12" :xl="12">
+                            <!--Laycan 日期框的实现-->
+                            <div
+                              class="block"
+                              style="text-align:left;"
+                            >
+                              <span class="demonstration"
+                                >Laycan : &nbsp;</span
+                              >
+                              <el-date-picker
+                                unlink-panels
+                                v-model="value_c_1"
+                                id="tab3_data"
+                                value-format="yyyy-MM-dd"
+                                type="daterange"
+                                range-separator="--"
+                                start-placeholder="Start Date"
+                                end-placeholder="End Date"
+                                @change="chooseTimeRange3"
+                                style="width:55%;height:35px;"
+                              >
+                              </el-date-picker>
+                            </div>
+                      </el-col>
+                      <el-col :xs="24" :sm="24" :md="12" :lg="12" :xl="12">
+                               <!--Sent within 框的实现-->
+                                <div style="text-align:left;">
+                                  Sent within :&nbsp;&nbsp;&nbsp;&nbsp;
+                                  <el-select id="sentWithin3" v-model="value_c_2" placeholder="All" style="width:45%;">
+                                    <el-option
+                                      v-for="item in options_b_2"
+                                      :key="item.value_c_2"
+                                      :label="item.label"
+                                      :value="item.value_c_2"
+                                    >
+                                    </el-option>
+                                  </el-select>
+                                  Days.
+                                </div>
+                      </el-col>
+                </el-row>
+                <el-row :gutter="10">
+                      <el-col :xs="24" :sm="24" :md="12" :lg="12" :xl="12">
+                             <div style="text-align:left ;">
+                                Quantity :&nbsp;gte(>=)
+                                <input
+                                  id="Quantity2"
+                                  type="text"
+                                  class="searchBox"
+                                  style="width:38%;height:25px;"
+                                />
+                              </div>
+                      </el-col>
+                      <el-col :xs="24" :sm="24" :md="12" :lg="12" :xl="12">
+                          <!--Mail Account 框的实现-->
+                            <div style="text-align:left;">
+                              Mail
+                              Account :&nbsp;
+                              <el-select id="mail_Account3" v-model="value_c_4" placeholder="All" style="width:55%;">
+                                <el-option
+                                  v-for="item in options_c_4"
+                                  :key="item.value_c_4"
+                                  :label="item.label"
+                                  :value="item.value_c_4"
+                                >
+                                </el-option>
+                              </el-select>
+                            </div>
+                      </el-col>
+                </el-row>
 
-                  <!--Sender's Mail 搜索框的实现-->
-                  <div
-                    class="search_tonnage"
-                    style="text-align:right; display:inline "
-                  >
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    &nbsp;&nbsp;&nbsp;
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sender's
-                    Mail : &nbsp;&nbsp;&nbsp;&nbsp;
-                    <input
-                      id="senderMail3"
-                      type="text"
-                      class="searchBox"
-                      style="width:200px;height:25px;"
-                    />
-                  </div>
-                </div>
 
-                <div>
-                  <!--Laycan 日期框的实现-->
-                  <div
-                    class="block"
-                    style="text-align:left;display:inline ;float:left "
-                  >
-                    <span class="demonstration"
-                      >Laycan : &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;</span
-                    >
-                    <el-date-picker
-                      unlink-panels
-                      v-model="value_c_1"
-                      id="tab3_data"
-                      value-format="yyyy-MM-dd"
-                      type="daterange"
-                      range-separator="--"
-                      start-placeholder="Start Date"
-                      end-placeholder="End Date"
-                      @change="chooseTimeRange3"
-                      style="height:30px;"
-                    >
-                    </el-date-picker>
-                  </div>
 
-                  <!--Sent within 框的实现-->
-                  <div style="text-align:left;display:inline ">
-                    &nbsp;&nbsp;Sent within : &nbsp;&nbsp;&nbsp;&nbsp;
-                    &nbsp;&nbsp;
-                    <el-select id="sentWithin3" v-model="value_c_2" placeholder="All">
-                      <el-option
-                        v-for="item in options_b_2"
-                        :key="item.value_c_2"
-                        :label="item.label"
-                        :value="item.value_c_2"
-                      >
-                      </el-option>
-                    </el-select>
-                    Days.
-                  </div>
-                </div>
 
-                <div style="height: 60px">
-                  <!--&lt;!&ndash;Del. Area 框的实现&ndash;&gt;-->
-                  <!--<div style="text-align:left ;display:inline ;float:left" >-->
-                  <!--Loding Port : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-->
-                  <!--<el-select v-model="value_c_3" placeholder="All">-->
-                  <!--<el-option-->
-                  <!--v-for="item in options_c_3"-->
-                  <!--:key="item.value_c_3"-->
-                  <!--:label="item.label"-->
-                  <!--:value="item.value_c_3">-->
-                  <!--</el-option>-->
-                  <!--</el-select>-->
-                  <!---->
-
-                  <!--</div>-->
-
-                  <!--Mail Account 框的实现-->
-                  <div style="text-align:left;display:inline ;">
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mail
-                    Account :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <el-select id="mail_Account3" v-model="value_c_4" placeholder="All">
-                      <el-option
-                        v-for="item in options_c_4"
-                        :key="item.value_c_4"
-                        :label="item.label"
-                        :value="item.value_c_4"
-                      >
-                      </el-option>
-                    </el-select>
-                  </div>
-                  <!--</div>-->
-                  <!--<div>-->
-
-                  <!--Qiantity 框的实现-->
-                  <!--<div style="text-align:left ;display:inline ;float:left">-->
-                    <!--Quantity :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-->
-                    <!--<el-select v-model="value_c_5" placeholder="All">-->
-                      <!--<el-option-->
-                        <!--v-for="item in options_c_5"-->
-                        <!--:key="item.value_c_5"-->
-                        <!--:label="item.label"-->
-                        <!--:value="item.value_c_5"-->
-                      <!--&gt;-->
-                      <!--</el-option>-->
-                    <!--</el-select>-->
-                  <!--</div>-->
-                    <div style="text-align:left ;display:inline ;float:left">
-                    Quantity :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;gte(>=)
-
-                    <input
-                      id="Quantity2"
-                      type="text"
-                      class="searchBox"
-                      style="width:200px;height:25px;"
-                    />
-                  </div>
-
-                  <!--&lt;!&ndash;Redel. Area 框的实现&ndash;&gt;-->
-                  <!--<div style="text-align:left;display:inline ;" >-->
-                  <!--&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Disch. Port :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-->
-                  <!--<el-select v-model="value_c_6" placeholder="None">-->
-                  <!--<el-option-->
-                  <!--v-for="item in options_c_6"-->
-                  <!--:key="item.value_c_6"-->
-                  <!--:label="item.label"-->
-                  <!--:value="item.value_c_6">-->
-                  <!--</el-option>-->
-                  <!--</el-select>-->
-
-                  <!--</div>-->
-                </div>
                 <!--<button-->
                   <!--@click="searchCargoSimple3"-->
                   <!--class="btn"-->
