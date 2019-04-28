@@ -2,11 +2,16 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 
+import time
+
 from django.views.decorators.csrf import csrf_exempt
 from django.http import JsonResponse
 from django.views.decorators.http import require_http_methods
 from django.core import serializers
 import json
+
+
+
 from users.models import Cargo_Card
 from users.models import Tonnage_Card
 from users.models import TC_Card
@@ -201,12 +206,21 @@ def tonnage_card_search(request):
         #               )
         # .filter(Vessel_name__icontains='A') \
         # '2018-03-08'
+
+        day=datetime.datetime.now().date()-datetime.timedelta(days=days-1)
+        day_from=str(datetime.datetime(day.year, day.month, day.day, 0, 0, 0))
+        timeArray = time.strptime(day_from, "%Y-%m-%d %H:%M:%S")
+        otherStyleTime = time.strftime("%Y/%-m/%-d %H:%M", timeArray)
+
+
+        print(otherStyleTime)
+        # q1 = Tonnage_Card.objects.filter(BLT__gte=datetime.datetime.now().year-built)
         q1 = Tonnage_Card.objects.filter(Q(Vessel_name__icontains=vessel_name),
 
                                          Q(Open_area__icontains=open_area),
                                          Q(DWT__gte=dwt,DWT__lte=dwt2),
-
-
+                                         Q(Sent__gte=otherStyleTime),
+                                         Q(BLT__gte=datetime.datetime.now().year-built),
                                          Q(Q(
                                             Q(Open_date_S__gte=datetime.date(int(opendate_start[0:4]), int(opendate_start[5:7]),
                                                 int(opendate_start[8:10]))),
@@ -265,9 +279,15 @@ def cargo_card_search(request):
         quantity = request_body['quantity']
         account = request_body['account']
 
+        day = datetime.datetime.now().date() - datetime.timedelta(days=days - 1)
+        day_from = str(datetime.datetime(day.year, day.month, day.day, 0, 0, 0))
+        timeArray = time.strptime(day_from, "%Y-%m-%d %H:%M:%S")
+        otherStyleTime = time.strftime("%Y/%-m/%-d %H:%M", timeArray)
+        print(otherStyleTime)
         q1 = Cargo_Card.objects.filter(Q(Cargo_name__icontains=cargo_name),
 
                                        Q(Quantity_s__gte=quantity),
+                                       Q(Sent__gte=otherStyleTime),
 
                                        Q(Q(
                                            Q(LayCan_S__gte=datetime.date(int(laycan_start[0:4]),
@@ -331,8 +351,16 @@ def tc_card_search(request):
         days = request_body['days']
         quantity = request_body['quantity']
         account = request_body['account']
+
+        day = datetime.datetime.now().date() - datetime.timedelta(days=days - 1)
+        day_from = str(datetime.datetime(day.year, day.month, day.day, 0, 0, 0))
+        timeArray = time.strptime(day_from, "%Y-%m-%d %H:%M:%S")
+        otherStyleTime = time.strftime("%Y/%-m/%-d %H:%M", timeArray)
+        print(otherStyleTime)
+
         q1 = TC_Card.objects.filter(Q(Account__icontains=acc),
                                     Q(Quantity_s__gte=quantity),
+                                    Q(Sent__gte=otherStyleTime),
 
                                     Q(Q(
                                         Q(LayCan_S__gte=datetime.date(int(laycan_start[0:4]),

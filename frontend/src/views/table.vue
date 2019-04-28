@@ -871,7 +871,7 @@
                                   Sent within :&nbsp;&nbsp;&nbsp;&nbsp;
                                   <el-select id="sentWithin3" v-model="value_c_2" placeholder="All" style="width:45%;">
                                     <el-option
-                                      v-for="item in options_b_2"
+                                      v-for="item in options_c_2"
                                       :key="item.value_c_2"
                                       :label="item.label"
                                       :value="item.value_c_2"
@@ -1252,10 +1252,8 @@ export default {
       //定义Open Date日期的组件js部分
       value_a_1: '',
       //定义Sent within的组件js部分
-      options_a_2: [{
-        value_a_2: '选项0',
-        label: 'All'
-      }, {
+      options_a_2: [
+      {
         value_a_2: '选项1',
         label: '1'
       }, {
@@ -1279,10 +1277,8 @@ export default {
       }],
       value_a_2: '',
       //定义Built的组件js部分
-      options_a_3: [{
-        value_a_3: '选项0',
-        label: 'All'
-      }, {
+      options_a_3: [
+      {
         value_a_3: '选项1',
         label: '5'
       }, {
@@ -1384,10 +1380,8 @@ export default {
       value_b_1: '',
 
       //定义Sent within的组件js部分
-      options_b_2: [{
-        value_b_2: '选项0',
-        label: 'All'
-      }, {
+      options_b_2: [
+      {
         value_b_2: '选项1',
         label: '1'
       }, {
@@ -1519,10 +1513,8 @@ export default {
       value_c_1: '',
 
       //定义Sent within的组件js部分
-      options_c_2: [{
-        value_c_2: '选项0',
-        label: 'All'
-      }, {
+      options_c_2: [
+      {
         value_c_2: '选项1',
         label: '1'
       }, {
@@ -2016,44 +2008,6 @@ export default {
         return row.Open_area;
     },
     //将Open_Date 中 标识sting转换为空
-    // deal_Open_Date(row, column) {
-    //   if(row.Open_date_S+'--'+row.Open_date_E.valueOf()=='1900-01-01--1900-01-01'){
-    //       return '';
-    //   }
-    //     // return row.Open_date_S+'--'+row.Open_date_E;
-    //
-    //   // 此处定义时间的英文显示
-    //   let date = new Date(row.Open_date_S.replace(/-/g,'/')); //Wed Jan 02 2019 00:00:00 GMT+0800 (China Standard Time)
-    //   let date2 = new Date(row.Open_date_E.replace(/-/g,'/')); //Wed Jan 02 2019 00:00:00 GMT+0800 (China Standard Time)
-    //
-    //   let chinaDate = date.toDateString(); //"Tue, 01 Jan 2019 16:00:00 GMT"
-    //   let chinaDate2 = date2.toDateString(); //"Tue, 01 Jan 2019 16:00:00 GMT"
-    //   //注意：此处时间为中国时区，如果是全球项目，需要转成【协调世界时】（UTC）
-    //   // let globalDate = date.toUTCString(); //"Wed Jan 02 2019"
-    //
-    //   //之后的处理是一样的
-    //   // let chinaDateArray = chinaDate.split(' '); //["Wed", "Jan", "02", "2019"]
-    //   // let displayDate = `${chinaDateArray[1]} ${chinaDateArray[2]}, ${chinaDateArray[3]}`; //"Jan 02, 2019"
-    //   let chinaDateArray = chinaDate.split(' '); //["Wed", "Jan", "02", "2019"]
-    //   let chinaDateArray2 = chinaDate2.split(' '); //["Wed", "Jan", "02", "2019"]
-    //
-    //   if (chinaDateArray[3]!=chinaDateArray2[3]){
-    //       let displayDate = `${chinaDateArray[1]} ${chinaDateArray[2]},${chinaDateArray[3]}`; //"Jan 02, 2019"
-    //       let displayDate2 = `${chinaDateArray2[1]} ${chinaDateArray2[2]},${chinaDateArray2[3]}`; //"Jan 02, 2019"
-    //
-    //      // let total_date= chinaDate+"--"+chinaDate2;
-    //       let total_date= displayDate+"--"+displayDate2;
-    //       return total_date
-    //   }else {
-    //       let displayDate = `${chinaDateArray[1]} ${chinaDateArray[2]}`; //"Jan 02, 2019"
-    //       let displayDate2 = `${chinaDateArray2[1]} ${chinaDateArray2[2]}`; //"Jan 02, 2019"
-    //
-    //      // let total_date= chinaDate+"--"+chinaDate2;
-    //       let total_date= displayDate+"--"+displayDate2;
-    //       return total_date
-    //   }
-    //
-    // },
     deal_Open_Date(row, column) {
       if(row.Open_date_S+'--'+row.Open_date_E.valueOf()=='1900-01-01--1900-01-01'){
           return '';
@@ -2343,6 +2297,19 @@ export default {
         dwt2=10000000
       }
 
+      if (document.getElementById("sentWithin1").value){
+          var days = parseInt(document.getElementById("sentWithin1").value);
+      }else{
+        days=1000
+      }
+
+       if (document.getElementById("built1").value){
+          var built = parseInt(document.getElementById("built1").value);
+      }else{
+        built=1000
+      }
+
+
       var conditions = {
         "vessel_name": searchText1,
         // "vessel_name": "A",
@@ -2351,8 +2318,8 @@ export default {
         // "opendate_end": "2018-03-09",
         "opendate_start": data_s,
         "opendate_end": data_e,
-        "days": 1,
-        "built": 100,
+        "days": days,
+        "built": built,
         "account": "",
         "open_area":searchText_open_area,
         "dwt": dwt1,
@@ -2667,6 +2634,15 @@ export default {
         Quantity1=0
       }
 
+      if (document.getElementById("sentWithin2").value){
+          var days = parseInt(document.getElementById("sentWithin2").value);
+          console.log('哈哈哈哈哈')
+          console.log(days)
+
+      }else{
+        days=1000
+      }
+
       var conditions = {
         "cargo_name": searchText2,
         "sender_mail": "0",
@@ -2674,7 +2650,7 @@ export default {
         // "laycan_end": "2019-03-31",
         "laycan_start": data_s,
         "laycan_end": data_e,
-        "days": 1,
+        "days": days,
         "quantity": Quantity1,
         "account": ""
 
@@ -2768,6 +2744,16 @@ export default {
       }
 
 
+      if (document.getElementById("sentWithin3").value){
+          var days = parseInt(document.getElementById("sentWithin3").value);
+          console.log('哈哈哈哈哈')
+          console.log(days)
+
+      }else{
+        days=1000
+      }
+
+
       var conditions = {
         	"acc":searchText3,
           "sender_mail":"0",
@@ -2775,7 +2761,7 @@ export default {
           // "laycan_end":"2019-03-10",
           "laycan_start":data_s,
           "laycan_end":data_e,
-          "days":1,
+          "days":days,
           "quantity":Quantity2,
           "account":""
       }
@@ -2835,12 +2821,48 @@ export default {
       /* generate workbook object from table */
       //  通过 id #mytable1 指明导出的是哪一个表格
       var wb = XLSX.utils.table_to_book(document.querySelector("#mytable1"));
+      //  const Sheet1 = XLSX.utils.table_to_book(document.querySelector("#mytable1"));
+       console.log("哈哈哈")
+
+      // const wb = {
+      //           FileName: 'export.xlsx',
+      //          SheetNames: ['Sheet1'],  //工作表名数组
+      //           Sheets: {
+      //             '!margins': [             //工作表单元格合并配置项 可选
+      //                       {
+      //                         s: { //s start 开始
+      //                           c: 3,//cols 开始列
+      //
+      //                         },
+      //                         e: {//e end  结束
+      //                           c: 8,//cols 结束列
+      //
+      //                         }
+      //                       }
+      //                     ],
+      //                  }                //工作表对象 键名对应SheetNames的key
+      //   };
+
 
       /* get binary string as output */
       var wbout = XLSX.write(wb, {
         bookType: "xlsx",
         bookSST: true,
         type: "array",
+
+        // // !margins
+        //                   //工作表单元格合并配置项 可选
+        //                     {
+        //                   //     s: { //s start 开始
+        //                   //       c: 3,//cols 开始列
+        //                   //
+        //                   //     },
+        //                   //     e: {//e end  结束
+        //                   //       c: 8,//cols 结束列
+        //                   //
+        //                   //     }
+        //                   //   }
+        //                   // ],
 
 
       });
