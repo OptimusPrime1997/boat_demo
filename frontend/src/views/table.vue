@@ -216,7 +216,7 @@
 
 
                 <!-- 添加导出Excel按钮-->
-                <button  @click="exportExcel"  class="btn" style="text-align:center;width:120px;height:32px;font-size:15px">Import Excel</button>
+                <button  @click="exportExcel"  class="btn" style="text-align:center;width:120px;height:32px;font-size:15px">Export Excel</button>
 
                 <!-- 添加复选框按钮-->
                  <el-button  @click="displaySelection"  class="btn" style="float:right;background:rgba(238,234,214,0)">Batch Choice </el-button>
@@ -597,7 +597,7 @@
                 </button>
 
                 <!--// 添加导出Excel按钮-->
-                 <button  @click="exportExcel2"  class="btn" style="text-align:center;width:120px;height:32px;font-size:15px">Import Excel</button>
+                 <button  @click="exportExcel2"  class="btn" style="text-align:center;width:120px;height:32px;font-size:15px">Export Excel</button>
 
                 <!-- 添加复选框按钮-->
                  <el-button  @click="displaySelection2"  class="btn" style="float:right;background:rgba(238,234,214,0)">Batch Choice </el-button>
@@ -956,7 +956,7 @@
                 </button>
 
                 <!--// 添加导出Excel按钮-->
-                 <button  @click="exportExcel3"  class="btn" style="text-align:center;width:120px;height:32px;font-size:15px">Import Excel</button>
+                 <button  @click="exportExcel3"  class="btn" style="text-align:center;width:120px;height:32px;font-size:15px">Export Excel</button>
 
                 <!-- 添加复选框按钮-->
                  <el-button  @click="displaySelection3"  class="btn" style="float:right;background:rgba(238,234,214,0)">Batch Choice </el-button>
@@ -1647,12 +1647,12 @@ export default {
   },
   mounted() {
     var self = this;
-    // var h = "202.120.32.222";
+    // var h = "47.103.63.138";
 
     // var tableData2 = new Array();
     this.axios({
       method: "get",
-      url: "http://202.120.32.222:8888/users/cargo"
+      url: "http://47.103.63.138:8888/users/cargo"
     })
       .then(function (response) {
         var a = eval(response.data);
@@ -1673,7 +1673,7 @@ export default {
     // var tableData1 = new Array();
     this.axios({
       method: "get",
-      url: "http://202.120.32.222:8888/users/tonnage"
+      url: "http://47.103.63.138:8888/users/tonnage"
     })
       .then(function (response) {
         var a = eval(response.data);
@@ -1693,7 +1693,7 @@ export default {
     // var tableData3 = new Array();
     this.axios({
       method: "get",
-      url: "http://202.120.32.222:8888/users/tc"
+      url: "http://47.103.63.138:8888/users/tc"
     })
       .then(function (response) {
         var a = eval(response.data);
@@ -2226,7 +2226,7 @@ export default {
     //
     //         this.axios({
     //           method: "get",
-    //           url: "http://202.120.32.222:8888/users/search_tonnage/" + searchText1,
+    //           url: "http://47.103.63.138:8888/users/search_tonnage/" + searchText1,
     //         })
     //           .then(function (response) {
     //
@@ -2330,7 +2330,7 @@ export default {
 
       this.axios({
         method: "post",
-        url: "http://202.120.32.222:8888/users/tonnage_search",
+        url: "http://47.103.63.138:8888/users/tonnage_search",
         data:conditions
       })
         .then(function (response) {
@@ -2366,7 +2366,7 @@ export default {
 
             this.axios({
               method: "get",
-              url: "http://202.120.32.222:8888/users/ton_incomplete" ,
+              url: "http://47.103.63.138:8888/users/ton_incomplete" ,
             })
               .then(function (response) {
 
@@ -2400,7 +2400,7 @@ export default {
 
             this.axios({
               method: "get",
-              url: "http://202.120.32.222:8888/users/ton_complete" ,
+              url: "http://47.103.63.138:8888/users/ton_complete" ,
             })
               .then(function (response) {
 
@@ -2436,7 +2436,7 @@ export default {
 
             this.axios({
               method: "get",
-              url: "http://202.120.32.222:8888/users/car_incomplete" ,
+              url: "http://47.103.63.138:8888/users/car_incomplete" ,
             })
               .then(function (response) {
 
@@ -2471,7 +2471,7 @@ export default {
 
             this.axios({
               method: "get",
-              url: "http://202.120.32.222:8888/users/car_complete" ,
+              url: "http://47.103.63.138:8888/users/car_complete" ,
             })
               .then(function (response) {
 
@@ -2506,7 +2506,7 @@ export default {
 
             this.axios({
               method: "get",
-              url: "http://202.120.32.222:8888/users/tc_incomplete" ,
+              url: "http://47.103.63.138:8888/users/tc_incomplete" ,
             })
               .then(function (response) {
 
@@ -2541,7 +2541,7 @@ export default {
 
             this.axios({
               method: "get",
-              url: "http://202.120.32.222:8888/users/tc_complete" ,
+              url: "http://47.103.63.138:8888/users/tc_complete" ,
             })
               .then(function (response) {
 
@@ -2580,7 +2580,7 @@ export default {
      //      //console.log(searchText.text);
      //      this.axios({
      //        method: "get",
-     //        url: "http://202.120.32.222:8888/users/search_cargo/" + searchText2,
+     //        url: "http://47.103.63.138:8888/users/search_cargo/" + searchText2,
      //      })
      //        .then(function (response) {
      //          console.log("axios method");
@@ -2658,7 +2658,7 @@ export default {
 
       this.axios({
         method: "post",
-        url: "http://202.120.32.222:8888/users/cargo_search",
+        url: "http://47.103.63.138:8888/users/cargo_search",
         data:conditions
       })
         .then(function (response) {
@@ -2691,7 +2691,7 @@ export default {
         //   //console.log(searchText.text);
         //   this.axios({
         //     method: "get",
-        //     url: "http://202.120.32.222:8888/users/search_tc/" + searchText3,
+        //     url: "http://47.103.63.138:8888/users/search_tc/" + searchText3,
         //   })
         //     .then(function (response) {
         //       console.log("axios method");
@@ -2769,7 +2769,7 @@ export default {
 
       this.axios({
         method: "post",
-        url: "http://202.120.32.222:8888/users/tc_search",
+        url: "http://47.103.63.138:8888/users/tc_search",
         data:conditions
       })
         .then(function (response) {
@@ -2820,12 +2820,13 @@ export default {
       // console.log(name)
       /* generate workbook object from table */
       //  通过 id #mytable1 指明导出的是哪一个表格
-      var wb = XLSX.utils.table_to_book(document.querySelector("#mytable1"));
-      //  const Sheet1 = XLSX.utils.table_to_book(document.querySelector("#mytable1"));
+      // var wb = XLSX.utils.table_to_book(document.querySelector("#mytable1"));
+      //  const wb =Sheet1 = XLSX.utils.table_to_book(document.querySelector("#mytable1"));
        console.log("哈哈哈")
+      var wb =XLSX.utils.table_to_book(document.querySelector("#mytable1"));
 
       // const wb = {
-      //           FileName: 'export.xlsx',
+      //          FileName: 'export.xlsx',
       //          SheetNames: ['Sheet1'],  //工作表名数组
       //           Sheets: {
       //             '!margins': [             //工作表单元格合并配置项 可选
@@ -2850,20 +2851,42 @@ export default {
         bookSST: true,
         type: "array",
 
-        // // !margins
-        //                   //工作表单元格合并配置项 可选
-        //                     {
-        //                   //     s: { //s start 开始
-        //                   //       c: 3,//cols 开始列
-        //                   //
-        //                   //     },
-        //                   //     e: {//e end  结束
-        //                   //       c: 8,//cols 结束列
-        //                   //
-        //                   //     }
-        //                   //   }
-        //                   // ],
-
+        // sheet: {
+        //          '!margins': [             //工作表单元格合并配置项 可选
+        //       {
+        //         s: { //s start 开始
+        //           c: 3,//cols 开始列
+        //           r: 0 //rows 开始行
+        //
+        //         },
+        //         e: {//e end  结束
+        //           c: 8,//cols 结束列
+        //           r: 0 //rows 结束行
+        //
+        //         }
+        //       }
+        //     ],
+        //
+        // }
+        // Sheets: {
+        //   Sheet: {
+        //     '!ref': 'A1:C2',
+        //     '!margins': [             //工作表单元格合并配置项 可选
+        //       {
+        //         s: { //s start 开始
+        //           c: 3,//cols 开始列
+        //           r: 0 //rows 开始行
+        //
+        //         },
+        //         e: {//e end  结束
+        //           c: 8,//cols 结束列
+        //           r: 0 //rows 结束行
+        //
+        //         }
+        //       }
+        //     ],
+        //   }
+        // }
 
       });
       try {
@@ -2991,7 +3014,7 @@ export default {
 
       this.axios({
         method: "put",
-        url: "http://202.120.32.222:8888/users/tonnage_update",
+        url: "http://47.103.63.138:8888/users/tonnage_update",
         data:conditions
       })
         .then(function (response) {
@@ -3042,7 +3065,7 @@ export default {
 
       this.axios({
         method: "put",
-        url: "http://202.120.32.222:8888/users/cargo_update",
+        url: "http://47.103.63.138:8888/users/cargo_update",
         data:conditions
       })
         .then(function (response) {
@@ -3111,7 +3134,7 @@ export default {
 
       this.axios({
         method: "put",
-        url: "http://202.120.32.222:8888/users/tc_update",
+        url: "http://47.103.63.138:8888/users/tc_update",
         data:conditions
       })
         .then(function (response) {
@@ -3154,7 +3177,7 @@ export default {
       };
       this.axios({
         method: "put",
-        url: "http://202.120.32.222:8888/users/ton_flag",
+        url: "http://47.103.63.138:8888/users/ton_flag",
         data:data
       })
         .then(function (response) {
@@ -3187,7 +3210,7 @@ export default {
       };
       this.axios({
         method: "put",
-        url: "http://202.120.32.222:8888/users/ton_flag",
+        url: "http://47.103.63.138:8888/users/ton_flag",
         data:data
       })
         .then(function (response) {
@@ -3213,7 +3236,7 @@ export default {
       };
       this.axios({
         method: "put",
-        url: "http://202.120.32.222:8888/users/cargo_flag",
+        url: "http://47.103.63.138:8888/users/cargo_flag",
         data:data
       })
         .then(function (response) {
@@ -3246,7 +3269,7 @@ export default {
       };
       this.axios({
         method: "put",
-        url: "http://202.120.32.222:8888/users/cargo_flag",
+        url: "http://47.103.63.138:8888/users/cargo_flag",
         data:data
       })
         .then(function (response) {
@@ -3272,7 +3295,7 @@ export default {
       };
       this.axios({
         method: "put",
-        url: "http://202.120.32.222:8888/users/tc_flag",
+        url: "http://47.103.63.138:8888/users/tc_flag",
         data:data
       })
         .then(function (response) {
@@ -3305,7 +3328,7 @@ export default {
       };
       this.axios({
         method: "put",
-        url: "http://202.120.32.222:8888/users/tc_flag",
+        url: "http://47.103.63.138:8888/users/tc_flag",
         data:data
       })
         .then(function (response) {
@@ -3354,7 +3377,7 @@ export default {
 
       this.axios({
         method: "put",
-        url: "http://202.120.32.222:8888/users/ton_date",
+        url: "http://47.103.63.138:8888/users/ton_date",
         data:conditions
       })
         .then(function (response) {
@@ -3404,7 +3427,7 @@ export default {
 
       this.axios({
         method: "put",
-        url: "http://202.120.32.222:8888/users/cargo_date",
+        url: "http://47.103.63.138:8888/users/cargo_date",
         data:conditions2
       })
         .then(function (response) {
@@ -3454,7 +3477,7 @@ export default {
 
       this.axios({
         method: "put",
-        url: "http://202.120.32.222:8888/users/tc_date",
+        url: "http://47.103.63.138:8888/users/tc_date",
         data:conditions3
       })
         .then(function (response) {
