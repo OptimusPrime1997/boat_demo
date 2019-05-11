@@ -232,6 +232,7 @@
                   @selection-change="handleSelectionChange"
 
                   :data=" tableData1.slice((currentPage - 1) * pagesize,currentPage * pagesize)"
+                  stripe
                   height="800"
                   border
                   style="width: 100%"
@@ -434,6 +435,7 @@
                     @size-change="handleSizeChange"
                     @current-change="handleCurrentChange"
                     :current-page="currentPage"
+                    :page-size="pagesize"
                     layout="prev, pager, next"
                     :total="tableData1.length"
                   >
@@ -613,10 +615,11 @@
 
                   :data="
                     tableData2.slice(
-                      (currentPage - 1) * pagesize,
-                      currentPage * pagesize
+                      (currentPage2 - 1) * pagesize2,
+                      currentPage2 * pagesize2
                     )
                   "
+                   stripe
                   height="800"
                   border
                   style="width: 100%"
@@ -799,7 +802,8 @@
                     background
                     @size-change="handleSizeChange2"
                     @current-change="handleCurrentChange2"
-                    :current-page="currentPage"
+                    :current-page="currentPage2"
+                    :page-size="pagesize2"
                     layout="prev, pager, next"
                     :total="tableData2.length"
                   >
@@ -970,10 +974,11 @@
                   @selection-change="handleSelectionChange3"
                   :data="
                     tableData3.slice(
-                      (currentPage - 1) * pagesize,
-                      currentPage * pagesize
+                      (currentPage3 - 1) * pagesize3,
+                      currentPage3 * pagesize3
                     )
                   "
+                  stripe
                   height="800"
                   border
                   style="width: 100%"
@@ -1166,7 +1171,8 @@
                     background
                     @size-change="handleSizeChange3"
                     @current-change="handleCurrentChange3"
-                    :current-page="currentPage"
+                    :current-page="currentPage3"
+                    :page-size="pagesize3"
                     layout="prev, pager, next"
                     :total="tableData3.length"
                   >
@@ -1246,9 +1252,15 @@ export default {
       tableData2: [],
       tableData3: [],
       text: '',
-      // //存储分页，搜索数据
+      // //tab1存储分页，搜索数据
       currentPage: 1,
       pagesize: 20,
+      // //tab2存储分页，搜索数据
+      currentPage2: 1,
+      pagesize2: 20,
+      // //tab3存储分页，搜索数据
+      currentPage3: 1,
+      pagesize3: 20,
       //定义Open Date日期的组件js部分
       value_a_1: '',
       //定义Sent within的组件js部分
@@ -2200,17 +2212,17 @@ export default {
     },
 
     handleSizeChange2: function (size) {
-      this.pagesize = size;
+      this.pagesize2 = size;
     },
-    handleCurrentChange2: function (currentPage) {
-      this.currentPage = currentPage;
+    handleCurrentChange2: function (currentPage2) {
+      this.currentPage2 = currentPage2;
     },
 
     handleSizeChange3: function (size) {
-      this.pagesize = size;
+      this.pagesize3 = size;
     },
-    handleCurrentChange3: function (currentPage) {
-      this.currentPage = currentPage;
+    handleCurrentChange3: function (currentPage3) {
+      this.currentPage3 = currentPage3;
     },
 
 
