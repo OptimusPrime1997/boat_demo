@@ -258,7 +258,7 @@
                   <el-table-column
                     prop="ID"
                     label="ID"
-                    width="40"
+                    width="60"
                   >
                     <!--<template slot-scope="scope">-->
                           <!--<template  v-if="scope.row.edit">-->
@@ -646,7 +646,7 @@
                   <el-table-column
                     prop="ID"
                     label="ID"
-                    width="40"
+                    width="60"
                   >
                     <!--<template slot-scope="scope">-->
                           <!--<template  v-if="scope.row.edit">-->
@@ -679,7 +679,7 @@
                   <el-table-column
                     props=[Quantity_s,Quantity_e]
                     label="Quantity"
-                    width="120"
+                    width="140"
                   >
                      <template slot-scope="scope">
                       <template  v-if="scope.row.edit">
@@ -1000,7 +1000,7 @@
                   <el-table-column
                     prop="ID"
                     label="ID"
-                    width="40"
+                    width="60"
                   >
                     <!--<template slot-scope="scope">-->
                           <!--<template  v-if="scope.row.edit">-->
@@ -1026,7 +1026,7 @@
                   <el-table-column
                     props=[Quantity_s,Quantity_e]
                     label="Quantity"
-                    width="110"
+                    width="140"
                   >
                     <template slot-scope="scope">
                           <template  v-if="scope.row.edit">
