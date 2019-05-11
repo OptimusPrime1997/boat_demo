@@ -210,7 +210,7 @@ def tonnage_card_search(request):
         day=datetime.datetime.now().date()-datetime.timedelta(days=days-1)
         day_from=str(datetime.datetime(day.year, day.month, day.day, 0, 0, 0))
         timeArray = time.strptime(day_from, "%Y-%m-%d %H:%M:%S")
-        otherStyleTime = time.strftime("%Y/%-m/%-d %H:%M", timeArray)
+        otherStyleTime = time.strftime("%Y/%-m/%d %H:%M", timeArray)
 
 
         print(otherStyleTime)
@@ -251,8 +251,8 @@ def tonnage_card_search(request):
 
 
         list = [vessel_name, sender_mail, opendate_start, opendate_end, days, built, account, dwt,open_area,dwt2]
-        print(list)
-        print(json.loads(serializers.serialize("json", q1)))
+        # print(list)
+        # print(json.loads(serializers.serialize("json", q1)))
         response['list'] = json.loads(serializers.serialize("json", q1))
         response['err_num'] = 0
     except Exception as e:
@@ -282,7 +282,7 @@ def cargo_card_search(request):
         day = datetime.datetime.now().date() - datetime.timedelta(days=days - 1)
         day_from = str(datetime.datetime(day.year, day.month, day.day, 0, 0, 0))
         timeArray = time.strptime(day_from, "%Y-%m-%d %H:%M:%S")
-        otherStyleTime = time.strftime("%Y/%-m/%-d %H:%M", timeArray)
+        otherStyleTime = time.strftime("%Y/%-m/%d %H:%M", timeArray)
         print(otherStyleTime)
         q1 = Cargo_Card.objects.filter(Q(Cargo_name__icontains=cargo_name),
 
@@ -355,7 +355,7 @@ def tc_card_search(request):
         day = datetime.datetime.now().date() - datetime.timedelta(days=days - 1)
         day_from = str(datetime.datetime(day.year, day.month, day.day, 0, 0, 0))
         timeArray = time.strptime(day_from, "%Y-%m-%d %H:%M:%S")
-        otherStyleTime = time.strftime("%Y/%-m/%-d %H:%M", timeArray)
+        otherStyleTime = time.strftime("%Y/%-m/%d %H:%M", timeArray)
         print(otherStyleTime)
 
         q1 = TC_Card.objects.filter(Q(Account__icontains=acc),
