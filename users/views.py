@@ -507,9 +507,9 @@ def cargo_card_complete(request):
         user = Cargo_Card.objects.filter(~Q(Cargo_name="none item name match")&~Q(Sent="")
                                            &~Q(LayCan_S="1900-01-01")&~Q(Sent="0")&~
                                             Q(Loading_Port="no loading port match")&~
-                                          Q(Discharging_Port ="no discharging port match").order_by('-Sent')
+                                          Q(Discharging_Port ="no discharging port match")
 
-        )
+        ).order_by('-Sent')
 
         print(user)
         # print(user.toJSON())
