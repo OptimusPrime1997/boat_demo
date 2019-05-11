@@ -29,7 +29,7 @@ def get_tonnage(request):
     try:
         print("tests:")
         # users = User.objects.filter(email=email)
-        user = Tonnage_Card.objects.all()
+        user = Tonnage_Card.objects.all().order_by('-Sent')
         print(user)
         # print(user.toJSON())
         # response['list'] = json.loads(serializers.serialize("json", users))
@@ -50,7 +50,7 @@ def search_tonnage(request, content):
         print("tests:")
         # users = User.objects.filter(email=email)
         # user = Cargo_Cards.objects.filter()
-        user = Tonnage_Card.objects.filter(Vessel_name__icontains=content)
+        user = Tonnage_Card.objects.filter(Vessel_name__icontains=content).order_by('-Sent')
         # print(user.toJSON())
         # response['list'] = json.loads(serializers.serialize("json", users))
         response['list'] = json.loads(serializers.serialize("json", user))
@@ -70,7 +70,7 @@ def search_tonnage_data(request, content):
         print("tests:")
         # users = User.objects.filter(email=email)
         # user = Cargo_Cards.objects.filter()
-        user = Tonnage_Card.objects.filter(Open_date_S__icontains=content, Open_date_E__icontains=content)
+        user = Tonnage_Card.objects.filter(Open_date_S__icontains=content, Open_date_E__icontains=content).order_by('-Sent')
         # print(user.toJSON())
         # response['list'] = json.loads(serializers.serialize("json", users))
         response['list'] = json.loads(serializers.serialize("json", user))
@@ -90,7 +90,7 @@ def get_cargo(request):
     try:
         print("tests:")
         # users = User.objects.filter(email=email)
-        user = Cargo_Card.objects.all()
+        user = Cargo_Card.objects.all().order_by('-Sent')
         print(user)
         # print(user.toJSON())
         # response['list'] = json.loads(serializers.serialize("json", users))
@@ -114,7 +114,7 @@ def search_cargo(request, content):
         print("tests:")
         # users = User.objects.filter(email=email)
         # user = Cargo_Cards.objects.filter()
-        user = Cargo_Card.objects.filter(Cargo_name__icontains=content)
+        user = Cargo_Card.objects.filter(Cargo_name__icontains=content).order_by('-Sent')
         # print(user.toJSON())
         # response['list'] = json.loads(serializers.serialize("json", users))
         response['list'] = json.loads(serializers.serialize("json", user))
@@ -134,7 +134,7 @@ def get_tc(request):
     try:
         print("tests:")
         # users = User.objects.filter(email=email)
-        user = TC_Card.objects.all()
+        user = TC_Card.objects.all().order_by('-Sent')
         print(user)
         # print(user.toJSON())
         # response['list'] = json.loads(serializers.serialize("json", users))
@@ -155,7 +155,7 @@ def search_tc(request, content):
         print("tests:")
         # users = User.objects.filter(email=email)
         # user = Cargo_Cards.objects.filter()
-        user = TC_Card.objects.filter(Account__icontains=content)
+        user = TC_Card.objects.filter(Account__icontains=content).order_by('-Sent')
         # print(user.toJSON())
         # response['list'] = json.loads(serializers.serialize("json", users))
         response['list'] = json.loads(serializers.serialize("json", user))
@@ -244,7 +244,7 @@ def tonnage_card_search(request):
                                          # BLT__gte=datetime.datetime.today().year-int(built),
                                          # BLT__lte= datetime.datetime.today().year ,
 
-                                         )
+                                         ).order_by('-Sent')
 
         # if dwt!="":
         #     q2=q1.filter(DWT_gt=dwt,)
@@ -317,7 +317,7 @@ def cargo_card_search(request):
                                          ),
 
 
-                                       )
+                                       ).order_by('-Sent')
 
         list = [cargo_name, sender_mail, laycan_start, laycan_end, days, quantity, account]
         print(list)
@@ -396,7 +396,7 @@ def tc_card_search(request):
                                     # LayCan_E__lte=datetime.date(int(laycan_end[0:4]), int(laycan_end[5:7]),
                                     #                             int(laycan_end[8:10])),
 
-                                    )
+                                    ).order_by('-Sent')
 
         list = [acc, sender_mail, laycan_start, laycan_end, days, quantity, account]
         print(list)
@@ -425,7 +425,7 @@ def tonnage_card_incomplete(request):
         # filter(lambda s: s and (type(s) != str or len(s.strip()) > 0), L)
         # user = Tonnage_Card.objects.filter(Sent="")
         user = Tonnage_Card.objects.filter(Q(Open_area="no open area match")|Q(Sent="")
-                                           |Q(Open_date_S="1900-01-01")|Q(Sent="0"))
+                                           |Q(Open_date_S="1900-01-01")|Q(Sent="0")).order_by('-Sent')
 
         print(user)
         # print(user.toJSON())
@@ -450,7 +450,7 @@ def tonnage_card_complete(request):
         # filter(lambda s: s and (type(s) != str or len(s.strip()) > 0), L)
         # user = Tonnage_Card.objects.filter(Sent="")
         user = Tonnage_Card.objects.filter(~Q(Open_area="no open area match")&~Q(Sent="")
-                                           &~Q(Open_date_S="1900-01-01")&~Q(Sent="0"))
+                                           &~Q(Open_date_S="1900-01-01")&~Q(Sent="0")).order_by('-Sent')
 
         print(user)
         # print(user.toJSON())
@@ -480,7 +480,7 @@ def cargo_card_incomplete(request):
                                             Q(Loading_Port="no loading port match")|
                                           Q(Discharging_Port ="no discharging port match")
 
-                                        )
+                                        ).order_by('-Sent')
 
         print(user)
         # print(user.toJSON())
@@ -507,7 +507,7 @@ def cargo_card_complete(request):
         user = Cargo_Card.objects.filter(~Q(Cargo_name="none item name match")&~Q(Sent="")
                                            &~Q(LayCan_S="1900-01-01")&~Q(Sent="0")&~
                                             Q(Loading_Port="no loading port match")&~
-                                          Q(Discharging_Port ="no discharging port match")
+                                          Q(Discharging_Port ="no discharging port match").order_by('-Sent')
 
         )
 
@@ -544,7 +544,7 @@ def tc_card_incomplete(request):
                                           Q(Quantity_s ="0")|
                                           Q(DUR_S ="0")
 
-                                        )
+                                        ).order_by('-Sent')
 
         print(user)
         # print(user.toJSON())
@@ -579,7 +579,7 @@ def tc_card_complete(request):
                                           Q(Quantity_s ="0")&~
                                           Q(DUR_S ="0")
 
-                                        )
+                                        ).order_by('-Sent')
         print(user)
         # print(user.toJSON())
         # response['list'] = json.loads(serializers.serialize("json", users))
