@@ -1,0 +1,4803 @@
+Sarande
+Shengjin
+Vlone
+Vlore
+Algiers
+Annaba
+Arzew
+Bejaia
+Beni Saf
+Bethioua
+Bone
+Cherchell
+Collo
+Dellys
+Djen-Djen
+Ghazaouet
+Jijel
+Mostaganem
+Oran
+Philippeville
+Port Methanier
+Skikda
+Tenes
+Gibraltar
+Alghero
+Ancona
+Anzio
+Arbatax
+Assemini
+Augusta
+Avola
+Bagnoli
+Baia
+Bari
+Barletta
+Brindisi
+Brucoli
+Cagliari
+Carloforte
+Castellammare di Stabia
+Catania
+Chioggia
+Ciro Marina
+Citrezza
+Civitavecchia
+Crotone
+Falconara
+Fiumicino
+Follonica
+Formia
+Fusina
+Gaeta
+Gallipoli Italy
+Gela
+Genoa
+Giardini
+Gioia Tauro
+Imperia
+Isola delle Femmine
+La Maddalena (Cagliari)
+La Maddalena (Sardinia)
+La Spezia
+Lampedusa
+Leghorn
+Licata
+Lipari
+Livorno
+Manfredonia
+Marina di Carrara
+Marsala
+Marzamemi
+Mazara del Vallo
+Melilli Oil Terminal
+Messina
+Milazzo
+Molfetta
+Monfalcone
+Monopoli
+Naples
+Olbia
+Oristano
+Ortona
+Otranto
+Palau
+Palermo
+Pantelleria
+Pesaro
+Pescara
+Piombino
+Portici
+Porto Azzurro
+Porto Cervo
+Porto Corsini
+Porto di Malamocco
+Porto di Vibo Valentia Marina
+Porto Empedocle
+Porto Foxi
+Porto Marghera
+Porto Marmoreo
+Porto Nogaro
+Porto San Leonardo
+Porto Santo Stefano
+Porto Torres
+Porto Vesme
+Portofino
+Pozzuoli
+Priolo
+Priolo Gargallo
+Punta Penna
+Punto Franco
+Quiliano Terminal
+Ravenna
+Reggio Calabria
+Rio Marina
+Salerno
+San Benedetto del Tronto
+San Remo
+San Vitale
+Sant' Antioco
+Santa Panagia Bay
+Sarroch
+Savona-Vado
+Siracusa
+Talamone
+Taranto
+Termini Imerese
+Torre Annunziata
+Torre del Greco
+Trapani
+Trieste
+Vada
+Vado Ligure
+Vasto
+Venice
+Vibo Valentia
+Abu Kammash
+Azzawiya
+Benghazi
+Bouri
+Bouri Terminal
+Derna
+Es Sider
+Homes
+Marsa al Hariga
+Marsa El Brega
+Marsa El Hariga
+Misurata
+Ras el Hilal
+Ras Lanuf
+Tarabulus
+Tobruk
+Tripoli Libya
+Zawia Terminal
+Zuara
+Zueitina
+Marsaxlokk
+Valletta
+Izola
+Koper
+Piran
+Barcelona
+Ashtart Terminal
+Gabes
+La Goulette
+La Skhirra
+Menzel Bourguiba
+Rades
+Sfax
+Sousse
+Tazerka
+Tunis
+Zarzis
+Berdyansk
+Cape Passero
+Passero
+Bizerte
+Ambriz
+Cabinda
+Essungo Marine Terminal
+Futila Terminal
+Girassol Terminal
+Kiabo Marine Terminal
+Kiame Marine Terminal
+Kuito
+Lobito
+Lombo Marine Terminal
+Luanda
+Malongo Terminal
+Mocamedes
+Namibe
+Palanca Terminal
+Porto Amboim
+Porto Saco
+Quinfuquena Terminal
+Soyo
+Sumbe
+Takula Terminal
+Port of The Valley
+Clarence Bay
+English Bay
+Georgetown Ascension Island
+Cotonou
+Seme Terminal
+Bonaberi
+Douala
+Ebome Marine Terminal
+Garoua
+Kole Terminal
+Kribi
+Limbe
+Limboh Terminal
+Moudi Terminal
+Tiko
+Victoria Cameroon Republic
+Arguineguin
+La Estaca
+La Salineta
+Las Palmas
+Puerto Caballo Oil Terminal
+Puerto de la Hondura Oil Terminal
+Puerto de La Luz y Las Palmas
+Puerto del Rosario
+San Sebastian Canary Islands
+Santa Cruz de la Palma
+Santa Cruz de Tenerife
+Mindelo
+Palmeira Bay
+Pedra De Lume
+Porto Grande
+Porto Praia
+Sal Island
+Santa Maria Bay
+Djeno
+N'Kossa Terminal
+Pointe-Noire
+Yombo
+Ango-Ango
+Banana
+Boma
+Matadi
+Moanda Oil Terminal
+Bata
+Benito
+Ceiba Marine Terminal
+Cogo
+Luba
+Malabo
+Puerto Iradier
+Puerto Macias
+Punta Europa Terminal
+Rey Malabo
+San Carlos Equatorial Guinea
+Zafiro Marine Terminal
+Cap Lopez
+Gamba
+Libreville
+Lucina Terminal
+Mayumba
+M'Bya Terminal
+Nyanga
+Oguendjo Terminal
+Ovendo
+Owendo
+Port Gentil
+Tchatamba Marine Terminal
+Banjul
+Saltpond
+Takoradi
+Tema
+Conakry
+Dougoufissa Creek
+Kakande
+Kamsar
+Port Kamsar
+Bissau
+Bolama
+Abidjan
+Banco Bay
+Canal de Vridi
+Espoir Terminal
+Locodjo
+Port Bouet Tanker Terminal
+San Pedro Ivory Coast
+Buchanan
+Cape Palmas
+Greenville
+Harper
+Monrovia
+Funchal
+Porto Santo
+Praia Formosa
+Nouadhibou
+Nouakchott
+Point Central
+Port de L'Amitie
+Port Etienne
+Agadir
+Al Hoceima
+Assila
+Boujdour
+Casablanca
+Dakhla
+El Araish
+El Jadida
+Essaouira
+Jorf Lasfar
+Kenitra
+Larache
+Mohammedia
+Port de Fedala
+Port Nador
+Safi
+Tan Tan
+Tangier
+Tarfaya
+Abonnema
+Aladja
+Antan Terminal
+Apapa
+Bonny Inshore Terminal
+Bonny Offshore Terminal
+Brass Terminal
+Burutu
+Calabar
+Dawes Island
+Degema
+Dockyard Creek
+Escravos Oil Terminal
+Forcados Oil Terminal
+Koko
+Lagos Nigeria
+Odudu Terminal
+Okono Terminal
+Okrika
+Onne
+Pennington
+Port Harcourt
+Qua Iboe
+Sapele
+Tin Can Island
+Ukpokiti Marine Terminal
+Warri
+Yoho Terminal
+Santo Antonio
+Sao Tome
+Cape Verde
+Dakar
+Kaolack
+Lyndiane
+M'Bao Oil Terminal
+Ziguinchor
+Freetown
+Kissy Oil Terminal
+Pepel
+Sherbro Island
+Kpeme
+Lome
+Laayoune
+Villa Cisneros (Dakhla)
+St John's Harbor
+Arroyo Seco
+Atucha
+Bahia Blanca
+Barranqueras
+Buenos Aires
+Cabo San Antonio
+Caleta Cordova
+Caleta Olivares
+Caleta Olivia
+Caleta Paula
+Camarones
+Campana
+Comodoro Rivadavia
+Concepcion del Uruguay
+Corrientes
+Deseado
+Diamante
+Dock Sud
+Formosa
+General Lagos
+Ibicuy
+Ingeniero Buitrango
+Ingeniero White
+La Plata
+Lima
+Mar del Plata
+Necochea
+Port Coronel Rosales
+Port of Madryn
+Port of Posadas
+Port of Puerto Deseado
+Puerto Acevedo
+Puerto Belgrano
+Puerto Galvan
+Puerto Ingeniero Rocca
+Puerto Martins
+Puerto Parana
+Puerto Quequen
+Puerto Rosario Ente Administrador (ENAPRO)
+Punta Alvear
+Punta Ancla
+Punta Ciguena
+Punta Colorada
+Punta Loyola
+Punta Quilla
+Quebracho
+Quequen
+Ramallo
+Rawson
+Recalada
+Rio Cullen Marine Terminal
+Rio Gallegos
+Rio Grande Argentina
+River Plate Lightering Areas
+San Antonio Oeste
+San Julian
+San Lorenzo - San Martin
+San Martin
+San Nicolas (Argentina)
+San Pedro Argentina
+San Sebastian Bay
+Santa Cruz
+Santa Fe
+Terminales Rio de la Plata
+Ushuaia
+Villa Constitucion
+Zarate
+Port Stanley Falkland Islands
+Stanley Falkland Islands
+Grytviken
+Colonia
+Fray Bentos
+Jose Ignacio
+La Paloma
+Montevideo
+Nueva Palmira
+Paysandu
+Punta del Este
+Upriver
+Puerto Madryn
+Barcadera
+Oranjestad
+San Nicolas (Aruba)
+Clifton Point
+Freeport Bahamas
+Inagua Islands
+Nassau
+Ocean Cay
+South Riding Point
+Belize City
+Cayman Brac
+Cayman Islands
+Creek
+Georgetown Cayman Islands
+Antilla
+Puerto Barrios
+Santo Tomas de Castilla
+Coxen Hole
+La Ceiba Honduras
+Puerto Castilla
+Puerto de Henecan
+Tela
+Altamira
+Alvarado
+Campeche
+Cayo Arcas Terminal
+Ciudad del Carmen
+Coatzacoalcos
+Cozumel
+Dos Bocas
+Frontera
+Minatitlan
+Nanchital
+Pajaritos
+Progreso
+Rabon Grande
+Tampico
+Tuxpan
+Veracruz
+Bluefields
+El Bluff
+Puerto Cabezas
+Vacamonte
+Alabama Inland Ports
+Alliance
+Ama
+Apalachicola
+Atreco
+Avondale
+Barbours Cut
+Baton Rouge
+Bayou Cosotte
+Bayport
+Baytown
+Beaumont
+Big Bend
+Boggy Bayou
+Brabazos
+Braithwaite
+Brownsville
+Burnside
+Chalmette
+Convent
+Corpus Christi
+Darrow
+Davant
+Deer Park
+Demopolis
+Destrehan
+Donaldsonville
+East Bay
+Eufaula
+Everglades
+Freeport United States
+Galena Park
+Galveston
+Garyville
+Geismar
+Good Hope
+Gramercy
+Greens Bayou
+Gretna
+Gulfmex No 2
+Gulfport
+Hillsborough Bay
+Houston
+Ingleside
+Jacintoport
+Key West
+La Place
+Lake Charles
+LOOP Terminal
+Louisiana Offshore Oil Port
+Manchester United States
+Marrero
+McDuffie Island
+Memphis
+Meraux
+Mississippi River
+Mobile
+Montgomery
+Myrtle Grove
+Nederland
+New Orleans
+Norco
+Offshore Pascagoula No 2
+Orange
+Ostrica
+Panama City
+Pasadena
+Pascagoula
+Paulina
+Pensacola
+Phoenix City
+Plaquemines
+Point Comfort
+Port Arthur
+Port Canaveral
+Port Fourchon
+Port Isabel
+Port Lavaca
+Port Manatee
+Port Neches
+Port of South Louisiana
+Port St Joe
+Port Sulphur
+Port Sutton
+Rattlesnake
+Reserve
+Rockport
+Sabine
+Selma
+Boca Grande United States
+Smith's Bluff
+South Louisiana Port
+South Sabine Point
+Southtex
+St Elmo
+St James
+St Petersburg United States
+St Rose
+St. James
+St. Petersburg
+Tampa
+Texas City
+Texport
+Three Mile Creek
+Tuscaloosa
+US Gulf Lightering Zones
+Weedon Island
+East Coast Central America
+sw pass
+usg
+hbhv
+Port au Prince
+Fond Mombin
+SW Pass
+Yucatan Channel
+Angra do Heroismo
+Horta
+Ponta Delgada
+Praia da Vitoria
+Antwerp
+Bruges
+Brussels
+Ghent
+Liege
+Nieuwpoort
+Ostend
+Zeebrugge
+Frobisher
+Iqaluit
+Alderney
+Braye
+St Helier
+St Peter Port
+Aalborg
+Aarhus
+Aeroskobing
+Allinge
+Asnaes
+Asnaesvaerkets Havn
+Assens
+Avernakke
+Bandholm
+Copenhagen
+Dania
+Dansk
+Ebeltoft
+Elsinore
+Ensted
+Esbjerg
+Faaborg
+Fakse Ladeplads
+Faxe
+Fredericia
+Frederikshavn
+Frederikssund
+Frederiksvaerk
+Gedser
+Graasten
+Grenaa
+Gulfhavn
+Haderslev
+Hadsund
+Hammerhavn
+Hanstholm
+Hasle
+Helsingor
+Hirtshals
+Hobro
+Holbaek
+Horsens
+Hvide Sande
+Kalundborg
+Karrebaeksminde
+Kerteminde
+Koge
+Kolding
+Kongsdal
+Korsoer
+Kyndby
+Laesohavn
+Lemvig
+Lindholm
+Lindoe Terminal
+Lyngs Odde
+Mariager
+Marstal
+Masnedovaerkets Havn
+Middelfart
+Naestved
+Nakskov
+Nekso
+Nyborg
+Nykobing (Falster)
+Nykobing (Mors)
+Nykobing (Sjaelland)
+Odense
+Orehoved
+Randers
+Ringkobing
+Rodbyhavn
+Rodvig
+Ronne
+Rudkobing
+Sakskoebing
+Samso Island
+Shannon Island
+Skaelskor
+Skaerbaek
+Skagen
+Skive
+Sonderborg
+Stege
+Stevns Pier
+Stigsnaesvaerkets Havn
+Struer
+Stubbekobing
+Studstrup
+Svaneke
+Svendborg
+Thisted
+Tuborg
+Vejle
+Vesterohavn
+Vordingborg
+Drelnes
+Fuglafjordur
+Klaksvik
+Kollafjordur
+Midvaag
+Runavik
+Skaala
+Soervaag
+Strendur
+Torshavn
+Trangisvaag
+Tvoroyri
+Vagur
+Vestmanna
+Ajaccio
+Ambes
+Antibes
+Antifer
+Arcachon
+Basse Indre
+Bassens
+Bastia
+Bayonne France
+Bec d' Ambes
+Blaye
+Bonifacio
+Bonnieres sur Seine
+Bordeaux
+Boulogne-sur-Mer
+Brest
+Caen
+Calais
+Calvi
+Camaret
+Cancale
+Cannes
+Caronte
+Cherbourg
+Concarneau
+Cordemais
+Corniguel
+Coueron
+Deauville
+Dieppe
+Donges
+Dunkirk
+Etang de Berre
+Evry
+Fecamp
+Fos
+Gennevilliers
+Granville
+Gravelines
+Gravenchon
+Haut Indre
+Honfleur
+Ile Rousse
+Indret
+Izon
+La Ciotat
+La Mede
+La Nouvelle
+La Pallice
+La Pointe de Berre
+La Rochelle
+La Rochelle-Pallice
+La Seyne-Bregaillon
+Lavera
+Le Chateau D'Oleron
+Le Guildo
+Le Havre
+Le Legue/Saint Brieuc
+Le Treport
+Le Verdon
+Les Sables d'Olonne
+Libourne
+Limay France
+Loctudy
+Lorient
+Mantes
+Marans
+Marseilles
+Montereau
+Montoir
+Morlaix
+Nanterre
+Nantes-St Nazaire
+Nice
+Paimboeuf
+Paimpol
+Paris
+Pauillac
+Petit Couronne
+Port de Bouc
+Port Jerome
+Port St Louis du Rhone
+Port St Nicholas
+Port Toga
+Port Tudy
+Port Vendres
+Porto Vecchio
+Propriano
+Quimper-Corniguel
+Rochefort & Tonnay-Charente
+Roscoff-Bloscon
+Rouen
+Saint-Ouen
+Sete
+St Malo
+St Nazaire
+St Valery-en-Caux
+St Valery-sur-Somme
+St. Nazaire
+Strasbourg
+Tonnay-Charente
+Toulon La Seyne
+Treguier
+Vannes
+Villefranche
+Blexen
+Brake
+Bremen
+Bremerhaven
+Brunsbuttel
+Busum
+Butzfleth
+Cologne
+Cuxhaven
+Duisburg (Ruhrort)
+Dusseldorf
+Eckernforde
+Elbeharbour
+Elsfleth
+Emden
+Flensburg
+Frankfurt
+Gluckstadt
+Hamburg
+Heiligenhafen
+Hochfeld
+Holtenau
+Husum Germany
+Itzehoe
+Kappeln
+Karlsruhe
+Kehl
+Kiel
+Kiel Canal
+Kiel-Holtenau
+Koblenz
+Krefeld
+Laboe
+Leer
+Lubeck
+Ludwigshafen Am Rhein
+Mainz
+Mannheim
+Neuhaus
+Neuss
+Neustadt
+Nordenham
+Oldenburg
+Oldersum
+Orth
+Ostermoor
+Papenburg
+Rendsburg
+Rostock
+Ruhrort
+Schleswig
+Schwarzenhutten
+Stade
+Stadersand
+Stralsund
+Toenning
+Travemunde
+Ueckermunde
+Uetersen
+Warnemunde
+Wedel
+Weserport
+Wilhelmshaven
+Wismar
+Aasiaat
+Ammassalik
+Angmagssalik
+Christianshaab
+Egedesminde
+Faeringehavn
+Frederikshaab
+Godhavn
+Godthaab
+Gronnedal
+Holsteinsborg
+Ilulissat
+Ivigtut
+Jakobshavn
+Julianehaab
+Kangerlussuaq
+Kangilinnguit
+Maniitsoq
+Marmorilik
+Nanortalik
+Narsaq
+Narssarssuaq
+North Star Bugt
+Nuuk
+Paamiut
+Qaanaaq
+Qaqortoq
+Qasigiannguit
+Qeqertarsuaq
+Sisimiut
+Soendre Stroemfjord
+Sukkertoppen
+Tasiilaq
+Umanak
+Upernavik
+Uummannaq
+Akranes
+Akureyri
+Dalvik
+Djupivogur
+Eskifjordur
+Faskrudsfjordur
+Grenivik
+Grindavik
+Grundarfjordur
+Grundartangi
+Hafnarfjordur
+Hofn
+Hornafjordur
+Husavik
+Hvammstangi
+Isafjordur
+Keflavik - Njarovik
+Neskaupstadur
+Njarovik
+Nordfjordur
+Nordhfjordhur
+Raufarhofn
+Reykjavik
+Seydisfjordur
+Siglufjord
+Skagastrond
+Stodhvarfjordur
+Straumsvik
+Vestmannaeyjar
+Vopnafjordur
+Arklow
+Aughinish
+Ballina
+Baltimore Ireland
+Bantry
+Burtonport
+Cahirsiveen
+Carlingford
+Castletown Bere
+Clarecastle
+Cobh
+Cork
+Dinish Island
+Drogheda
+Dublin
+Dun Laoghaire
+Duncannon
+Dundalk Ireland
+Dungarvan
+Dunmore East
+Fenit
+Foynes
+Galway
+Greenore
+Haulbowline
+Howth
+Killala
+Killybegs
+Kilronan
+Kilrush
+Kinsale
+Leahill Quarry
+Limerick
+Moneypoint
+New Ross
+Rathmullen
+Ringaskiddy
+Rosslare Europort
+Rushbrooke
+Shannon Foynes Port
+Sligo
+Tarbert Island
+Valentia
+Waterford
+Westport Ireland
+Whiddy Island
+Whitegate
+Wicklow
+Youghal
+Castletown
+Douglas
+Peel
+Port St Mary
+Ramsey
+Monaco
+Sluiskil
+Alkmaar
+Amsterdam
+Axel Plain
+Beverwijk
+Botlek
+Braakman Harbour
+Breskens
+Brouwershaven
+Delfzijl
+Den Helder
+Den Oever
+Dordrecht
+Eemshaven
+Europoort
+Flushing
+Groningen
+Hansweert
+Harlingen
+Hellevoetsluis
+Hoek van Holland
+Hook of Holland
+Ijmuiden
+Maassluis
+Maasvlakte
+Middelburg
+Moerdijk
+Nijmegen
+Pernis
+Port Scaldia
+Rotterdam
+Rozenburg
+Sas Van Gent
+Scheveningen
+Schiedam
+Terneuzen
+Velsen
+Vlaardingen
+Vlissingen
+Ymuiden
+Zaandam
+Zaanstad
+Zierikzee
+Zwolle
+Aaheim
+Aalesund
+Agotnes
+Aker Base
+Akrehamn
+Alvik
+Ardalstangen
+Arendal
+Aurland
+Batsfjord
+Bergen
+Bodo
+Borg Havn IKS
+Breivika
+Brevik
+Bronnoysund
+Drammen
+Egersund
+Eikefet
+Fagerstrand
+Farsund
+Fiborgtangen
+Flam
+Flekkefjord
+Floro
+Fredrikstad
+Gismeroy
+Glomfjord
+Grenland Harbour
+Grimstad
+Gudvangen
+Haavik
+Halden
+Hammerfest
+Harstad
+Haugesund
+Heroya
+Holmen
+Holmestrand
+Homsvik
+Honningsvag
+Horten
+Hoyanger
+Husnes
+Kaarsto
+Kambo
+Kirkenes
+Kleven
+Kopervik
+Kragero
+Kristiansand
+Kristiansund
+Langesund
+Larvik
+Leirvik
+Lillesand
+Lodingen
+Maaloy
+Malm
+Mandal
+Mellos Harbour
+Mjanesholmen
+Mo I Rana
+Mo-I-Rana
+Molde
+Mongstad
+Mosjoen
+Moss
+Naersnes
+Namsos
+Narvik
+Odda
+Orkanger
+Oslo
+Porsgrunn
+Prostneset
+Rafnes
+Risavika
+Risor
+Sandefjord
+Sandnes
+Sarpsborg
+Sauda
+Sjursoya
+Skien
+Skogn
+Skudeneshavn
+Slagen
+Sola
+Stavanger
+Steinkjer
+Sture
+Sunndalsora
+Svartnes
+Sveagruva
+Svelgen
+Svelvik
+Svolvaer
+Tananger
+Tangen
+Tau
+Thamshavn
+Tjeldbergodden
+Tonsberg
+Tromsdalen
+Tromso
+Trondheim
+Tvedestrand
+Vadso
+Vaksdal
+Vardo
+Vedavagen
+Aveiro
+Douro
+Faro & Olhao
+Figueira Da Foz
+Lagos Portugal
+Leixoes
+Lisbon
+Oporto
+Portimao
+Porto da Povoa de Varzim
+Porto de Vila do Conde
+Santa Apolonia
+Setubal
+Sines
+Viana do Castelo
+Vila Real de Santo Antonio
+Murmansk
+Abra
+Adra
+Aguilas
+Alcanar
+Alcudia
+Algeciras
+Alicante
+Almeria
+Aviles
+Benidorm
+Bermeo
+Bilbao
+Burela
+Burriana
+Cadiz
+Cala Figuera
+Canary Islands
+Carboneras
+Cartagena Spain
+Castellon
+Castro-Urdiales
+Ceuta
+Cillero
+Corcubion
+Corunna
+Denia
+El Ferrol
+Escombreras
+Ferrol
+Gandia
+Garrucha
+Gijon
+Hornillo
+Huelva
+Ibiza
+Javea
+La Coruna
+La Savina
+Luarca
+Mahon
+Malaga
+Marin Spain
+Mazarron
+Melilla
+Motril
+Muros
+Palamos
+Palma
+Pasajes
+Puerto de la Savina
+Puerto De Santa Maria
+Puerto Real
+Puerto Santa Maria
+Punta Ceballos Tanker Terminal
+Punta Lucero Tanker Terminal
+Raos
+Ribadeo
+Rosas
+Rota
+Sagunto
+San Carlos de la Rapita
+San Ciprian
+San Esteban de Pravia
+San Feliu de Guixols
+San Sebastian Spain
+Santander
+Santurce
+Seville
+Soller
+Tarragona
+Tenerife
+Torrevieja
+Valencia
+Vigo
+Vilanova i la Geltru
+Villagarcia de Arosa
+Villaricos
+Vivero
+Zorroza
+Au
+Basle
+Birsfelden
+Kleinhuningen
+St Johann
+Aberaeron
+Aberdeen United Kingdom
+Aberdovey
+Appledore
+Arbroath
+Ardglass
+Ardrishaig
+Ardrossan United Kingdom
+Avonmouth
+Ayr
+Ballylumford
+Banff
+Bangor United Kingdom
+Barmouth
+Barrow-in-Furness
+Barry
+Barton
+Belfast
+Berwick-upon-Tweed
+Bideford
+Bird Port
+Birkenhead
+Blyth
+Boston United Kingdom
+Bowling
+Braefoot Bay
+Bridgwater
+Bridlington
+Bridport
+Brightlingsea
+Bristol
+Brixham
+Brodick Harbour
+Bromborough
+Buckie
+Bude
+Burghead
+Burntisland
+Burray
+Burton upon Stather
+Caernarfon
+Cairnryan
+Caledonian Canal
+Campbeltown
+Canvey Island
+Cardiff
+Carnlough
+Carrickfergus
+Castle Bay
+Cattewater Harbour
+Charlestown United Kingdom
+Chatham Docks
+Cloghan Point
+Colchester
+Coleraine
+Conwy
+Coolkeragh
+Corpach
+Coryton
+Cowes
+Creeksea
+Crinan Canal
+Cromarty Firth
+Crouch Harbour
+Dagenham
+Dartmouth
+Dover
+Dover Strait
+Dunbar
+Dundee
+Dunoon
+Eastham
+Eccles
+Ellesmere Port
+Exmouth United Kingdom
+Eyemouth
+Falmouth
+Fawley
+Felixstowe
+Finnart United Kingdom
+Fingringhoe
+Fishguard
+Fleetwood
+Flixborough Wharf
+Flotta Terminal
+Folkestone
+Forth Ports
+Fosdyke
+Fowey
+Fraserburgh
+Gainsborough
+Garlieston
+Garston
+Girvan
+Glasgow
+Glensanda
+Gloucester United Kingdom
+Goole
+Gourock
+Grangemouth
+Granton
+Gravesend
+Grays
+Great Yarmouth
+Greenock
+Greenwich
+Grimsby
+Gunness
+Hamble
+Hartlepool
+Harwich
+Heysham
+Holm
+Holyhead
+Hound Point
+Howden
+Howdendyke
+Hull
+Hunterston
+Immingham
+Ince
+Invergordon
+Inverness
+Ipswich
+Irlam
+Irvine
+Isle Of Grain
+Isle of Whithorn
+Keadby
+Kilkeel
+Killingholme
+Kilroot
+King's Ferry
+King's Lynn
+Kingsnorth
+Kirkcaldy
+Kirkcudbright
+Kirkwall
+Kyle of Lochalsh
+Lamlash Harbour
+Lancaster
+Largs
+Larne
+Leith
+Lerwick
+Lisahally Port
+Littlehampton
+Liverpool United Kingdom
+Liverpool Bay Terminal
+Llanddulas
+Loch Gairloch
+Lochaline
+Lochboisdale
+Lochmaddy
+London
+Londonderry
+Longhope
+Lossiemouth
+Lowestoft
+Lydney
+Lyness
+Macduff
+Maldon
+Mallaig
+Manchester United Kingdom
+Manchester Ship Canal
+Maydown
+Medway Ports
+Methil
+Middlesbrough
+Milford Docks
+Milford Haven
+Mistley
+Montrose
+Mostyn
+Neath
+New Holland
+Newburgh
+Newcastle upon Tyne
+Newhaven
+Newlyn
+Newport (Isle Of Wight)
+Newport (South Wales)
+Nigg Oil Terminal
+North Woolwich
+Norwich
+Oakham Ness
+Oban
+Old Kilpatrick
+Otterham
+Padstow
+Par
+Partington
+Pembroke
+Penryn
+Penzance
+Perth United Kingdom
+Peterhead Bay Harbour
+Peterhead Harbours
+Plymouth United Kingdom
+Poole
+Port Askaig
+Port Ellen
+Port Henry
+Port Lamont
+Port Penrhyn
+Port Talbot
+Portavogie
+Portbury
+Porthmadog
+Portland United Kingdom
+Portree
+Portrush
+Portsmouth United Kingdom
+Purfleet
+Queenborough
+Ramsgate
+Redcar
+Richborough Port
+Ridham Dock
+Rochester United Kingdom
+Rosyth
+Rothesay
+Rowhedge
+Runcorn
+Rye
+Salford
+Salt Island
+Saltburn
+Saltend
+Scalloway
+Scapa Flow
+Scarborough United Kingdom
+Scrabster
+Seaham
+Seal Sands
+Selby United Kingdom
+Sharpness and Gloucester
+Shell Haven
+Shoreham
+Shotton
+Silloth
+Silvertown
+Southampton
+St Mary's (Scilly Islands)
+Stanlow
+Stornoway
+Strangford
+Stranraer
+Stromness
+Sullom Voe
+Sunderland
+Sutton Bridge
+Swansea
+Tarbert
+Teesport
+Teignmouth
+Tetney Terminal
+Thamesport
+Thelwall
+Tilbury
+Torbay Harbour
+Torquay
+Totnes
+Tranmere Oil Terminal
+Trent Wharves
+Troon
+Truro
+Tyne
+Ullapool
+Warrenpoint
+Warrington
+Watchet
+Wells
+Wemyss Bay
+Weston Point
+Weymouth United Kingdom
+Whitby
+Whitehaven
+Whitstable
+Wick
+Wisbech
+Wivenhoe
+Workington
+UKC
+Reydarf Jordur
+Ushant
+Karmoy
+Cee
+Barbados Island
+Black Rock Tanker Terminal
+Bridgetown
+Needham's Point Tanker Terminal
+Oistins Bay Tanker Terminal
+Spring Garden Tanker Terminal
+Hovensa
+Barranquilla
+Cartagena Colombia
+Cienaga
+Covenas Offshore Terminal
+Ecopetrol
+Mamonal
+Monomeros
+Muelles El Bosque
+Pindo
+Pozos Colorados
+Puerto Bolivar Colombia
+Puerto Prodeco
+Puerto Zuniga
+San Andres Island
+Santa Marta
+Tolu
+Tumaco
+Turbo
+Puerto Limon
+Puerto Moin
+Bahia Honda
+Banes
+Baracoa
+Boca Grande Cuba
+Cabanas
+Caibarien
+Cardenas
+Casilda
+Cayo Frances
+Cienfuegos
+Felton
+Guantanamo
+Guayabal
+Havana
+Isabela de Sagua
+Jucaro
+Macabi
+Manati
+Manzanillo Cuba
+Mariel
+Matanzas Cuba
+Moa
+Nicaro
+Nueva Gerona
+Nuevitas
+Palo Alto
+Pastelillo
+Preston
+Puerto Padre
+Puerto Tarafa
+Punta Gorda
+Santa Cruz del Sur
+Santa Lucia
+Santa Maria Cuba
+Santiago de Cuba
+Tanamo
+Tarafa
+Tunas de Zaza
+Vita
+Portsmouth Dominica
+Roseau
+Woodbridge Bay
+AES Andres LNG Terminal
+Arroyo Barril
+Azua
+Barahona
+Boca Chica
+Cabo Rojo
+Ciudad Trujillo
+El Botado
+La Romana
+Manzanillo Dominican Republic
+Palenque
+Puerto Batadero
+Puerto Duarte
+Puerto Plata
+Puerto Viejo de Azua
+Rio Haina
+Samana
+San Pedro de Macoris
+Sanchez
+Sans Souci
+Santo Domingo
+Cayenne
+Degrad des Cannes
+Kourou
+Le Larivot
+St Laurent du Maroni
+Grand Mal Tanker Terminal
+Queen's Park Tanker Terminal
+St George's Grenada
+Basse-Terre Guadeloupe
+Gustavia Guadeloupe
+Pointe-a-Pitre Guadeloupe
+Essequibo River
+Everton
+Georgetown Guyana
+Kaituma
+Linden
+New Amsterdam
+Cap Haitien
+Miragoane
+Port au Prince
+Puerto Cortes
+Kingston Jamaica
+Lucea
+Montego Bay
+Ocho Rios
+Port Antonio
+Port Bustamente
+Port Esquivel
+Port Kaiser
+Port Rhoades
+Port Royal Jamaica
+Rio Bueno
+Rocky Point
+Salt River
+Savanna La Mar
+Fort-de-France
+La Trinite
+Marin Martinique
+Plymouth Montserrat
+Bonaire Terminal
+Bonoil
+Bopec Terminal
+Brasil (Bonaire)
+Bullen Bay
+Caracas Bay
+Curacao
+Curoil Mooring
+Emmastad
+Fuik Bay
+Goto
+Kralendijk
+Philipsburg
+Salina
+Santa Anna Bay
+Schottegat
+Sint Michielsbay
+St Eustatius
+St Michiel's Bay
+St. Eustatius
+Tumbledown Dick Bay
+Willemstad
+Almirante
+Bahia Las Minas
+Bocas del Toro
+Chiriqui Grande Terminal
+Coco Solo North
+Colon
+Cristobal
+Las Minas Bay
+Manzanillo International Terminal
+Aguadilla
+Aguirre
+Arecibo
+Fajardo
+Guanica
+Guayanilla
+Jobos Bay
+Las Mareas
+Mayaguez
+Ponce
+Port Arecibo
+Porto Nuevo
+San Juan
+Tallaboa
+Yabucoa
+Basseterre
+Charlestown St Kitts & Nevis
+Castries
+Cul-de-Sac
+Pointe Seraphine
+Vieux Fort
+Arnos Vale
+Campden Park Bay
+Kingstown
+Moengo
+Nieuw Nickerie
+Paramaribo
+Paranam
+Smalkalden
+Wageningen
+Brighton
+Chaguaramas
+Cronstadt Island
+Crown Point
+Galeota Point
+Point Fortin
+Point Lisas
+Pointe a Piere
+Pointe-a-Pierre
+Port of Spain
+Scarborough Trinidad & Tobago
+Tembladora
+Cockburn Harbour
+Grand Turk Port
+Providenciales
+Guam
+St. Croix
+Alcasa
+Amuay Bay
+Araya
+Bachaquero
+Bajo Grande
+Bajo Grande Refinery
+Boca Grande Venezuela
+Borburata
+Cabimas
+Caripito
+Carupano
+Chichiriviche
+Ciudad Bolivar
+Coloncha
+Cristobal Colon
+Cumana
+Cumarebo
+El Chaure
+El Guamache
+El Palito
+El Tablazo
+Guanta
+Guaraguao
+Guaranao
+Guiria
+Jose Terminal
+La Ceiba Venezuela
+La Estacada
+La Guaira
+La Salina
+Las Piedras
+Los Cocos
+Macuro
+Maracaibo
+Matanzas Venezuela
+Moron
+Orinoco
+Palua
+Pamatacual
+Pampatar
+Paradero
+Pertigalete
+Puerto Cabello
+Puerto de Hierro
+Puerto Jose
+Puerto La Cruz
+Puerto Miranda
+Puerto Ordaz
+Puerto Pedernales
+Puerto Sucre
+Punta Camacho
+Punta Cardon
+Punta Cuchillo
+Punta de Palmas
+Punta Piedras
+San Felix
+San Lorenzo Venezuela
+Venalum Terminal
+Venterminales
+Port Purcell
+Road Harbour
+Roadtown
+Wickham's Cay
+Charlotte Amalie
+Christiansted
+Frederiksted
+Hovic
+Limetree Bay
+Port Alucroix
+St Thomas
+Third Port
+Aaiun
+North Coast South America
+ECSA
+Laffiteau
+Freeport Bermuda
+Hamilton Bermuda
+St George's Bermuda
+Albany United States
+Alexandria United States
+Baltimore United States
+Bayonne United States
+Boston United States
+Bridgeport
+Brunswick
+Burlington
+Cambridge
+Camden
+Cape Charles
+Charleston
+Chelsea
+Chesapeake
+Chester
+Columbia
+Commodore's Point
+Dames Point
+Delaware City
+Dodge Island
+Dundalk United States
+Elizabeth
+Fairless Hills
+Fernandina
+Fort Lauderdale
+Fort Pierce
+Georgetown United States
+Girard Point
+Gloucester United States
+Greenwich Point
+Groton
+Hampton Roads
+Hawkins Point
+Hyannis Harbor
+Jacksonville
+Jeffries Point
+Locust Point
+Lummus Island
+Marcus Hook
+Miami
+Morehead City
+Morrisville
+Nantucket Harbor
+New Bedford
+New Haven
+New Jersey
+New London
+Newark
+Newport (Rhode Island)
+Newport News
+Norfolk
+Northport
+Oak Bluff
+Ogdensburg
+Palm Beach
+Paulsboro
+Perth Amboy
+Philadelphia
+Piney Point
+Port Covington
+Port Everglades
+Port Jefferson
+Port Newark
+Port Richmond
+Port Royal United States
+Port Wentworth
+Portland (Maine)
+Portsmouth United States
+Portsmouth (New Hampshire)
+Providence
+Revere
+Richmond (Virginia)
+Riverhead Terminal
+Savannah
+South Locust Point
+Sparrow's Point
+Stamford Harbor
+Stonington Harbor
+Sunny Point Terminal
+Trenton
+Wilmington (Delaware)
+Wilmington (North Carolina)
+Winterport
+Yorktown
+Brazil
+Chipco
+New York
+New York
+New York
+Cape Henlopen
+Coeymans
+Cape Henry
+Newington
+Admiral Barroso Terminal
+Alemoa Terminal
+Alumar
+Angra dos Reis
+Antonina
+Aracaju
+Aracruz
+Aratu
+Areia Branca
+Barao De Teffe
+Barnabe Island Terminal
+Barra do Riacho
+Belem
+Butadiene Dock Island
+Cabedelo
+Carmopolis
+Conceicaozinha Terminal
+Corumba
+Cosipa Terminal
+Cutrale Terminal
+Dow Quimica Terminal
+DTBASA
+DTSE/GEGUA Oil Terminal
+Fazendinha
+Forno
+Gebig
+Governor's Island
+Guaiba Island Terminal
+Guamare Oil Terminal
+Ilha Guaiba Terminal
+Ilha Redonda
+Ilheus
+Imbituba
+Itacoatiara
+Itajai
+Itaqui
+Laguna
+Landaria
+Luis Fausto de Medeiros
+Macapa
+Maceio
+Malhado
+Manaus
+Miramar Oil Terminal
+Mucuripe
+Munguba
+Natal
+Niteroi
+Obidos
+Paranagua
+Pecem
+Pelotas
+Ponta da Madeira
+Ponta Do Ubu
+Ponta Ubu
+Porto Abc Norte
+Porto Alegre
+Porto Peixinho
+Portocel
+Praia Mole
+Recife
+Redonda Island
+Regencia
+Rio de Janeiro
+Rio Grande Brazil
+Salvador
+Santa Clara Brazil
+Santana
+Santarem
+Santos
+Sao Cristovao
+Sao Francisco do Sul
+Sao Francisco do Sul Marine Terminal
+Sao Luis
+Sao Sebastiao
+Sepetiba
+Sepetiba Bay
+Sepetiba Terminal
+Suape
+Suape Marine Terminal
+Tebig Terminal
+Termisa Terminal
+Torgua
+Tramandai
+Trombetas
+Tubarao
+Ultrafertil Terminal
+Usiba
+Vila do Conde
+Vitoria
+East Coast South America
+Acaraju
+Piacaguera
+Barra dos Coqueiros
+Fortaleza
+Itaguai
+Acu Port
+Balchik
+Bourgas
+Nessebar
+Pomorie
+Sozopol
+Tzarevo
+Varna
+Bakar
+Dubrovnik
+Dugi Rat
+Gazenica
+Hvar
+Juzna Luka
+Kardeljevo
+Korcula
+Krk Island
+Luka Gruz
+Mali Losinj
+Maslenica
+Metkovic
+Omisalj
+Ploce
+Plomin
+Pula
+Rasa
+Rijeka
+Rijeka Dubrovacka
+Rovinj
+Senj
+Sepen
+Sibenik
+Sjeverna
+Split
+Srecica
+Susak
+Urinj
+Zadar
+Akrotiri
+Dhekelia
+Famagusta
+Gemikonagi
+Kalecik
+Karavostassi
+Kyrenia
+Larnaca
+Latchi
+Limassol
+Moni
+Morphou Bay
+Paphos
+Teknecik
+Vassiliko
+Xeros
+Abu Qir
+Alexandria Egypt
+Damietta
+El Alamein
+El Dekheila
+Mersa el Hamra
+Mersa Matruh
+Port Said
+Sidi Kerir Terminal
+Batumi
+Poti
+Sukhumi
+Supsa
+Acandia
+Achladi
+Adamas
+Aghios Nikolaos
+Agia Marina
+Agia Trias
+Agioi Theodoroi
+Alexandroupolis
+Aliveri Bay
+Aliverion
+Argostoli
+Aspra Spitia Ore Terminal
+Aspropyrgos
+Astakos
+Ayia Marina
+Ayios Nikolaos
+Canea
+Catacolo
+Cephalonia
+Chalkis
+Chios
+Corfu (Kerkira)
+Corinth
+Corinth Canal
+Drapetsona Bay
+Drepano
+Elefsis
+Eleusis
+Foron Bay
+Gera Bay
+Gythion
+Halkis
+Hercules Port
+Igoumenitsa
+Iraklion
+Isthmia
+Itea
+Kalamaki
+Kalamata
+Kali Limenes
+Kalymnos
+Karavos Harbour
+Karlovassi
+Katakolon
+Kavala
+Kavonisi-Kissamos
+Kithira
+Kos
+Kymassi
+Lamia
+Laurium
+Lavrion
+Leros Island
+Lixouri
+Malagari
+Mandraki
+Mandukio
+Marathocampos
+Marathoupolis
+Megara Oil Terminal
+Mesolongi
+Microlimano
+Milaki
+Milos Island
+Mitylene
+Mykonos Island
+Nafplion
+Nauplia
+Pachi
+Pamfilla
+Paroikia
+Paros
+Patmos
+Patras
+Perama
+Phaleron Bay
+Piraeus
+Poseidonia
+Preveza
+Prinos
+Proti Island
+Pylos
+Pythagorio
+Rafina
+Rethimnon
+Rhodes
+Rion
+Salonica
+Samos
+Seriphos Island
+Skaramanga
+Souda Bay
+St George Harbour
+Stratoni
+Stylis
+Suda Bay
+Syros Island
+Thessaloniki
+Vathi
+Volos
+Voudhia Bay
+Yali Island
+Yerakini
+Zakinthos
+Zante
+Zea
+Ashdod
+Ashkelon
+Eilat
+Hadera
+Haifa
+Aqaba
+Mo'ta
+Mushterak
+Beirut
+Chekka
+Dora Terminal
+Jounieh
+Saida
+Selaata
+Sidon
+Sour
+Tripoli Lebanon
+Tyr
+Zahrani Terminal
+Zouk Terminal
+Agigea
+Basarabi
+Braila
+Calafat
+Calarasi
+Cernavoda
+Chilia
+Constantza
+Danube - Black Sea Canal
+Danube River
+Drencova
+Drobeta Turnu Severin
+Galatz
+Giurgiu
+Harsova
+Isaccea
+Macin
+Mahmudia
+Mangalia
+Medgidia
+Midia
+Midia Navodari
+Moldova Noua
+Oltenitza
+Orsova
+Tulcea
+Turcoaia
+Turnu Magurele
+Zimnicea
+Anapa
+Azov
+Gelendzhick
+Kavkaz
+Makhachkala
+Novorossiysk
+Onega
+Rostov-on-Don
+Sheskharis
+Sochi
+Taganrog
+Temryuk
+Tuapse
+Yeisk
+Yeysk
+Bar
+Kotor
+Lipci
+Risan
+Tivat
+Banias
+Borj Islam
+Latakia
+Lattakia
+Tartous
+Alanya
+Aliaga
+Ambarli
+Antalya
+Bagfas-Iskur Fertilizer Jetty
+Bandirma
+Bartin
+Bodrum
+Borusan
+Panama Canal
+Botas (Ceyhan) Oil Terminal
+Botas Natural Gas Terminal
+Canakkale
+Cesme
+Ceyhan
+Cukurova
+Dardanelles
+Darica
+Delta Terminal
+Derince
+Dikili
+Diliskelesi
+Dortyol Oil Terminal
+Edincik
+Ege Gubre
+Erdemir
+Eregli
+Fatsa
+Fethiye
+Finike
+Gallipoli Turkey
+Gebze
+Gelibolu
+Gemlik
+Giresun
+Gocek
+Golovasi
+Gorele
+Gulluk
+Habas
+Haydarpasa
+Hereke
+Hopa
+Icdas Jetty
+Inebolu
+Isdemir
+Iskenderun
+Istanbul
+Izmir
+Izmit
+Karabiga
+Karakoy
+Kusadasi
+Marmaris
+Mersin
+Metas
+Mudanya
+Nemrut Bay
+Nemtas
+Ordu
+Pirs Ekindzhiler
+Rize
+Samsun
+Sedef
+Sinop
+S-Port
+Tasucu
+Tekirdag
+Toros
+Trabzon
+Tutuncifilik
+Tuzla
+Yarimca
+Zonguldak
+Azovstal
+Belgorod-Dnestrovskiy
+Chernomorsk
+Dneprobugskiy
+Dneprovsko-Bugsky
+Evpatoria
+Feodosia
+Illihivs'k
+Ilyichevsk
+Izmail
+Kerch
+Kherson
+Kiliya
+Mariupol
+Nikolaev
+Nikolayev
+Odessa
+Oktyabrsk
+Reni
+Sevastopol
+Skadovsk
+Theodosia
+Ust-Dunaysk
+Yalta
+Yuzhnyy
+Zhdanov
+Eastern Mediterranean
+Aboukir
+Assaluyeh
+Thisvi
+San Nicolas (Greece)
+Poliport
+Chornomorsk
+Yalova
+Marmara Ereglisi
+Durres
+Amherst
+Becancour
+Burlington Bay
+Collingwood
+Goderich
+Halifax
+Hamilton Canada
+Kingston Canada
+Kingsville
+Marathon
+Mckellar Island
+Midland
+Mission River
+Oshawa
+Parry Sound
+Penetanguishene
+Port Colborne
+Port Dalhousie
+Port Hope
+Port Stanley Canada
+Port Weller
+Prescott
+Saulte Ste Marie
+Spragge
+St Catharines
+Thorold
+Thunder Bay
+Toronto
+Welland
+Welland Canal
+Algonac
+Ashland
+Ashtabula
+Bay City
+Buffalo
+Burns Harbor
+Calumet
+Charlevoix
+Cheboygan
+Chicago
+Clayton
+Cleveland
+Conneaut
+Detroit
+Duluth-Superior
+Erie
+Escanaba
+Fairport Harbor
+Grand Haven
+Green Bay
+Holland Harbor
+Huron
+Kenosha
+Lake Calumet Harbor
+Lorain
+Marquette
+Menominee/Marinette
+Milwaukee
+Monroe
+Muskegon
+Ontonagon
+Oswego
+Port Huron
+Port Washington
+Racine
+Rochester United States
+Saginaw
+Superior
+Taconite Harbor
+Toledo
+Waukegan
+Wyandotte
+Port Cortier
+Amherstburg
+Annapolis Royal
+Argentia
+Arichat
+Aulds Cove
+Baddeck
+Baie Comeau
+Baie Verte
+Baie-Comeau
+Bathurst
+Bay Roberts
+Bayside
+Belledune
+Blanc-Sablon
+Botwood
+Bridgewater
+Brooklyn
+Buctouche Harbour
+Burgeo
+Campbellton
+Canaport
+Canso
+Cap-aux-Meules
+Caraquet
+Carbonear
+Carleton
+Carmanville
+Catalina
+Chandler
+Charlottetown
+Chatham
+Chicoutimi
+Churchill
+Clarenville
+Come By Chance
+Comeau Bay
+Contrecoeur
+Corner Brook
+Cornwall
+Crossman Point
+Dalhousie
+Digby
+Fairview Cove
+Forestville
+Gaspe
+Georgetown Canada
+Godbout
+Goose Bay
+Grand Bank
+Gros Cacouna
+Hantsport
+Harbour Breton
+Harbour Grace
+Havre St Pierre
+Holyrood
+Humbermouth
+Iona
+Isaac's Harbour
+La Have
+Les Escoumins
+Lewisporte
+Liscomb
+Little Narrows
+Liverpool Canada
+Lockeport
+Long Harbour
+Long Pond
+Louisbourg
+Lunenburg
+Main Brook
+Marystown
+Matane
+Meteghan
+Mont Louis
+Montague
+Montreal
+Mulgrave
+Nanisivik
+Natashquan
+New Glasgow & Trenton
+New Richmond
+Newcastle (Canada)
+North Sydney
+Owen Sound
+Parrsboro
+Paspebiac
+Pictou
+Point Tupper
+Pointe Aux Basques
+Pointe Noire
+Pointe-au-Pic
+Port Alfred
+Port aux Basques
+Port Cartier
+Port Harmon
+Port Hawkesbury
+Port Medway
+Port Saguenay
+Portneuf
+Pugwash
+Quebec
+Richibucto
+Rimouski
+Saint John
+Saint Thomas-de-Kent
+Sandy Beach
+Sept-Iles
+Seven Islands
+Shediac
+Sheet Harbour
+Shelburne
+Ship Harbour
+Shippegan
+Sorel
+Souris
+Springdale
+St Andrews
+St Anthony
+St John's
+ST. LAWrence Seaway
+St Romuald
+St. Lawrence
+Stephenville
+Stewart
+Summerside
+Sydney Canada
+Tadoussac
+Three Rivers
+Trois-Rivieres
+Tuktoyaktuk
+Twillingate
+Valleyfield
+Weymouth Canada
+Whiffen Head
+Windsor
+Yarmouth
+Miquelon
+St Pierre
+Bangor United States
+Bar Harbor
+Bath
+Brayton Point
+Bucksport
+Cape Cod Canal
+Fall River
+Northville
+Plymouth United States
+Port Chester Harbor
+Provincetown
+Rockland
+Sandwich
+Searsport
+Tiverton
+Venezuela
+Deikela
+Escoumins
+Dzaoudzi
+Fomboni
+Longoni
+Mamoudzou
+Mayotte
+Moroni
+Mutsamudu
+Pamanzi Bay
+Kilindi
+Kipevu Oil Terminal
+Lamu
+Malindi
+Mbaraki
+Mombasa
+Port Reitz
+Port Tudor
+Shimanzi Oil Terminal
+Andoany
+Antalaha
+Antsiranana
+Diego Suarez
+Fort Dauphin
+Mahajanga
+Majunga
+Manakara
+Mananjary
+Morondava
+Nosy Be
+Port Saint Louis
+Tamatave
+Toamasina
+Tolagnaro
+Tulear
+Port Louis
+Beira
+Chinde
+Inhambane
+Macuse
+Maputo
+Matola
+Mozambique Island
+Nacala
+Pebane
+Pemba
+Ponta Dobela
+Porto Belo
+Quelimane
+Luderitz
+Walvis Bay
+Pointe des Galets
+Mahe
+Port Victoria
+Chisimaio
+Kismayu
+Merca
+Mogadiscio
+Cape Town
+Durban
+East London
+Mossel Bay
+Port Elizabeth
+Port Natal
+Port Nolloth
+Richards Bay
+Saldanha Bay
+Simonstown
+Chake Chake
+Dar es Salaam
+Dar-Es-Salaam
+Kilwa Kivinje
+Kilwa Masoko
+Lindi
+Mjimwema Oil Terminal
+Mkoani
+Mtwara
+Pangani
+Tanga
+Wete Wete
+Zanzibar City
+Algeria
+Cape of Good Hope
+Reunion
+Heltermaa
+Kesklinna
+Kopli-Port Of Tallinn
+Kuivastu
+Kunda
+Muuga
+Muuga-Port Of Tallinn
+Novotallinsky
+Old City Harbour-Port of Tallinn
+Paldiski-Port Of Tallinn
+Paljassaare
+Pyarnu
+Rohukula
+Roomassaare
+Sviby
+Tallinn
+Virtsu
+Abo
+Ajos
+Akonniemi
+Brahestad
+Ekenas
+Haakoninlahti
+Hamina
+Hanko
+Haponniemi
+Haukipudas
+Helsinki
+Hepokari
+Imatra
+Inkoo
+Isnas
+Jakobstad
+Joensuu
+Joutseno
+Kantvik
+Kaskinen
+Kasko
+Kaukas
+Kemi
+Kokkola
+Kosula
+Kotka
+Koverhar
+Kristinankaupunki
+Kristinestad
+Kumpusalmi
+Kuopio
+Laajasalo Oil Harbour
+Lapaluoto
+Lappeenranta
+Loviisa
+Mantyluoto
+Mariehamn
+Merikarvia
+Mustola
+Naantali
+Nuottasaari
+Oritkari
+Oulu
+Pansio
+Parainen
+Pargas
+Pateniemi
+Pietarsaari
+Pori
+Porkkala
+Puhos
+Raahe
+Rahja
+Rapasaari
+Rauma
+Rautaruuki
+Reposaari
+Ristiina
+Roytta
+Saimaa Canal
+Savonlinna
+Siilinjarvi
+Skogby
+Skoldivk
+Skuru
+Taipale
+Tammisaari
+Tolkkinen-Tolkis
+Toppila
+Tornio
+Turku
+Uto
+Uusikaupunki
+Varkaus Harbours
+Veitsiluoto
+Vihreasaari
+Vuoksen Terminal
+Vuosaari Harbour
+Ykspihlaja
+Baltic Container Terminal
+Engure
+Lielupe
+Liepaja
+Mersrags
+Pavilosta
+Riga
+Roja
+Salacgriva
+Skulte
+Ventspils
+Butinge Marine Terminal
+Klaipeda
+Darlowo
+Elblag
+Gdansk
+Gdynia
+Hel
+Kolobrzeg
+Police
+Port Polnocny
+Swinoujscie
+Szczecin
+Ustka
+Wladyslawowo
+Amderma
+Archangel
+Dikson
+Dudinka
+Ekonomiya
+Igarka
+Kaliningrad
+Kandalaksha
+Leningrad
+Leviy Bereg
+Lomonosov
+Mezen
+Naryan-Mar
+Primorsk
+St Petersburg Russia
+Tiksi
+Ust-Luga
+Vyborg
+Vysotsk
+Ahus
+Ala
+Axelsvik Oil Terminal
+Bado
+Bergkvara
+Bollsta
+Borgholm
+Braviken
+Brofjorden
+Bulkhamnen
+Degerhamn
+Djuron
+Domsjo
+Donso
+Edstrandsbassangen
+Enkoping
+Falkenberg
+Fredriksskans
+Frihamnen
+Froland
+Gastgivarehagen
+Gavle
+Gefle
+Goteborg
+Gothenburg
+Granudden
+Hallstavik
+Halmstad
+Hammarbyhamnen
+Haparanda
+Hargshamn
+Harnosand
+Helsingborg
+Hoganas
+Hornefors
+Hudiksvall
+Husum Sweden
+Iggesund
+Kage
+Kalix
+Kalmar
+Kapellskar
+Karlsborg
+Karlshall
+Karlshamn
+Karlskrona
+Karlstad
+Karlsvik
+Karskar
+Klintehamn
+Kolo Harbour
+Koping
+Kristinehamn
+Kubikenborg
+Kungsor
+Landskrona
+Langror
+Lidkoping
+Limhamn
+Lomma
+Loudden
+Lugnvik
+Lulea
+Lysekil
+Malmo
+Mariestad
+Marstrand
+Norrkoping
+Norrsundet
+Nyhamn
+Nykoping
+Nynashamn
+Oaxen
+Ohmans
+Ornskoldsvik
+Orrskar
+Ortviken
+Oskarshamn
+Ostrand
+Otterbacken
+Oxelosund
+Oxhaga Harbour
+Pampus Harbour
+Paskallavik
+Pataholm
+Pitea
+Ramshall
+Ronehamn
+Ronneby
+Ronnskar
+Rya Harbour
+Sandarne
+Sikea
+Simrishamn
+Skelleftea
+Skeppsbron
+Skoghall
+Skredsvik
+Skutskar
+Slite
+Soderhamn
+Sodertalje & Sodertalje Canal
+Solvesborg
+Soraker
+Stadsgarden
+Stenungsund
+Stilleryd Harbour
+Stockholm
+Stockvik
+Stormskar Oil Terminal
+Storugns
+Strangnas
+Stroemstad
+Stugsund
+Sundsvall
+Sutudden Harbour
+Tallbacken
+Trelleborg
+Trollhatte Canal
+Tunadalshamnen
+Uddebo
+Uddevalla
+Umea
+Utansjo
+Vaja
+Valdemarsvik
+Vallvik
+Vanersborg
+Varberg
+Vartahamnen
+Vasteras
+Vastervik
+Visby
+Wallhamn
+Ystad
+St Nicolas
+South Korea
+South Africa
+Morocco
+Black sea
+Cuba
+THISVI
+St. Petersburg
+Pago-Pago
+Chalna
+Chittagong
+Khulna
+Mongla
+Kuala Belait
+Lumut Brunei Darussalam
+Muara
+Seria
+Tanjong Salirong
+Kompong Som
+Phnom-Penh
+Pointe du Depart
+Sihanoukville
+Amoy
+Aoshan Oil Terminal
+Ashihe
+Baoshan
+Baozhen
+Basuo
+Bayuquan
+Beida
+Beigang
+Beijin
+Beilun
+Canton
+Chenglingji
+Chinkiang
+Chiwan
+Chizhou
+Chongqing
+Didong
+Dixi
+Dongdu
+Dongshan
+Erman
+Fangcheng
+Foochow
+Fujin
+Fuzhou
+Ganchong
+Gaolan
+Guangzhou
+Haikou
+Haimen
+Hangzhou
+Hankow
+Harbin
+Hoikow
+Hong Kong China
+Huangdao
+Huangpu
+Huangshi
+Huiyang
+Huizhou
+Hulanhe
+Jiangcheng Hedi
+Jiangmen
+Jiujiang
+Jiulongpo
+Jiuzhou
+Lan Shui Terminal
+Lanjiatuo
+Lizhiyuan
+Lufeng Terminal
+Maoertuo
+Maoming
+Mawan
+Meizhou
+Nanmen
+Nanning
+Ningbo
+Niupeng
+Qianwan
+Quanzhou
+Rongqi
+Sanbaimen
+Sanbu
+Sankeshu
+Sanya
+Shanghai
+Shangyao
+Shantou
+Shanwei
+Shekou
+Shenzhen
+Shijuetou
+Swatow
+Tongling
+Tsamkong
+Tsingtao
+Wenzhou
+Wuhan
+Wuzhou
+Xiabaishi
+Xiamen
+Xijiang Marine Terminal
+Xinhe
+Xinhui
+Xinjian
+Xinsha
+Xiuyu
+Yangjiang
+Yangpu
+Yantian
+Yichang
+Yingkou
+Zhangzhu
+Zhaoqing
+Zhapu
+Zhengyanghe
+Zhenhai
+Zhenjiang
+Zhonggang
+Zhongshan
+Zhoushan
+Zhuhai
+Christmas Island
+Port Refuge
+Avatiu
+Labasa
+Lambasa
+Lautoka
+Levuka
+Savu Savu
+Suva
+Walu Bay
+Bora-Bora
+Papeete
+Apra Harbour
+Chai Wan
+Hong Kong Hong Kong
+Kowloon
+Kwai Chung
+Kwun Tong
+Lamma Island
+Stonecutters Island
+Tap Shek Kok
+Tsing Yi Island
+Tsuen Wan
+Tuen Mun
+Wan Chai
+Yau Ma Tei
+Bheemunipatnam
+Budge Budge
+Calcutta
+Chennai
+Cuddalore
+Ennore
+Gangavaram
+Gopalpur
+Haldia
+Kakinada
+Kolkata
+Krishnapatnam
+Machilipatnam
+Madras
+Nagapattinam
+New Tuticorin
+Paradip
+Pondicherry
+Port Blair
+Tuticorin
+Visakhapatnam
+Vizag
+Adang Bay
+Amamapare
+Ambon
+Ampenam
+Anoa Natuna
+Anyer Terminal
+Ardjuna Marine Terminal
+Arun Terminal
+Asahan
+Balikpapan
+Balongan
+Banjarmasin
+Banten
+Banyuwangi - Meneng
+Batu Ampar
+Bau-Bau
+Bekapai Terminal
+Belawan
+Belida Marine Terminal
+Bengkalis
+Bengkulu
+Benoa
+Benteng
+Biak
+Bima
+Bima Terminal
+Bintan Island
+Bintuni
+Biringkasi
+Bitung
+Blang Lancang
+Bontang
+Buatan
+Bula
+Bunyu
+Camar Marine Terminal
+Celukan Bawang
+Cengkareng
+Cigading
+Cilacap
+Cinta
+Cirebon
+Citra Ujung Baru
+Ciwandan
+Dabo
+Demta
+Donggala
+Dumai
+Ende
+Gabion
+Gebe Island
+Gilimanuk
+Gorontalo
+Gresik
+Gunung Sitoli
+Hagu
+IBT
+Jakarta
+Jambi
+Jayapura
+Kabil
+Kaimana
+Kakap Natuna Marine Terminal
+Kalbut Situbondo Terminal
+Kalianget
+Kalimantan
+Karimun Island
+Kasim Marine Terminal
+Kempo
+Kendari
+Kijang
+Kota Baru
+Krueng Geukueh
+Krueng Raya
+Kuala Beukah
+Kuala Kapuas
+Kuala Langsa
+Kuala Tanjung
+Kumai
+Kupang
+Labuan Amuk Terminal
+Labuantring
+Lalang Marine Terminal
+Larantuka
+Lawi-Lawi Terminal
+Lembar
+Lhoknga
+Lhokseumawe
+Macassar
+Madura
+Mahakam River
+Majene
+Makassar
+Malahayati
+Malili
+Manado
+Mangkasa Oil Terminal
+Manokwari
+Maumere
+Medan
+Meneng
+Merak Petroleum Base
+Merauke
+Meulaboh
+Muntok
+Namlea
+North Pulau Laut Coal Terminal
+Nunukan
+Nusantara
+Pagatan
+Palembang
+Palopo
+Panarukan
+Pangkal Balam
+Pangkalan Susu
+Panjang
+Pantoloan
+Pare Pare
+Pekanbaru
+Pelra
+Pemangkat
+Penuba
+Plaju & Sungai Gerong
+Poleng
+Pomalaa
+Pontianak
+Poso
+Probolinggo
+Prointal
+Pulang Pisau
+Pulau Baai
+Pulau Laut
+Pulau Sambu
+Ramba
+Rengat
+Sabang
+Salawati
+Samarinda
+Sambas
+Sampit
+Sangatta
+Santan Terminal
+Satui
+Sebuku Island
+Sekupang
+Selat Panjang
+Semangka Bay
+Semarang
+Senipah Terminal
+Sibolga
+Singkawang
+Sintete
+Sorong
+Sunda Kelapa
+Sungai Gerong
+Sungai Kolak
+Sungai Pakning
+Surabaya
+Susoh
+Tahuna
+Tanah Merah
+Tanjung Balai Asahan
+Tanjung Balai Karimun
+Tanjung Bara Coal Terminal
+Tanjung Emas
+Tanjung Gerem
+Tanjung Intan
+Tanjung Pandan
+Tanjung Perak
+Tanjung Pinang
+Tanjung Priok
+Tanjung Sekong
+Tanjung Uban
+Tarahan Terminal
+Tarakan Island
+Tegal
+Telok Ayer
+Teluk Bayur
+Teluk Semangka
+Tembilahan
+Ternate
+Tuban
+Tubang
+Udang Natuna
+Ujung Pandang
+Uleelheue
+Waingapu
+Waisarisa
+Wamsasi
+Widuri Marine Terminal
+Banaba
+Betio
+English Harbour
+Tarawa
+Teraina Harbour
+Macau
+Bakapit
+Biawak
+Bintangor
+Bintulu
+Bintulu Terminal
+Butterworth
+Datuk Sim Kheng Hong
+Dulang Marine Terminal
+Dungun
+Johor
+Kemaman
+Kerteh Terminal
+Kota Kinabalu
+Kuah
+Kuala Baram
+Kuantan
+Kuching
+Kudat
+Kunak
+Labuan
+Lahad Datu
+Langkawi Port
+Lawas
+Limbang
+Lingga
+Lumut Malaysia
+Lundu
+Lutong
+Malacca
+Miri
+Pasir Gudang
+Penang
+Pending
+Port Dickson
+Port Kelang
+Port Klang
+Port Swettenham
+Prai
+Pulau Tioman
+Sandakan
+Sapangar Bay Oil Terminal
+Sarikei
+Sejingkat
+Semporna
+Senari
+Sibu
+Sipitang
+Sungai Udang
+Tanah Puteh
+Tanjong Berhala
+Tanjong Gelang
+Tanjong Kidurong
+Tanjung Bin
+Tanjung Bruas
+Tanjung Manis
+Tanjung Pelepas
+Tapis Terminal
+Tawau
+Telok Ramunia
+Teluk Anson
+Teluk Ewa
+Westport Malaysia
+Kwajalein
+Wake Island
+Tomil Harbour
+Yap Colonia International Port
+Akyab
+Bassein
+Mawlamyine
+Moulmein
+Pathein
+Rangoon
+Sittwe
+Thilawa
+Yangon
+Nauru
+Aitape
+Alotau
+Anewa Bay
+Bialla
+Buka
+Daru
+Kavieng
+Kieta
+Kimbe
+Kumul Marine Terminal
+Lae
+Lorengau
+Madang
+Oro Bay
+Port Moresby
+Rabaul
+Samarai
+Vanimo
+Wewak
+Anakan
+Aparri
+Atimonan
+Bacolod
+Bais
+Banago
+Basco
+Bataan
+Batangas
+Bato
+Bislig
+Borongan
+Bredco
+Butuan
+Cagayan De Oro
+Calaca
+Calbayog
+Catbalogan
+Cebu
+Claveria
+Culasi
+Currimao
+Daan Banwa
+Dadiangas
+Danao Escalante
+Davao
+Dumaguete
+Dumaguit
+Estancia
+General Santos
+Gingoog
+Guihulngan
+Hilongos
+Hondagua
+Iligan
+Iloilo
+Isabel
+Isabela
+Jasaan
+Jimenez
+Jolo
+Jordan
+Jose Panganiban
+Lamao
+Larena
+Legaspi
+Legazpi
+Liloan
+Limay Philippines
+Lucanin
+Lunao
+Maasin
+Makar
+Manila
+Mariveles
+Masao
+Masbate
+Masinloc
+Mati
+Mauban
+Medina
+Minlagas
+Nasipit Port
+Nonoc
+Olongapo
+Ormoc
+Ozamiz
+Pagbilao
+Palompon
+Polloc
+Poro Point
+Port Irene
+Puerto Princesa
+Pulupandan
+Quezon
+Racahe
+Rio Tuba
+Roxas City
+San Carlos Philippines
+San Fernando
+San Isidro
+San Jose Philippines
+Sangi
+Santa Ana
+Santa Clara Philippines
+Santa Cruz (Luzon)
+Santa Cruz (Marinduque Island)
+Santa Maria Philippines
+Santo Nino
+Sasa
+Siain
+Suba-Nipa
+Subic Bay
+Surigao
+Tabaco
+Tacloban
+Tagaloan
+Tagbilaran
+Talisayan
+Tanauan
+Tandayag
+Tandoc
+Tilisayan
+Toledo (Philippines)
+Verano
+Villanueva
+West Linapacan
+Zamboanga
+Apia
+Brani Terminal
+Jurong
+Keppel
+Pasir Panjang
+Pulau Ayer Chawan
+Pulau Bukom
+Pulau Merlimau
+Pulau Pesek
+Pulau Sebarok
+Sembawang
+Singapore
+Tanjong Pagar
+Allardyce Harbour
+Aola Bay
+Gizo
+Honiara
+Lofung
+Malloco Bay
+Noro
+Pakera Point
+Point Cruz
+Ringi Cove
+Shortland Harbour
+Tulagi
+Viru Harbour
+Yandina
+Palk Bay
+Cod Bay
+Colombo
+Galle
+Jaffna
+Kankesanturai
+Trincomalee
+Bang Hua Sua
+Bang Saphan
+Bangkok
+Benchamas Terminal
+Bongkot Terminal
+Chanthaburi
+Chongnonsri Marine Terminal
+Erawan Terminal
+Kantang
+Khanom
+Klong Toey
+Koh Si Chang Transhipment Area
+Kohsichang TPP
+Kosichang
+Krabi
+Krung Thep
+Laem Chabang
+Map Ta Phut
+Pattani
+Petchburi Terminal
+Phuket
+Rayong TPI Terminal
+Sathupradit
+Sattahip
+Siam Seaport
+Songkhla
+Sriracha Harbour
+Sriracha Oil Terminals
+Tantawan Marine Terminal
+Dilli
+Neiafu (Vavau)
+Nukualofa
+Pangai
+Funafuti
+Barber's Point Harbor
+Barber's Point Terminal - Chevron
+Barber's Point Terminal - Tesoro Hawaii
+Hilo
+Honolulu
+Kahului
+Kailua Kona
+Kawaihae
+Lahaina
+Nawiliwili
+Port Allen
+Luganville
+Port Vila
+Santo
+Ba Ngoi
+Baria Serece
+Ben Nghe
+Ben Thuy
+Cam Pha
+Campha
+Can Tho
+Cat Lo
+Cho-Lon
+Cua Lo
+Dai Hung
+Danang
+Dong Thap
+Haiphong
+Ho Chi Minh City
+Hon Chong
+Hon Gay
+Le Mon
+My Tho
+My Thoi
+Nam Can
+Nghe Tinh
+Nha Be
+Nha Trang
+Phu My
+Port Campha
+Quy Nhon
+Saigon
+Van Phong Bay
+Vung Tau
+Taboneo
+Tok Bali
+Dafeng
+Tunesia
+Istanbu
+Giic Jetty
+Pagai
+Morowali
+Quang Ninh
+West Malaysia
+Malaysia
+Chile
+Basamuk
+Kampot
+Thailand
+Cai Lan
+Prachuap
+Macun
+Mabini
+Padang
+Cai Mep
+Samalaju
+Humen
+Kariakal
+Abbot Point
+Adelaide
+Airlie Island
+Ardrossan Australia
+Ballast Head
+Bell Bay
+Bing Bong
+Botany Bay
+Bowen
+Brisbane
+Bundaberg
+Burnie
+Cairns
+Cape Flattery
+Cape Jervis
+Coffs Harbour
+Cooktown
+Dalrymple Bay
+Devonport
+Eden
+Emu Bay
+Geelong
+Gladstone
+Gore Bay
+Gove
+Groote Eylandt
+Hastings
+Hay Point
+Hobart
+Innisfail
+Karumba
+Kingscote
+Klein Point
+Kurnell
+Launceston
+Lucinda
+Mackay
+Maryborough
+Melbourne
+Milner Bay
+Mourilyan
+Newcastle
+Normanton
+Penneshaw
+Pinkenba
+Port Alma
+Port Augusta
+Port Bonython
+Port Botany
+Port Giles
+Port Huon
+Port Jackson
+Port Kembla
+Port Kennedy
+Port Latta
+Port Lincoln
+Port Phillip Bay
+Port Pirie
+Port Stanvac
+Port Walcott
+Portland Australia
+Proper Bay
+Pyrmont
+Rapid Bay
+Risdon
+Rockhampton
+Self's Point
+Snail's Bay
+Snug Cove
+Spalding Cove
+Spring Bay
+Stanley Australia
+Strahan
+Sydney Australia
+Sydney Cove
+Thursday Island
+Torres Strait and Great Barrier Reef
+Townsville
+Triabunna
+Trial Bay
+Twofold Bay
+Urangan
+Wallaroo
+Weipa
+Western Port
+White Bay
+Whyalla
+Yamba
+Baie de Numbo
+Baie des Dames
+Baie Ugue
+Kouaoua
+Nepoui
+Noumea
+Poro
+Thio
+Babouillat
+Akaroa
+Auckland
+Bluff
+Christchurch
+Dunedin
+Eastland Port
+Gisborne
+Greymouth
+Lyttelton
+Marsden Point
+Mount Maunganui
+Napier
+Nelson
+New Plymouth
+Onehunga
+Opua
+Otago Harbour
+Picton
+Port Chalmers
+Port Marlborough
+Port Taranaki
+Ravensbourne
+Taharoa Terminal
+Tarakohe
+Tauranga
+Thames
+Timaru
+Wanganui
+Waverley Harbour
+Wellington
+Westport New Zealand
+Whakaaropai Terminal
+Whangarei
+East Australia
+Plate
+New Zealand 
+Libya
+Nola
+Yantai
+japan
+Albany Australia
+Barrow Island
+Broome
+Bunbury
+Busselton
+Cape Cuvier
+Cape Lambert
+Carnarvon
+Challis
+Challis Venture Terminal
+Cossack Pioneer Terminal
+Dampier
+Darwin
+Esperance
+Exmouth Australia
+Fremantle
+Geraldton
+Griffin Venture Terminal
+Jabiru Marine Terminal
+Koolan Island
+Kwinana
+Parker Point
+Perth Australia
+Port Hedland
+Princess Royal Harbour
+Saladin Marine Terminal
+Skua Venture Terminal
+Stag Marine Terminal
+Talisman Marine Terminal
+Thevenard
+Useless Loop
+Varanus Island Terminal
+Wandoo Marine Terminal
+Withnell Bay
+Wyndham
+Yampi Sound
+West Australia
+Bella Coola
+Berrypoint
+Campbell River
+Chemainus
+Comox
+Cowichan Bay
+Crofton
+Duke Point
+Duncan Bay
+Esquimalt
+Fraser Port
+Gold River
+Kitimat
+Ladysmith
+Michipicoten Harbour
+Nanaimo
+New Westminster
+Ocean Falls
+Plumper Sound
+Port Alberni
+Port Alice
+Port Hardy
+Port Mellon
+Powell River
+Prince Rupert
+Quatsino Sound
+Ridley Island
+Roberts Bank
+Squamish
+Tahsis
+Texada Island
+Vancouver Canada
+Victoria Canada
+Woodfibre
+Beringovsky
+Egvekinot
+Providenija
+Adak
+Akutan
+Anchorage
+Bethel
+Castle Island
+Cordova
+Craig
+Dillingham
+Drift River Marine Terminal
+Dutch Harbor
+Haines
+Hollis
+Homer
+Hoonah
+Hydaburg
+Johnston Island Harbour
+Juneau
+Kake
+Kaunakakai
+Kenai
+Ketchikan
+King Cove
+Klawock
+Knik
+Kodiak
+Kotzebue
+March Point
+Metlakatla
+Naknek
+Nikiski
+Nome
+Pelican
+Petersburg
+Red Dog
+Sand Point
+Saxman
+Seldovia
+Sitka
+Skagway
+St George
+St Michael
+St Paul
+St. Michael
+Unalaska
+Valdez
+Village Cove
+Whittier
+Wrangell
+Yakutat
+sad
+Antofagasta
+Arica
+Barquito
+Cabo Negro
+Calbuco
+Caldera Chile
+Caleta Clarencia
+Caleta Coloso
+Caleta Ossa
+Caleta Patillos
+Castro
+Chanaral
+Coquimbo
+Coronel
+Corralle
+Cutter Cove
+Easter Island
+Gregorio
+Guacolda
+Guayacan
+Hanga-Piko
+Huasco
+Iquique
+Isla de Pascua
+Isla Guarello
+La Chimba Cove
+Laredo
+Las Losas
+Las Salinas
+Las Ventanas
+Lenadura
+Lirquen
+Lota
+Magellan Strait Area
+Mejillones
+Patillos Cove
+Pecket
+Port Williams
+Porvenir
+Puerto Bories
+Puerto Chacabuco
+Puerto Coralle
+Puerto Corral
+Puerto Montt
+Puerto Natales
+Puerto Percy
+Puerto Ventanas
+Puerto Williams
+Punta Arenas
+Quellon
+Quemchi
+Quintero
+San Antonio
+San Gregorio
+San Vicente
+Santa Barbara Chile
+Talcahuano
+Taltal
+Tocopilla
+Valdivia
+Valparaiso
+Vinapu Oil Terminal
+Buenaventura
+Andiport
+Bahia De Caraquez
+Balao Terminal
+Esmeraldas
+Guayaquil
+La Libertad Ecuador
+Manta
+Puerto Bolivar Ecuador
+San Lorenzo Ecuador
+Tepre Terminal
+Ancon
+Atico
+Bayovar
+Cabo Blanco
+Callao
+Chancay
+Chimbote
+Coishco
+Conchan
+Eten
+General San Martin
+Huacho
+Huarmey
+Ilo
+Iquitos
+La Pampilla
+Lobitos
+Lobos Islands
+Malabrigo
+Matarani
+Mollendo
+Pacasmayo
+Paita
+Paramonga
+Pimentel
+Pisco
+Puerto Bayovar
+Puerto Chicama
+Salaverry
+Samanco
+San Nicolas (Peru)
+Supe
+Talara
+Tierra Colorada
+West Coast South America
+Penco
+testabc1234
+Anqing
+Beihai
+BZ 28 Terminal
+BZ 34 Terminal
+CaoFeiDian
+Changjiagang
+Changjiang
+Changjiangkou
+Changshu
+Changzhou
+Chefoo
+Chengguan
+Chengxi
+Chikou
+Chinwangtao
+Dadong
+Dagang
+Dairen
+Dalian
+Dandong
+Datong
+Dayao Bay
+Dushan
+Ganjingzi
+Gaoqiao
+Haiyan
+Hangchow
+Heizuizi
+Henggang
+Heshangdao
+Huanghua
+Huangtiangang
+Jiamusi
+Jiangyin
+Jingtang
+Jintang
+Jinzhou
+Jiucaigang
+Laizhou
+Langshan
+Langtou
+Lanshan
+Lianyungang
+Ligang
+Longkou
+Longyan
+Lu Hua Shan
+Luzhou
+Majishan
+Nanjing
+Nantong
+Nianyuwan
+Penglai
+Qinhuangdao
+Rizhao
+Shaobagou
+Shidao
+Shui Dong
+Siergou
+Taicang
+Taixing
+Taizhou
+Taku Bar
+Tanggu
+Tangshan
+Tianjin
+Tongjiang
+Wei Hai
+Wuhu
+Xiagang
+Xianglujiao
+Xiaoshangang
+Xingang (Anhui Province)
+Yangzhou
+Zhangjiagang
+Zhicheng (Zhejiang Province)
+Zhoupu (Shanghai)
+Zhoupu (Zhenjiang Province)
+Abashiri
+Aboshi
+Aburakawa
+Aioi
+Akita
+Amagasaki
+Anan
+Aokata
+Aomori
+Ariake
+Atsumi
+Chiba
+Chita
+Etajima
+Fukui
+Fukuyama
+Funabashi
+Funakawa
+Fushiki
+Gamagori
+Hachinohe
+Hakata
+Hakodate
+Hamada
+Hannan
+Haramachi
+Hashihama
+Hattaro
+Heianza
+Hibi
+Hibikinada
+Higashi-Harima
+Higashi-Ogishima
+Hikari
+Hikoshima
+Himeji
+Himekawa
+Hirao
+Hiro
+Hirohata
+Hiroshima
+Hitachi
+Hitachinaka
+Hososhima
+Hukui
+Iho
+Imabari
+Imari
+Innoshima
+Ishikara
+Ishikariwan Shinko
+Ishikawa
+Ishinomaki
+Itozaki
+Iwakuni
+Izumisano
+Kagoshima
+Kainan
+Kakogawa
+Kamaishi
+Kanazawa
+Kanda
+Kanmon Ko
+Kanokawa
+Karatsu
+Karita
+Kasado
+Kasaoka
+Kashima
+Kashiwazaki
+Kawasaki
+Keihin
+Kesennuma
+Kiire
+Kikuma
+Kimitsu
+Kinuura
+Kinwan
+Kisarazu
+Kishiwada
+Kitakyushu
+Kobe
+Kochi Japan
+Kokura
+Komatsujima
+Kudamatsu
+Kure
+Kushiro
+Maizuru
+Marugame
+Mategata
+Matsunaga
+Matsushima
+Matsuura
+Matsuyama
+Mega
+Mihara
+Miike
+Minamata
+Mishima-Kawanoe
+Misumi
+Mitajiri
+Mitsukojima
+Miyako
+Miyazu
+Mizushima
+Moji
+Monbetsu
+Mukaishima
+Muroran
+Nagasaki
+Nagoya
+Naha
+Nakanoseki
+Namikata
+Nanao
+Naoetsu
+Naoshima
+Naze
+Niigata-Higashi
+Niigata-Nishi
+Niihama
+Nishihara
+Noshiro
+Numazu
+Ofunato
+Ogishima
+Oita
+Okinawa
+Omaezaki
+Omishima
+Onahama
+Onoda
+Onomichi
+Osaka
+Oshima
+Otaru Japan
+Owase
+Reihoku
+Rokko Island
+Rumoi
+Saganoseki
+Saijo
+Saiki
+Sakai
+Sakaide
+Sakaiminato
+Sakata
+Sakito
+Sasebo
+Senboku
+Sendai
+Setoda
+Shibushi
+Shikama
+Shimizu
+Shimonoseki
+Shimotsu
+Shingu
+Shiogama
+Shirashima
+Shirogane
+Soma
+Susaki
+Tachibana
+Tagonoura
+Takamatsu
+Takasago
+Takasu
+Takehara
+Takuma
+Tamano
+Tamashima
+Tanabe
+Taniyama
+Tobata
+Tokachi
+Tokai
+Tokushima
+Tokuyama
+Tokyo
+Tomakomai
+Tomioka
+Tonda
+Toyama
+Toyama-Shinko
+Toyohashi
+Tsu
+Tsukumi
+Tsumatsusaka (Matsusaka)
+Tsumatsusaka (Tsu)
+Tsuneishi
+Tsuruga
+Ube
+Uchiura
+Ukishima
+Uno
+Uwajima
+Wada
+Wakamatsu
+Wakayama
+Wakkanai
+Yanai
+Yatsushiro
+Yawata
+Yawatahama
+Yokkaichi
+Yokohama
+Yokosuka
+Yura
+Chongjin
+Haeju
+Hungnam
+Nampo
+Senbong
+Songjin
+Unggi Hang
+Wonsan
+Bugpyong
+Bukpyung
+Busan
+Changhang
+Cheju
+Chinhae
+Daesan
+Daipori
+Inchon
+Ko Jung
+Kunsan
+Kwangyang
+Masan
+Mogpo
+Mokpo
+Mukho
+Okkye
+Okpo
+Onsan
+Pohang
+Pusan
+Pyeong Taek
+Samcheog Han
+Samcheon Po
+Samchok
+Samchonpo
+Samil
+Sokcho
+Taesan
+Tonghae Korea (South)
+Ulsan
+Yeosu
+Yosu
+Aleksandrovsk Sakhalinsky
+Anadyr
+De Kastri
+Kholmsk
+Korsakov
+Krasnogorsk
+Lazarev
+Magadan
+Mago
+Nakhodka
+Nevelsk
+Nikolaevsk on Amur
+Olga
+Petropavlovsk-Kamchatsky
+Pevek
+Poronaysk
+Posyet
+Uglegorsk
+Ust Kamchatsk
+Vanino
+Vladivostok
+Vostochnyy
+Zarubino
+An-Ping
+Hoping
+Hualien
+Kaohsiung
+Keelung
+Mailiao
+Ma-Kung
+Sha Lung Oil Terminal
+Taichung
+Ta-Lin-Pu Offshore Oil Terminal
+Tanshoei
+Yun-An LNG Terminal
+Yamagawa
+Hudong Shipyard
+Korea Strait
+Boryeong
+Qingdao
+Qinzhou
+Shihu
+Luoyuan
+Otake
+Songxia
+Chaozhou
+Dangjin
+Donghae
+Lamberts Point
+china
+Weihai
+Weihai
+Weihai
+Weihai
+Younghung
+Rugao
+Taipei
+ChenJiaGang
+Shanhaiguan
+Dongjiakou
+Jingjiang
+Zhanjiang
+Huludao
+Caldera Costa Rica
+Golfito
+Puntarenas
+Quepos
+Acajutla
+Acajutla Offshore Terminal
+Cutuco
+La Libertad El Salvador
+La Union
+Champerico
+Puerto Quetzal
+San Jose Guatemala
+San Lorenzo Honduras
+Acapulco
+Cabo San Lucas
+Cedros Island
+Ensenada
+Guaymas
+La Paz
+Lazaro Cardenas
+Manzanillo Mexico
+Mazatlan
+Morro Redondo
+Puerto Madero
+Puerto Vallarta
+Rosarito Terminal
+Salina Cruz
+San Carlos Mexico
+San Juan de la Costa
+San Marcos
+Santa Rosalia
+Topolobampo
+Corinto
+Puerto Sandino
+San Juan del Sur
+Aguadulce
+Balboa
+Charco Azul
+La Palma
+Panama Canal
+Pedregal
+Puerto Armuelles
+Taboga Island
+Taboguilla Island
+West Coast Central America
+kkkkk
+test vishal
+Puerto Chiapas
+Kivalina
+Aberdeen United States
+Alameda
+Anacortes
+Astoria
+Avon
+Bellingham
+Benicia
+Bremerton
+Columbia/Snake River System
+Coos Bay
+Crescent City
+Crockett
+El Segundo Terminal
+Eureka
+Everett
+Ferndale
+Grays Harbor
+Hercules
+Hoquiam
+Hueneme
+Humboldt Bay
+Huntington Beach
+Kalama
+Lewiston
+Long Beach
+Longview
+Los Angeles
+Mare Island
+Martinez
+Moss Landing
+National City
+Newport (Oregon)
+Oakland
+Oleum
+Olympia
+Ozol
+Pittsburg, California
+Port Angeles
+Port Gamble
+Port San Luis
+Port Townsend
+Portland (Oregon)
+Redwood City
+Richmond (California)
+Sacramento
+Salem
+San Diego
+San Francisco
+San Pedro Harbor
+Santa Barbara United States
+Seattle
+Selby United States
+Seward
+St Helens
+Stockton
+Tacoma
+The Dalles
+Vallejo
+Vancouver United States
+US West Coast
+AMERICAN
+test vishal data
+Baku
+Bahrain
+Khalifa Bin Salman
+Mina Salman
+Sitra
+Alang
+Allepey
+Baitkal Cove
+Bedi Bunder
+Belekeri
+Beypore
+Bhavnagar
+Bombay
+Calicut
+Cannanore
+Cochin
+Coondapur
+Dahanu
+Dahej
+Dholera
+Dighi
+Hazira
+Honavar
+Jafarabad
+Jakhau
+Jamnagar Terminal
+Jawahar Dweep
+Jawaharlal Nehru Port
+Kandla
+Karwar
+Kochi India
+Kundapur
+Kundapura
+Magdalla
+Malpe
+Mandvi
+Mangalore
+Mormugao
+Mumbai
+Mundra
+Navlakhi
+Neendakara
+New Mangalore
+Nhava Sheva
+Okha
+Panaji
+Pipavav
+Pir Pau
+Porbandar
+Port Okha
+Port Redi
+Ratnagiri
+Redi
+Salaya
+Sikka
+Tellicherry
+Trivandrum
+Vadinar Terminal
+Vengurla
+Veraval
+Abadan
+Bahregan
+Bahregan Oil Centre (BOC)
+Bahrgan
+Bandar Abbas
+Bandar Anzali
+Bandar Imam Khomeini
+Bandar Mahshahr
+Bandar Noshahr
+Bandar Shahid Bahonar
+Bandar Shahid Rejaie
+Bandar Taheri
+Barkan
+Bushehr
+Bushire
+Chabahar
+Cyrus Terminal
+Enzeli
+Hormuz Terminal
+Kharg Island
+Khemco Terminal
+Khorramshahr
+Kish Island
+Lavan Island
+Novshehr
+Now Shahr
+Shahid Bahonar
+Shahid Beheshti
+Shahid Rajai
+Sirri Island
+Soroosh Terminal
+Abu Al Kashib
+Abu Fulus
+Albakr Terminal
+Ashar
+Basrah
+Fao
+Khor Al Amaya
+Khor Al Zubair
+Maqal
+Mina Al Bakr
+Sunger
+Umm Qasr
+Aktau
+Doha Kuwait
+Khor al Muffatta
+Kuwait
+Mina Abdulla
+Mina Al Ahmadi
+Mina Al Zour
+Mina Saud
+Shuaiba
+Shuwaikh
+Male
+Khasab
+Mina al Fahal
+Mina Qaboos
+Mina Raysut
+Muscat
+Port Raysut
+Port Sultan Qaboos
+Qalhat
+Salalah
+Sohar
+AL-HAMD Container Terminal
+Bin Qasim
+Fauji Oil Terminal
+Gadani Beach
+Gwadar
+Juna Bunder
+Karachi
+Keti Bandar
+Muhammad Bin Qasim
+Port Muhammad
+Al Rayyan Marine Terminal
+Al Shaheen Terminal
+Doha Qatar
+Halul Island
+Mesaieed
+Ras Laffan
+Umm Said
+Astrakhan
+Dammam
+Ju'aymah Crude & LPG Terminals
+Jubail
+King Abdul Aziz Port
+King Fahd Industrial Port (Jubail)
+King Fahd Industrial Port (Yanbu)
+Ras al Ghar
+Ras al Khafji
+Ras al Ma'ajjiz Terminal
+Ras al Mishab
+Ras Tanura
+Zuluf
+Krasnovodsk
+Turkmanbashi
+Abu Al Bukhoosh
+Abu Dhabi
+Ahmed Bin Rashid Port
+Ajman
+Arzanah Island
+Das Island
+Dibba
+Dubai
+Fateh Terminal
+Fujairah
+Hamriyah LPG Terminal
+Hamriyah Oil Terminal
+Hulaylah
+Jebel Ali
+Jebel Dhanna/Ruwais
+Khor Fakkan
+Mina Saqr
+Mina Zayed
+Mubarek Terminal
+Mubarraz Island
+Port Khalid
+Port Rashid
+Ras Al Khaimah
+Ruwais
+Sharjah
+Sharjah Offshore Terminal
+Umm Al Nar Petroleum Port
+Umm Al Qaiwain
+Zirku Island
+ Muldwarka
+Muldwarka
+Sur
+Jaigarh
+AMERICAN
+jhgj
+fdsfsd
+Handy List
+Grain
+Weihai
+Dharamtar
+Karaikal
+Djibouti
+Abu Zenima
+Adabiya
+Ain Sukhna Terminal
+Ataqa
+East Zeit Terminal
+Geisum Terminal
+Hamrawein
+Hurghada
+Kosseir
+Nuweibah
+Quseir
+Ras Budran
+Ras Gharib
+Ras Shukheir
+Ras Sudr
+Safaga
+Suez Canal
+Wadi Feiran
+Za'farana Terminal
+Zeit Bay Terminal
+Assab
+Massawa
+Al Qadimah
+Dhiba
+Dhuba
+Dhuba Bulk Plant Terminal
+Gizan
+Jeddah
+Jizan
+Qadimah
+Rabigh
+Yanbu
+Berbera
+Marsa Bashayer Export Terminal
+Port Sudan
+Suakin
+Aden
+Ash Shihr
+Hodeidah
+Khalf Harbour
+Little Aden
+Ma'alla Terminal
+Mokha
+Mukalla
+Nishtun
+Ras Alkatheeb
+Ras Isa
+Ras Isa Marine Terminal
+Saleef

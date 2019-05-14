@@ -1,0 +1,129 @@
+Coal
+Coke
+Grain 
+Iron Ore
+Iron Sand
+Oil
+Salt
+Sinter
+Tapioca
+Ballast
+Bauxite
+Alumina
+Pigiron
+Limestone
+Steel
+Minerals
+Cement
+Mill scale
+Sulphur
+Metcoke
+Ferts (BHF)
+Slag
+Oliven
+Petcoke
+HBI
+Sugar
+Copper Concentrates
+Clinker
+dsds
+Rice
+Soyabeans
+AAAAAAA
+Shredded Scrap
+Scrap (HMS 1+2)
+Iron Ore
+Urea in Bulk
+Bagged Rice
+Calcined Petcoke
+Canola (Vancouver)
+Corn
+Gypsum
+Steaming Coal
+Steel Rebars
+Ore
+Bagged Rice
+Agricultural Products 
+Iron Ore Pellets (AMMC Fluxed Pellets BSA)
+Iron Ore Lumps
+Feldspar
+Manganese Ore
+Granite
+Nickel Ore
+Palm Kernel
+BHF
+Transi
+TSP
+Fertilizers
+Yellow Pine Logs
+PKE IN BULK
+Stow
+Hot Rolled Coils
+Pyrite
+aggregates
+DFP
+Sanduyuy
+Dolomite
+sasasfdd
+HSS
+Agriprods
+Alumina
+Bauxite
+Bentonite
+Bagged Flexicoke
+Billet
+Coil Plate
+Coils
+Corn
+Corn/SBM
+Corn/Wheat
+Dolomite
+FLAX
+Ferro Silicon
+Fertilizers
+Flexicoke
+Grains
+HBI
+HRC
+Hydrates
+Iron Ore
+Metcoke
+Oats
+Petcoke
+Pipe
+Plate
+Rails
+Rebar
+Rice/Corn
+Round Bars
+Rye
+SBM
+SBM/YSB
+SBM/Corn
+SBM/Corn
+SBM/Pellets
+SBMP
+Scrap
+Soybean/wheat
+Soybeans
+Spring/Durum Wheat
+Steel
+Steel Plate
+Steel Slabs
+Sulfate
+Wheat
+Wheat/Corn
+Wheat/Flax/Beans
+Wheat/HSS
+Wheat/Peas
+Wheat/Peas/HSS
+WHEAT FLOUR
+bulk rock phosphate
+STEEL BILLET
+stl scrap
+PIG IRON
+FERTILIZER
+steel rail
+AGRI
+tapioca chip
+steel rail
