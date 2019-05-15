@@ -637,21 +637,6 @@ def tonnage_update(request):
         filename = 'textmatch/Vessel_keywords.txt'
         with open(filename, 'a') as file_object:
             file_object.write(acc1 + "=>" + acc1 + '+' +str(acc3)+ '+' +str(acc2) +'\n')
-            # file_object.write(acc1)
-            # file_object.write("=>")
-            # file_object.write(acc1)
-            # file_object.write('+')
-            # file_object.write(str(acc3))
-            # file_object.write('+')
-            # file_object.write(str(acc2))
-            # file_object.write('\n')
-
-
-
-
-
-
-
 
         response['result'] = "success"
 
