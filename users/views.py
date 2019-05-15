@@ -27,10 +27,10 @@ DWT_ARRAY = [0, 10000, 40000, 35000, 40000, 50000, 65000]
 def get_tonnage(request):
     response = {}
     try:
-        print("tests:")
+        # print("tests:")
         # users = User.objects.filter(email=email)
         user = Tonnage_Card.objects.all().order_by('-Sent')
-        print(user)
+        # print(user)
         # print(user.toJSON())
         # response['list'] = json.loads(serializers.serialize("json", users))
         response['list'] = json.loads(serializers.serialize("json", user))
@@ -47,7 +47,7 @@ def get_tonnage(request):
 def search_tonnage(request, content):
     response = {}
     try:
-        print("tests:")
+        # print("tests:")
         # users = User.objects.filter(email=email)
         # user = Cargo_Cards.objects.filter()
         user = Tonnage_Card.objects.filter(Vessel_name__icontains=content).order_by('-Sent')
@@ -67,7 +67,7 @@ def search_tonnage(request, content):
 def search_tonnage_data(request, content):
     response = {}
     try:
-        print("tests:")
+        # print("tests:")
         # users = User.objects.filter(email=email)
         # user = Cargo_Cards.objects.filter()
         user = Tonnage_Card.objects.filter(Open_date_S__icontains=content, Open_date_E__icontains=content).order_by('-Sent')
@@ -88,16 +88,16 @@ def search_tonnage_data(request, content):
 def get_cargo(request):
     response = {}
     try:
-        print("tests:")
+        # print("tests:")
         # users = User.objects.filter(email=email)
         user = Cargo_Card.objects.all().order_by('-Sent')
-        print(user)
+        # print(user)
         # print(user.toJSON())
         # response['list'] = json.loads(serializers.serialize("json", users))
-        print(serializers.serialize("json", user))
-        print(json.loads(serializers.serialize("json", user)))
+        # print(serializers.serialize("json", user))
+        # print(json.loads(serializers.serialize("json", user)))
         response['list'] = json.loads(serializers.serialize("json", user))
-        print(response['list'])
+        # print(response['list'])
         response['error_num'] = 0
         response['msg'] = 'success'
     except Exception as  e:
@@ -111,7 +111,7 @@ def get_cargo(request):
 def search_cargo(request, content):
     response = {}
     try:
-        print("tests:")
+        # print("tests:")
         # users = User.objects.filter(email=email)
         # user = Cargo_Cards.objects.filter()
         user = Cargo_Card.objects.filter(Cargo_name__icontains=content).order_by('-Sent')
@@ -132,10 +132,10 @@ def search_cargo(request, content):
 def get_tc(request):
     response = {}
     try:
-        print("tests:")
+        # print("tests:")
         # users = User.objects.filter(email=email)
         user = TC_Card.objects.all().order_by('-Sent')
-        print(user)
+        # print(user)
         # print(user.toJSON())
         # response['list'] = json.loads(serializers.serialize("json", users))
         response['list'] = json.loads(serializers.serialize("json", user))
@@ -152,7 +152,7 @@ def get_tc(request):
 def search_tc(request, content):
     response = {}
     try:
-        print("tests:")
+        # print("tests:")
         # users = User.objects.filter(email=email)
         # user = Cargo_Cards.objects.filter()
         user = TC_Card.objects.filter(Account__icontains=content).order_by('-Sent')
@@ -187,7 +187,7 @@ def tonnage_card_search(request):
         request_body = json.loads(request.body.decode())
         # print("request_body:", request_body)
         vessel_name = request_body['vessel_name']
-        print(vessel_name)
+        # print(vessel_name)
         sender_mail = request_body['sender_mail']
         opendate_start = request_body['opendate_start']
         opendate_end = request_body['opendate_end']
@@ -213,7 +213,7 @@ def tonnage_card_search(request):
         otherStyleTime = time.strftime("%Y/%-m/%d %H:%M", timeArray)
 
 
-        print(otherStyleTime)
+        # print(otherStyleTime)
         # q1 = Tonnage_Card.objects.filter(BLT__gte=datetime.datetime.now().year-built)
         q1 = Tonnage_Card.objects.filter(Q(Vessel_name__icontains=vessel_name),
 
@@ -271,7 +271,7 @@ def cargo_card_search(request):
         # get data from POST request
         request_body = json.loads(request.body.decode())
         cargo_name = request_body['cargo_name']
-        print(cargo_name)
+        # print(cargo_name)
         sender_mail = request_body['sender_mail']
         laycan_start = request_body['laycan_start']
         laycan_end = request_body['laycan_end']
@@ -283,7 +283,7 @@ def cargo_card_search(request):
         day_from = str(datetime.datetime(day.year, day.month, day.day, 0, 0, 0))
         timeArray = time.strptime(day_from, "%Y-%m-%d %H:%M:%S")
         otherStyleTime = time.strftime("%Y/%-m/%d %H:%M", timeArray)
-        print(otherStyleTime)
+        # print(otherStyleTime)
         q1 = Cargo_Card.objects.filter(Q(Cargo_name__icontains=cargo_name),
 
                                        Q(Quantity_s__gte=quantity),
@@ -320,9 +320,9 @@ def cargo_card_search(request):
                                        ).order_by('-Sent')
 
         list = [cargo_name, sender_mail, laycan_start, laycan_end, days, quantity, account]
-        print(list)
+        # print(list)
 
-        print(json.loads(serializers.serialize("json", q1)))
+        # print(json.loads(serializers.serialize("json", q1)))
         response['list'] = json.loads(serializers.serialize("json", q1))
         response['err_num'] = 0
 
@@ -344,7 +344,7 @@ def tc_card_search(request):
         # get data from POST request
         request_body = json.loads(request.body.decode())
         acc = request_body['acc']
-        print(acc)
+        # print(acc)
         sender_mail = request_body['sender_mail']
         laycan_start = request_body['laycan_start']
         laycan_end = request_body['laycan_end']
@@ -356,7 +356,7 @@ def tc_card_search(request):
         day_from = str(datetime.datetime(day.year, day.month, day.day, 0, 0, 0))
         timeArray = time.strptime(day_from, "%Y-%m-%d %H:%M:%S")
         otherStyleTime = time.strftime("%Y/%-m/%d %H:%M", timeArray)
-        print(otherStyleTime)
+        # print(otherStyleTime)
 
         q1 = TC_Card.objects.filter(Q(Account__icontains=acc),
                                     Q(Quantity_s__gte=quantity),
@@ -399,9 +399,9 @@ def tc_card_search(request):
                                     ).order_by('-Sent')
 
         list = [acc, sender_mail, laycan_start, laycan_end, days, quantity, account]
-        print(list)
+        # print(list)
 
-        print(json.loads(serializers.serialize("json", q1)))
+        # print(json.loads(serializers.serialize("json", q1)))
         response['list'] = json.loads(serializers.serialize("json", q1))
 
         response['err_num'] = 0
@@ -419,7 +419,7 @@ def tc_card_search(request):
 def tonnage_card_incomplete(request):
     response = {}
     try:
-        print("tests:")
+        # print("tests:")
         # users = User.objects.filter(email=email)
         # L = [1, '', 0, 'A', "  ", None, [1, 2], False, 3.14, [], {'a': 1}, {}]
         # filter(lambda s: s and (type(s) != str or len(s.strip()) > 0), L)
@@ -427,7 +427,7 @@ def tonnage_card_incomplete(request):
         user = Tonnage_Card.objects.filter(Q(Open_area="no open area match")|Q(Sent="")
                                            |Q(Open_date_S="1900-01-01")|Q(Sent="0")).order_by('-Sent')
 
-        print(user)
+        # print(user)
         # print(user.toJSON())
         # response['list'] = json.loads(serializers.serialize("json", users))
         response['list'] = json.loads(serializers.serialize("json", user))
@@ -444,7 +444,7 @@ def tonnage_card_incomplete(request):
 def tonnage_card_complete(request):
     response = {}
     try:
-        print("tests:")
+        # print("tests:")
         # users = User.objects.filter(email=email)
         # L = [1, '', 0, 'A', "  ", None, [1, 2], False, 3.14, [], {'a': 1}, {}]
         # filter(lambda s: s and (type(s) != str or len(s.strip()) > 0), L)
@@ -452,7 +452,7 @@ def tonnage_card_complete(request):
         user = Tonnage_Card.objects.filter(~Q(Open_area="no open area match")&~Q(Sent="")
                                            &~Q(Open_date_S="1900-01-01")&~Q(Sent="0")).order_by('-Sent')
 
-        print(user)
+        # print(user)
         # print(user.toJSON())
         # response['list'] = json.loads(serializers.serialize("json", users))
         response['list'] = json.loads(serializers.serialize("json", user))
@@ -470,7 +470,7 @@ def tonnage_card_complete(request):
 def cargo_card_incomplete(request):
     response = {}
     try:
-        print("tests:")
+        # print("tests:")
         # users = User.objects.filter(email=email)
         # L = [1, '', 0, 'A', "  ", None, [1, 2], False, 3.14, [], {'a': 1}, {}]
         # filter(lambda s: s and (type(s) != str or len(s.strip()) > 0), L)
@@ -482,7 +482,7 @@ def cargo_card_incomplete(request):
 
                                         ).order_by('-Sent')
 
-        print(user)
+        # print(user)
         # print(user.toJSON())
         # response['list'] = json.loads(serializers.serialize("json", users))
         response['list'] = json.loads(serializers.serialize("json", user))
@@ -499,7 +499,7 @@ def cargo_card_incomplete(request):
 def cargo_card_complete(request):
     response = {}
     try:
-        print("tests:")
+        # print("tests:")
         # users = User.objects.filter(email=email)
         # L = [1, '', 0, 'A', "  ", None, [1, 2], False, 3.14, [], {'a': 1}, {}]
         # filter(lambda s: s and (type(s) != str or len(s.strip()) > 0), L)
@@ -511,7 +511,7 @@ def cargo_card_complete(request):
 
         ).order_by('-Sent')
 
-        print(user)
+        # print(user)
         # print(user.toJSON())
         # response['list'] = json.loads(serializers.serialize("json", users))
         response['list'] = json.loads(serializers.serialize("json", user))
@@ -529,7 +529,7 @@ def cargo_card_complete(request):
 def tc_card_incomplete(request):
     response = {}
     try:
-        print("tests:")
+        # print("tests:")
         # users = User.objects.filter(email=email)
         # L = [1, '', 0, 'A', "  ", None, [1, 2], False, 3.14, [], {'a': 1}, {}]
         # filter(lambda s: s and (type(s) != str or len(s.strip()) > 0), L)
@@ -546,7 +546,7 @@ def tc_card_incomplete(request):
 
                                         ).order_by('-Sent')
 
-        print(user)
+        # print(user)
         # print(user.toJSON())
         # response['list'] = json.loads(serializers.serialize("json", users))
         response['list'] = json.loads(serializers.serialize("json", user))
@@ -563,7 +563,7 @@ def tc_card_incomplete(request):
 def tc_card_complete(request):
     response = {}
     try:
-        print("tests:")
+        # print("tests:")
         # users = User.objects.filter(email=email)
         # L = [1, '', 0, 'A', "  ", None, [1, 2], False, 3.14, [], {'a': 1}, {}]
         # filter(lambda s: s and (type(s) != str or len(s.strip()) > 0), L)
@@ -580,7 +580,7 @@ def tc_card_complete(request):
                                           Q(DUR_S ="0")
 
                                         ).order_by('-Sent')
-        print(user)
+        # print(user)
         # print(user.toJSON())
         # response['list'] = json.loads(serializers.serialize("json", users))
         response['list'] = json.loads(serializers.serialize("json", user))
@@ -612,6 +612,11 @@ def tonnage_update(request):
         acc8 = request_body['ID']
         acc9 = request_body['mail_text']
 
+
+
+
+
+
         tonnage_card = Tonnage_Card(Vessel_name=acc1, DWT=acc2, BLT=acc3, Open_area=acc4, Open_date_S=acc5, Open_date_E=acc6,
                           Sent=acc7,
                           ID=acc8, mail_text=acc9)
@@ -619,6 +624,19 @@ def tonnage_update(request):
 
 
         list = [acc1, acc2, acc3, acc4, acc5, acc6, acc7, acc8, acc9]
+
+
+        print(acc3)
+        print(acc2)
+
+
+        filename2 = 'textmatch/Port_keywords.txt'
+        with open(filename2, 'a') as file_object2:
+            file_object2.write(acc4 + '\n')
+
+        filename = 'textmatch/Vessel_keywords.txt'
+        with open(filename, 'a') as file_object:
+            file_object.write(acc1 + "=>" + acc1 + '+' +str(acc3)+ '+' +str(acc2) +'\n')
 
         response['result'] = "success"
 
@@ -668,8 +686,19 @@ def cargo_update(request):
         #                             )
 
         list = [acc1, acc2, acc3, acc4, acc5, acc6, acc7, acc8, acc9, acc10]
+        print("打印信息")
         # print(list)
         # print(json.loads(serializers.serialize("json", tc_card)))
+
+        filename = 'textmatch/Cargo_names.txt'
+        with open(filename, 'a') as file_object:
+            file_object.write(acc1+'\n')
+
+        filename2 = 'textmatch/Port_keywords.txt'
+        with open(filename2, 'a') as file_object:
+            file_object.write(acc4+'\n')
+            file_object.write(acc5+'\n')
+
         response['result'] = "success"
         response['err_num'] = 0
 
@@ -719,6 +748,15 @@ def tc_update(request):
         list = [acc1, acc2, acc3, acc4, acc5, acc6, acc7, acc8, acc9, acc10, acc11, acc12]
         # print(list)
         # print(json.loads(serializers.serialize("json", tc_card)))
+        filename = 'textmatch/Account_keywords.txt'
+        with open(filename, 'a') as file_object:
+            file_object.write(acc1+'\n')
+        filename2 = 'textmatch/Port_keywords.txt'
+        with open(filename2, 'a') as file_object:
+            file_object.write(acc2+'\n')
+            file_object.write(acc3+'\n')
+
+
         response['result'] = "success"
         response['err_num'] = 0
 
