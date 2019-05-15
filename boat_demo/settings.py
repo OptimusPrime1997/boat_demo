@@ -151,10 +151,13 @@ CORS_ORIGIN_ALLOW_ALL = True
 
 # CORS
 CORS_ORIGIN_WHITELIST = (
-    '202.120.32.222:8080',
     '127.0.0.1:8080',
     'localhost:8080',
     '0.0.0.0:8080',
+    '47.103.63.138:80',
+    '127.0.0.1:80',
+    'localhost:80',
+    '0.0.0.0:80',
     # 'www.meiduo.site:8080',
     # 'api.meiduo.site:8000'
 )
