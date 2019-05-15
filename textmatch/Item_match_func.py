@@ -488,7 +488,10 @@ def cargo_mail_match(lines, sendtime, mailtext):
         if loading_port != "none" or discharging_port != "none":
             for j in range(0, len(result_list)):
                 if result_list[j][1] == ("no loading port match","no discharging port match"):
-                    result_list[j][1] = (loading_port, discharging_port)
+                    if discharging_port != "none":
+                        result_list[j][1] = (loading_port, discharging_port)
+                    else:
+                        result_list[j][1] = (loading_port, "no discharging port match")
 
         if date_s != "1900/01/01":
             for u in range(0, len(result_list)):
@@ -562,7 +565,10 @@ def tc_mail_match(lines, sendtime, mailtext):
         if delivery_area != "none" or redelivery_area != "none":
             for j in range(0, len(result_list)):
                 if result_list[j][1] == ("no delivery area match","no redelivery area match"):
-                    result_list[j][1] = (delivery_area, redelivery_area)
+                    if redelivery_area != "none":
+                        result_list[j][1] = (delivery_area, redelivery_area)
+                    else:
+                        result_list[j][1] = (delivery_area, "no redelivery area match")
 
         if date_s != "1900/01/01":
             for u in range(0, len(result_list)):
