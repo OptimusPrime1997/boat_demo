@@ -294,7 +294,7 @@ def account_match(line):
 
 #写入数据库操作
 def write_to_tonnage_card(vessel_name, dwt, blt, open_area, sent_time, open_date_s, open_date_e, mail_text):
-    db = pymysql.connect(host="202.120.32.222", user="root", passwd="123456", db="trade_mail")
+    db = pymysql.connect(host="47.103.63.138", user="root", passwd="tcloudsjtu", db="trade_mail")
     cursor = db.cursor()
     sql = "INSERT INTO tonnage_card(Vessel_name, DWT, BLT, Open_area,Sent,Open_date_S,Open_date_E, mail_text) " \
           "VALUES ('%s','%s','%s','%s','%s','%s','%s', '%s')" % \
@@ -312,7 +312,7 @@ def write_to_tonnage_card(vessel_name, dwt, blt, open_area, sent_time, open_date
 
 
 def write_to_tc_card(account, delivery_area, redelivery_area, sent_time, laycan_s, laycan_e, mail_text, quantity_s, quantity_e, duration_s, duration_e):
-    db = pymysql.connect("202.120.32.222", "root", "123456", "trade_mail")
+    db = pymysql.connect("47.103.63.138", "root", "tcloudsjtu", "trade_mail")
     cursor = db.cursor()
     sql = "INSERT INTO tc_card(Account, Delivery_area, Redelivery_area, Sent, LayCan_S, LayCan_E, " \
           "mail_text, Quantity_s, Quantity_e, DUR_S, DUR_E) " \
@@ -332,7 +332,7 @@ def write_to_tc_card(account, delivery_area, redelivery_area, sent_time, laycan_
 
 
 def write_to_cargo_card(cargo_name, loading_port, discharging_port, sent_time, laycan_s, laycan_e, mail_text, quantity_s, quantity_e):
-    db = pymysql.connect("202.120.32.222", "root", "123456", "trade_mail")
+    db = pymysql.connect("47.103.63.138", "root", "tcloudsjtu", "trade_mail")
     cursor = db.cursor()
     sql = "INSERT INTO cargo_card(Cargo_name, Loading_Port, Discharging_Port, Sent, " \
           "LayCan_S, LayCan_E, mail_text, Quantity_s, Quantity_e) " \
@@ -488,7 +488,10 @@ def cargo_mail_match(lines, sendtime, mailtext):
         if loading_port != "none" or discharging_port != "none":
             for j in range(0, len(result_list)):
                 if result_list[j][1] == ("no loading port match","no discharging port match"):
-                    result_list[j][1] = (loading_port, discharging_port)
+                    if discharging_port != "none":
+                        result_list[j][1] = (loading_port, discharging_port)
+                    else:
+                        result_list[j][1] = (loading_port, "no discharging port match")
 
         if date_s != "1900/01/01":
             for u in range(0, len(result_list)):
@@ -562,7 +565,10 @@ def tc_mail_match(lines, sendtime, mailtext):
         if delivery_area != "none" or redelivery_area != "none":
             for j in range(0, len(result_list)):
                 if result_list[j][1] == ("no delivery area match","no redelivery area match"):
-                    result_list[j][1] = (delivery_area, redelivery_area)
+                    if redelivery_area != "none":
+                        result_list[j][1] = (delivery_area, redelivery_area)
+                    else:
+                        result_list[j][1] = (delivery_area, "no redelivery area match")
 
         if date_s != "1900/01/01":
             for u in range(0, len(result_list)):
