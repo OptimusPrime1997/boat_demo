@@ -5,7 +5,7 @@ from flashtext import KeywordProcessor
 import pymysql
 
 date_keyword_processor = KeywordProcessor()
-date_keyword_processor.add_keyword_from_file('Date.txt')
+date_keyword_processor.add_keyword_from_file('./Date.txt')
 
 vessel_name_keyword_processor = KeywordProcessor()
 vessel_name_keyword_processor.add_keyword_from_file('Vessel_keywords.txt')
