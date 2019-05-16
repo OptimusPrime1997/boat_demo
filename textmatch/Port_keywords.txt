@@ -4802,3 +4802,18 @@ Ras Isa
 Ras Isa Marine Terminal
 Saleef
 Antwerp
+Dubai
+no discharging port match
+Dubai
+no discharging port match
+Dublin
+SAMSUN
+Dublin
+Antwerp
+Antwerp
+Dublin
+Hull
+no delivery area match
+no redelivery area match
+Hull
+Rotterdam

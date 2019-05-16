@@ -23,3 +23,4 @@ DECEMBER=>12
 DEC=>12
 spot=>t2
 s p o t=>t2
+PPT=>t2
