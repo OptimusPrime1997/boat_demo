@@ -2811,188 +2811,210 @@ export default {
 
     // ton导出Excel方法
     exportExcel() {
-      // 设置当前日期
-      let date = new Date();
+      this.currentPage= '1';
+      this.pagesize = '1000000';//表格长度变长
+      this.$nextTick(function () {
+            // 设置当前日期
+            let date = new Date();
 
-      // let local_time = time.toLocaleString();
-      let year = date.getFullYear();
-      let month = date.getMonth() + 1;
-      month = month < 10 ? '0' + month : month;
-      let day = date.getDate();
-      day = day < 10 ? ('0' + day) : day;
-      let hour = date.getHours();
-      hour=hour < 10 ? ('0' + hour) : hour;
-      let minute = date.getMinutes();
-      minute = minute < 10 ? ('0' + minute) : minute;
-      let second=date.getSeconds();
-      second=second < 10 ? ('0' + second) : second;
+            // let local_time = time.toLocaleString();
+            let year = date.getFullYear();
+            let month = date.getMonth() + 1;
+            month = month < 10 ? '0' + month : month;
+            let day = date.getDate();
+            day = day < 10 ? ('0' + day) : day;
+            let hour = date.getHours();
+            hour=hour < 10 ? ('0' + hour) : hour;
+            let minute = date.getMinutes();
+            minute = minute < 10 ? ('0' + minute) : minute;
+            let second=date.getSeconds();
+            second=second < 10 ? ('0' + second) : second;
 
-      let name = year + '-' + month + '-' + day+' '+hour+':'+minute+':'+second;
+            let name = year + '-' + month + '-' + day+' '+hour+':'+minute+':'+second;
 
-      // console.log(name)
-      /* generate workbook object from table */
-      //  通过 id #mytable1 指明导出的是哪一个表格
-      // var wb = XLSX.utils.table_to_book(document.querySelector("#mytable1"));
-      //  const wb =Sheet1 = XLSX.utils.table_to_book(document.querySelector("#mytable1"));
-       console.log("哈哈哈")
-      var wb =XLSX.utils.table_to_book(document.querySelector("#mytable1"));
+            // console.log(name)
+            /* generate workbook object from table */
+            //  通过 id #mytable1 指明导出的是哪一个表格
+            // var wb = XLSX.utils.table_to_book(document.querySelector("#mytable1"));
+            //  const wb =Sheet1 = XLSX.utils.table_to_book(document.querySelector("#mytable1"));
+             console.log("哈哈哈")
+            var wb =XLSX.utils.table_to_book(document.querySelector("#mytable1"));
 
-      // const wb = {
-      //          FileName: 'export.xlsx',
-      //          SheetNames: ['Sheet1'],  //工作表名数组
-      //           Sheets: {
-      //             '!margins': [             //工作表单元格合并配置项 可选
-      //                       {
-      //                         s: { //s start 开始
-      //                           c: 3,//cols 开始列
-      //
-      //                         },
-      //                         e: {//e end  结束
-      //                           c: 8,//cols 结束列
-      //
-      //                         }
-      //                       }
-      //                     ],
-      //                  }                //工作表对象 键名对应SheetNames的key
-      //   };
+            // const wb = {
+            //          FileName: 'export.xlsx',
+            //          SheetNames: ['Sheet1'],  //工作表名数组
+            //           Sheets: {
+            //             '!margins': [             //工作表单元格合并配置项 可选
+            //                       {
+            //                         s: { //s start 开始
+            //                           c: 3,//cols 开始列
+            //
+            //                         },
+            //                         e: {//e end  结束
+            //                           c: 8,//cols 结束列
+            //
+            //                         }
+            //                       }
+            //                     ],
+            //                  }                //工作表对象 键名对应SheetNames的key
+            //   };
 
 
-      /* get binary string as output */
-      var wbout = XLSX.write(wb, {
-        bookType: "xlsx",
-        bookSST: true,
-        type: "array",
+            /* get binary string as output */
+            var wbout = XLSX.write(wb, {
+              bookType: "xlsx",
+              bookSST: true,
+              type: "array",
 
-        // sheet: {
-        //          '!margins': [             //工作表单元格合并配置项 可选
-        //       {
-        //         s: { //s start 开始
-        //           c: 3,//cols 开始列
-        //           r: 0 //rows 开始行
-        //
-        //         },
-        //         e: {//e end  结束
-        //           c: 8,//cols 结束列
-        //           r: 0 //rows 结束行
-        //
-        //         }
-        //       }
-        //     ],
-        //
-        // }
-        // Sheets: {
-        //   Sheet: {
-        //     '!ref': 'A1:C2',
-        //     '!margins': [             //工作表单元格合并配置项 可选
-        //       {
-        //         s: { //s start 开始
-        //           c: 3,//cols 开始列
-        //           r: 0 //rows 开始行
-        //
-        //         },
-        //         e: {//e end  结束
-        //           c: 8,//cols 结束列
-        //           r: 0 //rows 结束行
-        //
-        //         }
-        //       }
-        //     ],
-        //   }
-        // }
+              // sheet: {
+              //          '!margins': [             //工作表单元格合并配置项 可选
+              //       {
+              //         s: { //s start 开始
+              //           c: 3,//cols 开始列
+              //           r: 0 //rows 开始行
+              //
+              //         },
+              //         e: {//e end  结束
+              //           c: 8,//cols 结束列
+              //           r: 0 //rows 结束行
+              //
+              //         }
+              //       }
+              //     ],
+              //
+              // }
+              // Sheets: {
+              //   Sheet: {
+              //     '!ref': 'A1:C2',
+              //     '!margins': [             //工作表单元格合并配置项 可选
+              //       {
+              //         s: { //s start 开始
+              //           c: 3,//cols 开始列
+              //           r: 0 //rows 开始行
+              //
+              //         },
+              //         e: {//e end  结束
+              //           c: 8,//cols 结束列
+              //           r: 0 //rows 结束行
+              //
+              //         }
+              //       }
+              //     ],
+              //   }
+              // }
 
-      });
-      try {
-        //  name+'.xlsx'表示导出的excel表格名字
-        FileSaver.saveAs(
-          new Blob([wbout], { type: "application/octet-stream" }),
-          name + ".xlsx"
-        );
-      } catch (e) {
-        if (typeof console !== "undefined") console.log(e, wbout);
-      }
-      return wbout;
+            });
+            try {
+              //  name+'.xlsx'表示导出的excel表格名字
+              FileSaver.saveAs(
+                new Blob([wbout], { type: "application/octet-stream" }),
+                name + ".xlsx"
+              );
+            } catch (e) {
+              if (typeof console !== "undefined") console.log(e, wbout);
+            }
+            this.pagesize = '20'; //表格还原
+            return wbout;
+        
+      })
+
+
+
+
+
     },
     // cargo导出Excel方法
     exportExcel2() {
-      // 设置当前日期
-      let date = new Date();
+      this.currentPage= '1';
+      this.pagesize2 = '1000000';//表格长度变长
+      this.$nextTick(function () {
+                // 设置当前日期
+                let date = new Date();
 
-      // let local_time = time.toLocaleString();
-      let year = date.getFullYear();
-      let month = date.getMonth() + 1;
-      month = month < 10 ? '0' + month : month;
-      let day = date.getDate();
-      day = day < 10 ? ('0' + day) : day;
-      let hour = date.getHours();
-      hour=hour < 10 ? ('0' + hour) : hour;
-      let minute = date.getMinutes();
-      minute = minute < 10 ? ('0' + minute) : minute;
-      let second=date.getSeconds();
-      second=second < 10 ? ('0' + second) : second;
+                // let local_time = time.toLocaleString();
+                let year = date.getFullYear();
+                let month = date.getMonth() + 1;
+                month = month < 10 ? '0' + month : month;
+                let day = date.getDate();
+                day = day < 10 ? ('0' + day) : day;
+                let hour = date.getHours();
+                hour=hour < 10 ? ('0' + hour) : hour;
+                let minute = date.getMinutes();
+                minute = minute < 10 ? ('0' + minute) : minute;
+                let second=date.getSeconds();
+                second=second < 10 ? ('0' + second) : second;
 
-      let name = year + '-' + month + '-' + day+' '+hour+':'+minute+':'+second;
+                let name = year + '-' + month + '-' + day+' '+hour+':'+minute+':'+second;
 
-      // console.log(name)
-      /* generate workbook object from table */
-      //  通过 id #mytable1 指明导出的是哪一个表格
-      var wb = XLSX.utils.table_to_book(document.querySelector("#mytable2"));
-      /* get binary string as output */
-      var wbout = XLSX.write(wb, {
-        bookType: "xlsx",
-        bookSST: true,
-        type: "array"
-      });
-      try {
-        //  name+'.xlsx'表示导出的excel表格名字
-        FileSaver.saveAs(
-          new Blob([wbout], { type: "application/octet-stream" }),
-          name + ".xlsx"
-        );
-      } catch (e) {
-        if (typeof console !== "undefined") console.log(e, wbout);
-      }
-      return wbout;
+                // console.log(name)
+                /* generate workbook object from table */
+                //  通过 id #mytable1 指明导出的是哪一个表格
+                var wb = XLSX.utils.table_to_book(document.querySelector("#mytable2"));
+                /* get binary string as output */
+                var wbout = XLSX.write(wb, {
+                  bookType: "xlsx",
+                  bookSST: true,
+                  type: "array"
+                });
+                try {
+                  //  name+'.xlsx'表示导出的excel表格名字
+                  FileSaver.saveAs(
+                    new Blob([wbout], { type: "application/octet-stream" }),
+                    name + ".xlsx"
+                  );
+                } catch (e) {
+                  if (typeof console !== "undefined") console.log(e, wbout);
+                }
+                this.pagesize2 = '20'; //表格还原
+                return wbout;
+          })
+
     },
     // tc导出Excel方法
     exportExcel3() {
-      // 设置当前日期
-      let date = new Date();
+      this.currentPage= '1';
+      this.pagesize3 = '1000000';//表格长度变长
+      this.$nextTick(function () {
+            // 设置当前日期
+            let date = new Date();
 
-      // let local_time = time.toLocaleString();
-      let year = date.getFullYear();
-      let month = date.getMonth() + 1;
-      month = month < 10 ? '0' + month : month;
-      let day = date.getDate();
-      day = day < 10 ? ('0' + day) : day;
-      let hour = date.getHours();
-      hour=hour < 10 ? ('0' + hour) : hour;
-      let minute = date.getMinutes();
-      minute = minute < 10 ? ('0' + minute) : minute;
-      let second=date.getSeconds();
-      second=second < 10 ? ('0' + second) : second;
+            // let local_time = time.toLocaleString();
+            let year = date.getFullYear();
+            let month = date.getMonth() + 1;
+            month = month < 10 ? '0' + month : month;
+            let day = date.getDate();
+            day = day < 10 ? ('0' + day) : day;
+            let hour = date.getHours();
+            hour=hour < 10 ? ('0' + hour) : hour;
+            let minute = date.getMinutes();
+            minute = minute < 10 ? ('0' + minute) : minute;
+            let second=date.getSeconds();
+            second=second < 10 ? ('0' + second) : second;
 
-      let name = year + '-' + month + '-' + day+' '+hour+':'+minute+':'+second;
+            let name = year + '-' + month + '-' + day+' '+hour+':'+minute+':'+second;
 
-      // console.log(name)
-      /* generate workbook object from table */
-      //  通过 id #mytable1 指明导出的是哪一个表格
-      var wb = XLSX.utils.table_to_book(document.querySelector("#mytable3"));
-      /* get binary string as output */
-      var wbout = XLSX.write(wb, {
-        bookType: "xlsx",
-        bookSST: true,
-        type: "array"
-      });
-      try {
-        //  name+'.xlsx'表示导出的excel表格名字
-        FileSaver.saveAs(
-          new Blob([wbout], { type: "application/octet-stream" }),
-          name + ".xlsx"
-        );
-      } catch (e) {
-        if (typeof console !== "undefined") console.log(e, wbout);
-      }
-      return wbout;
+            // console.log(name)
+            /* generate workbook object from table */
+            //  通过 id #mytable1 指明导出的是哪一个表格
+            var wb = XLSX.utils.table_to_book(document.querySelector("#mytable3"));
+            /* get binary string as output */
+            var wbout = XLSX.write(wb, {
+              bookType: "xlsx",
+              bookSST: true,
+              type: "array"
+            });
+            try {
+              //  name+'.xlsx'表示导出的excel表格名字
+              FileSaver.saveAs(
+                new Blob([wbout], { type: "application/octet-stream" }),
+                name + ".xlsx"
+              );
+            } catch (e) {
+              if (typeof console !== "undefined") console.log(e, wbout);
+            }
+            this.pagesize3 = '20'; //表格还原
+            return wbout;
+        })
     },
 
     // 添加ton编辑保存功能的方法
