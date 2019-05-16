@@ -16,4 +16,3 @@ def match(filepath,sendtime):
     if classify_result == '3':
         Item_match_func.tc_mail_match(lines,sendtime,mailtext)
 
-match('C:\\Users\\user\\Desktop\\test\\1.txt',"1900/01/01 11:11")
