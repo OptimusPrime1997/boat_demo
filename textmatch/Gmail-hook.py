@@ -1,21 +1,16 @@
 from __future__ import print_function
-from bs4 import BeautifulSoup
+from bs4 import BeautifulSoup, Comment
 import pickle
 import os.path
 import base64
 import threading
 import time
 import json
-import daemon
 from googleapiclient.discovery import build
 from google_auth_oauthlib.flow import InstalledAppFlow
 from google.auth.transport.requests import Request
 
 from Match_service import match
-
-#export http_proxy=luojinhong:luojinhong1997@202.120.32.250:5678
-#os.environ['http_proxy']='202.120.32.250:5678'
-#os.environ['https_proxy']='202.120.32.250:5678'
 
 # If modifying these scopes, delete the file token.pickle.
 SCOPES = ['https://www.googleapis.com/auth/gmail.readonly']
@@ -23,7 +18,10 @@ SCOPES = ['https://www.googleapis.com/auth/gmail.readonly']
 lastMid = 0
 
 def formatMail(rawMail):
-    mail = BeautifulSoup(rawMail, 'lxml').get_text('\n', strip=True)
+    htmlMail = BeautifulSoup(rawMail, 'lxml')
+    comments = htmlMail.findAll(text=lambda text:isinstance(text, Comment))
+    [comment.extract() for comment in comments]
+    mail = htmlMail.get_text('\n', strip=True)
     return mail
 
 def show_chatty_threads(service, user_id='me'):
@@ -47,7 +45,7 @@ def get_last_mid(service, user_id='me'):
     if message:
         return message[0]['id']
     else:
-        return -1
+        return -1 
 
 def readLastMid():
     try:
@@ -104,26 +102,41 @@ def get_messages(service, user_id='me', limit=1):
                 print('Subject: %s' % subject)
         content = ""
 
-        if 'parts' not in mdata['payload']:
-            return None, None
-        rawParts = mdata['payload']['parts']
-        parts = partsWalk(rawParts)
-
-        if parts == []:
-            return None, None
-
-        # with open('test.txt', 'w+', encoding='utf-8') as f:
-        #     j = json.dumps(parts)
-        #     f.write(j)
-        #     f.close()
-
-        # write all parts' content into one file
-        for part in parts:
-            if part['body']['size'] > 0 and 'data' in part['body']:
+        with open('whole.json', 'w+', encoding='utf-8') as f:
+            j = json.dumps(mdata)
+            f.write(j)
+            f.close()
+        
+        if 'parts' not in mdata['payload']: # single part
+            part = mdata['payload']
+            if 'body' in part and part['body']['size'] > 0 and 'data' in part['body']:
                 content = str(base64.urlsafe_b64decode(part['body']['data'].encode('UTF-8')), 'UTF-8')
                 with open(messageId + '.txt', 'w+', encoding='utf-8') as f:
                     f.writelines(formatMail(content))
                     f.close()
+                return messageId, date
+            else:
+                return None, None
+
+        rawParts = mdata['payload']['parts']
+        parts = partsWalk(rawParts)
+        
+        if parts == []:
+            return None, None
+            
+        with open('test.json', 'w+', encoding='utf-8') as f:
+            j = json.dumps(parts)
+            f.write(j)
+            f.close()
+        
+        # write all parts' content into one file
+        for part in parts:
+            if part['body']['size'] > 0 and 'data' in part['body']: 
+                if 'mimeType' in part and part['mimeType'] == 'text/html':
+                    content = str(base64.urlsafe_b64decode(part['body']['data'].encode('UTF-8')), 'UTF-8')
+                    with open(messageId + '.txt', 'w+', encoding='utf-8') as f:
+                        f.writelines(formatMail(content))
+                        f.close()
        # print(content)
     return messageId, date
 
@@ -133,9 +146,12 @@ def syncMessages(service, user_id='me', maxTmp=1):
     currMid = get_last_mid(service, user_id)
     #print('currentMid ' + str(currMid) + ' \nlastMid ' + lastMid)
     # if lastMid != currMid: # new email
-    print(str(currMid))
+    # print(str(currMid))
     if str(currMid) != '0' and lastMid != currMid:
         mid, date = get_messages(service, user_id, maxTmp)
+        if mid is None:
+            print('Unrecognized mail!')
+            return None, None
         lastMid = currMid
         updateLastMid()
         return mid, date
@@ -151,30 +167,26 @@ class GmailHook(threading.Thread):
         self.threadID = threadID
         self.name = name
         self.service = service
-
+    
     def run(self):
         global lastMid
         maxTmp = 5
         while True:
-            try:
-                ret, ts = syncMessages(self.service)
-            except Exception as e:
-                print(e)
-            else:
-                if ret is not None:
+            ret, ts = syncMessages(self.service)
+            if ret is not None:
+                print('Received new mail.' + ret)
+                print("Timestamp: " + ts)
+                tsTuple = time.localtime(int(ts) / 1000)
+                date = time.strftime("%Y-%m-%d %H:%M:%S", tsTuple)
+                print('date: ' + date)
+                #match(os.path.join(os.path.abspath('.'), ret + '.txt'))
+                match(ret + '.txt', date)
+                while ret != lastMid and tmp < maxTmp:
+                    ret, ts = syncMessages(self.service)
                     print('Received new mail.' + ret)
-                    print("Timestamp: " + ts)
-                    tsTuple = time.localtime(int(ts) / 1000)
-                    date = time.strftime("%Y-%m-%d %H:%M:%S", tsTuple)
-                    print('date: ' + date)
-                    #match(os.path.join(os.path.abspath('.'), ret + '.txt'))
                     match(ret + '.txt', date)
-                    while ret != lastMid:
-                        ret, ts = syncMessages(self.service)
-                        print('Received new mail.' + ret)
-                        match(ret + '.txt', date)
-                time.sleep(5)
-
+            time.sleep(3)
+            
 
 def main():
     """Shows basic usage of the Gmail API.
@@ -221,5 +233,4 @@ def main():
     gh.join()
 
 if __name__ == '__main__':
-#    with daemon.DaemonContext():
     main()
