@@ -69,7 +69,7 @@ def classify_mail(lines):
 def find_digit(s, e, line):
     cnt=0
     num1 = num2 = "none"
-    while s < e:
+    while s <= e:
         if line[s].isdigit():
             if cnt == 0:
                 if line[s + 1].isdigit():
@@ -88,7 +88,7 @@ def find_digit(s, e, line):
                     # 最多两个日期
                     break
                 elif line[s + 1] == '-' or line[s + 1] == ' ' or line[s + 1] == 'S' or line[s + 1] == 'N' or line[s + 1] == 'R' \
-                        or line[s + 1] == 'T' or line[s + 1] == 's' or line[s + 1] == 'n' or line[s + 1] == 'r' or line[s + 1] == 't' or line[s+1] == '/':
+                        or line[s + 1] == 'T' or line[s + 1] == 's' or line[s + 1] == 'n' or line[s + 1] == 'r' or line[s + 1] == 't' or line[s+1] == '/' or line[s+1] == '\n':
                     num2 = line[s:s + 1]
                     break
         s += 1
