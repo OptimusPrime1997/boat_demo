@@ -4888,3 +4888,9 @@ no loading port match
 no discharging port match
 cartagena
 itaguai
+Hull
+Hull
+EC MEX
+Gdynia
+ITACOATIARA
+HAZIRA

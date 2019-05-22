@@ -6,7 +6,8 @@ from flashtext import KeywordProcessor
 import pymysql
 
 date_keyword_processor = KeywordProcessor()
-DIR=os.getcwd()+'/'
+DIR='/root/project/boat_demo/textmatch/'
+print("Current dir:"+DIR)
 date_keyword_processor.add_keyword_from_file(DIR+'Date.txt')
 
 vessel_name_keyword_processor = KeywordProcessor()
@@ -297,7 +298,7 @@ def account_match(line):
 
 #写入数据库操作
 def write_to_tonnage_card(vessel_name, dwt, blt, open_area, sent_time, open_date_s, open_date_e, mail_text):
-    db = pymysql.connect(host="47.103.63.138", user="root", passwd="tcloudsjtu", db="trade_mail")
+    db = pymysql.connect(host="127.0.0.1", user="root", passwd="tcloudsjtu", db="trade_mail")
     cursor = db.cursor()
     sql = "INSERT INTO tonnage_card(Vessel_name, DWT, BLT, Open_area,Sent,Open_date_S,Open_date_E, mail_text) " \
           "VALUES ('%s','%s','%s','%s','%s','%s','%s', '%s')" % \
@@ -315,7 +316,7 @@ def write_to_tonnage_card(vessel_name, dwt, blt, open_area, sent_time, open_date
 
 
 def write_to_tc_card(account, delivery_area, redelivery_area, sent_time, laycan_s, laycan_e, mail_text, quantity_s, quantity_e, duration_s, duration_e):
-    db = pymysql.connect("47.103.63.138", "root", "tcloudsjtu", "trade_mail")
+    db = pymysql.connect("127.0.0.1", "root", "tcloudsjtu", "trade_mail")
     cursor = db.cursor()
     sql = "INSERT INTO tc_card(Account, Delivery_area, Redelivery_area, Sent, LayCan_S, LayCan_E, " \
           "mail_text, Quantity_s, Quantity_e, DUR_S, DUR_E) " \
@@ -335,7 +336,7 @@ def write_to_tc_card(account, delivery_area, redelivery_area, sent_time, laycan_
 
 
 def write_to_cargo_card(cargo_name, loading_port, discharging_port, sent_time, laycan_s, laycan_e, mail_text, quantity_s, quantity_e):
-    db = pymysql.connect("47.103.63.138", "root", "tcloudsjtu", "trade_mail")
+    db = pymysql.connect("127.0.0.1", "root", "tcloudsjtu", "trade_mail")
     cursor = db.cursor()
     sql = "INSERT INTO cargo_card(Cargo_name, Loading_Port, Discharging_Port, Sent, " \
           "LayCan_S, LayCan_E, mail_text, Quantity_s, Quantity_e) " \
