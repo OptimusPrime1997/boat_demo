@@ -1,23 +1,26 @@
 # encoding: utf-8
 import re
 import time
+import os
 from flashtext import KeywordProcessor
 import pymysql
 
 date_keyword_processor = KeywordProcessor()
-date_keyword_processor.add_keyword_from_file('./Date.txt')
+DIR=os.getcwd()+'/'
+date_keyword_processor.add_keyword_from_file(DIR+'Date.txt')
 
 vessel_name_keyword_processor = KeywordProcessor()
-vessel_name_keyword_processor.add_keyword_from_file('Vessel_keywords.txt')
+vessel_name_keyword_processor.add_keyword_from_file(DIR+'Vessel_keywords.txt')
+vessel_name_keyword_processor.add_non_word_boundary('/')
 
 port_keyword_processor = KeywordProcessor()
-port_keyword_processor.add_keyword_from_file('Port_keywords.txt')
+port_keyword_processor.add_keyword_from_file(DIR+'Port_keywords.txt')
 
 cargo_name_keyword_processor = KeywordProcessor()
-cargo_name_keyword_processor.add_keyword_from_file('Cargo_names.txt')
+cargo_name_keyword_processor.add_keyword_from_file(DIR+'Cargo_names.txt')
 
 account_name_keyword_processor = KeywordProcessor()
-account_name_keyword_processor.add_keyword_from_file('Account_keywords.txt')
+account_name_keyword_processor.add_keyword_from_file(DIR+'Account_keywords.txt')
 
 #切分邮件，以'+'号为界
 def cut_mail_by_symbol(lines):
@@ -621,7 +624,7 @@ def vessel_mail_match2(lines, sendtime, mailtext):
         if result_list[0][1] != "no open area match":
             for j in range(0, len(result_list)):
                 if result_list[j][1] == "no open area match":
-                    result_list[j][1] = open_area
+                    result_list[j][1] = result_list[0][1]
 
         if result_list[0][2][0] != "1900/01/01":
             for u in range(0,len(result_list)):

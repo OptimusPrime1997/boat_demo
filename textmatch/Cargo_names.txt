@@ -128,3 +128,6 @@ AGRI
 tapioca chip
 steel railCoal
 Grain
+Coal
+none item name match
+Metcoke
