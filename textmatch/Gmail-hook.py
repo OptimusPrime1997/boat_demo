@@ -11,7 +11,7 @@ from google_auth_oauthlib.flow import InstalledAppFlow
 from google.auth.transport.requests import Request
 
 from Match_service import match
-
+DIR='/root/project/boat_demo/textmatch/'
 # If modifying these scopes, delete the file token.pickle.
 SCOPES = ['https://www.googleapis.com/auth/gmail.readonly']
 
@@ -49,7 +49,7 @@ def get_last_mid(service, user_id='me'):
 
 def readLastMid():
     try:
-        f = open('lmid', 'r')
+        f = open(DIR+'lmid', 'r')
         rd = f.readlines()
         f.close()
         if len(rd) == 1:
@@ -57,13 +57,13 @@ def readLastMid():
         else:
             return 0
     except FileNotFoundError:
-        f = open('lmid', 'w+')
+        f = open(DIR+'lmid', 'w+')
         f.close()
         return 0
 
 def updateLastMid():
     global lastMid
-    with open('lmid', 'w+') as f:
+    with open(DIR+'lmid', 'w+') as f:
         f.writelines(lastMid)
         f.close()
 
@@ -102,7 +102,7 @@ def get_messages(service, user_id='me', limit=1):
                 print('Subject: %s' % subject)
         content = ""
 
-        with open('whole.json', 'w+', encoding='utf-8') as f:
+        with open(DIR+'whole.json', 'w+', encoding='utf-8') as f:
             j = json.dumps(mdata)
             f.write(j)
             f.close()
@@ -111,7 +111,7 @@ def get_messages(service, user_id='me', limit=1):
             part = mdata['payload']
             if 'body' in part and part['body']['size'] > 0 and 'data' in part['body']:
                 content = str(base64.urlsafe_b64decode(part['body']['data'].encode('UTF-8')), 'UTF-8')
-                with open(messageId + '.txt', 'w+', encoding='utf-8') as f:
+                with open(DIR+messageId + '.txt', 'w+', encoding='utf-8') as f:
                     f.writelines(formatMail(content))
                     f.close()
                 return messageId, date
@@ -124,7 +124,7 @@ def get_messages(service, user_id='me', limit=1):
         if parts == []:
             return None, None
             
-        with open('test.json', 'w+', encoding='utf-8') as f:
+        with open(DIR+'test.json', 'w+', encoding='utf-8') as f:
             j = json.dumps(parts)
             f.write(j)
             f.close()
@@ -134,7 +134,7 @@ def get_messages(service, user_id='me', limit=1):
             if part['body']['size'] > 0 and 'data' in part['body']: 
                 if 'mimeType' in part and part['mimeType'] == 'text/html':
                     content = str(base64.urlsafe_b64decode(part['body']['data'].encode('UTF-8')), 'UTF-8')
-                    with open(messageId + '.txt', 'w+', encoding='utf-8') as f:
+                    with open(DIR+messageId + '.txt', 'w+', encoding='utf-8') as f:
                         f.writelines(formatMail(content))
                         f.close()
        # print(content)
@@ -195,8 +195,8 @@ def main():
     # The file token.pickle stores the user's access and refresh tokens, and is
     # created automatically when the authorization flow completes for the first
     # time.
-    if os.path.exists('token.pickle'):
-        with open('token.pickle', 'rb') as token:
+    if os.path.exists(DIR+'token.pickle'):
+        with open(DIR+'token.pickle', 'rb') as token:
             creds = pickle.load(token)
     # If there are no (valid) credentials available, let the user log in.
     if not creds or not creds.valid:
@@ -204,10 +204,10 @@ def main():
             creds.refresh(Request())
         else:
             flow = InstalledAppFlow.from_client_secrets_file(
-                'credentials.json', SCOPES)
+                DIR+'credentials.json', SCOPES)
             creds = flow.run_local_server()
         # Save the credentials for the next run
-        with open('token.pickle', 'wb') as token:
+        with open(DIR+'token.pickle', 'wb') as token:
             pickle.dump(creds, token)
 
     service = build('gmail', 'v1', credentials=creds)
