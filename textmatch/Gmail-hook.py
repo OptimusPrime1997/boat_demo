@@ -170,7 +170,6 @@ class GmailHook(threading.Thread):
     
     def run(self):
         global lastMid
-        maxTmp = 5
         while True:
             ret, ts = syncMessages(self.service)
             if ret is not None:
@@ -181,7 +180,7 @@ class GmailHook(threading.Thread):
                 print('date: ' + date)
                 #match(os.path.join(os.path.abspath('.'), ret + '.txt'))
                 match(ret + '.txt', date)
-                while ret != lastMid and tmp < maxTmp:
+                while ret != lastMid:
                     ret, ts = syncMessages(self.service)
                     print('Received new mail.' + ret)
                     match(ret + '.txt', date)
