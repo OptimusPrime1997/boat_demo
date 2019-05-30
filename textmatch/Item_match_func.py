@@ -469,7 +469,10 @@ def cargo_mail_match(lines, sendtime, mailtext):
                     quantity_list.append((quantity_s,quantity_e))
 
             if loading_port != "none" or discharging_port != "none":
-                port_list.append((loading_port, discharging_port))
+                if discharging_port == "none":
+                    port_list.append((loading_port, "no discharging port match"))
+                else:
+                    port_list.append((loading_port, discharging_port))
 
             if len(port_list) == 0:
                 port_list.append(("no loading port match","no discharging port match"))
@@ -543,7 +546,10 @@ def tc_mail_match(lines, sendtime, mailtext):
                 if duration_s:
                     dur_list.append((duration_s, duration_e))
             if delivery_area != "none" or redelivery_area != "none":
-                port_list.append((delivery_area, redelivery_area))
+                if redelivery_area == "none":
+                    port_list.append((delivery_area, "no redelivery area match"))
+                else:
+                    port_list.append((delivery_area, redelivery_area))
 
             if len(port_list) == 0:
                 port_list.append(("no delivery area match","no redelivery area match"))
