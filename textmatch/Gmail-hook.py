@@ -102,16 +102,18 @@ def get_messages(service, user_id='me', limit=1):
                 print('Subject: %s' % subject)
         content = ""
 
-        with open(DIR+'whole.json', 'w+', encoding='utf-8') as f:
-            j = json.dumps(mdata)
-            f.write(j)
-            f.close()
+#         with open(DIR+'whole.json', 'w+', encoding='utf-8') as f:
+#             j = json.dumps(mdata)
+#             f.write(j)
+#             f.close()
         
         if 'parts' not in mdata['payload']: # single part
             part = mdata['payload']
             if 'body' in part and part['body']['size'] > 0 and 'data' in part['body']:
                 content = str(base64.urlsafe_b64decode(part['body']['data'].encode('UTF-8')), 'UTF-8')
                 with open(DIR+messageId + '.txt', 'w+', encoding='utf-8') as f:
+                    if subject != '':
+                        f.writelines(subject + '\n')
                     f.writelines(formatMail(content))
                     f.close()
                 return messageId, date
@@ -135,6 +137,8 @@ def get_messages(service, user_id='me', limit=1):
                 if 'mimeType' in part and part['mimeType'] == 'text/html':
                     content = str(base64.urlsafe_b64decode(part['body']['data'].encode('UTF-8')), 'UTF-8')
                     with open(DIR+messageId + '.txt', 'w+', encoding='utf-8') as f:
+                        if subject != '':
+                            f.writelines(subject + '\n')
                         f.writelines(formatMail(content))
                         f.close()
        # print(content)
